@@ -185,3 +185,21 @@ Important decision:
 - strategy/RecruiterMode.md
 
 앞으로 모든 기능은 KPI, Backlog, Risk, DX11 매핑, 영상 계획, Recruiter Summary 기준을 통과해야 한다.
+
+## 2026-05-31 15:22:46 +09:00 - /save-md checkpoint
+
+사용자가 /save-md를 요청했다. 현재까지의 문서화/전략/마스터 플랜 상태를 CODEX_WORK_MEMORY.md에 저장했다.
+
+현재 핵심 상태:
+
+- 전체 마스터 플랜 PlantUML: shared/uml/PortfolioMasterPlan.puml
+- 전략 계층: strategy 폴더
+- 학습/블로그/노션/면접 강제 사이클: workflow 폴더
+- Feature Toggle 및 Before/After 구조: projects/unity-technical-showcase/feature-toggle 폴더
+- GPT 평가 요청 파일: GPT_EVALUATION_REQUEST.md
+- GPT 전체 전달 파일: PortfolioStudyMasterPlanForGPT.md
+- Claude 전달 파일: CLAUDE.md
+
+다음 작업 시 최상위 질문을 유지한다:
+
+이 기능이 일반 Unity 포트폴리오와 비교해서 어떤 차별성을 만들고 있는가?
