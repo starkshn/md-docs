@@ -69,6 +69,62 @@ collection://99f867b4-09cd-43c3-9f47-0b5e86cde399
 
 ## Views
 
+### 01 All Schedule Timeline
+
+Purpose:
+
+- Shows all development work, No Development blocks, patch buffers, and milestone reviews in one timeline.
+- This is the main visual dashboard for "what happened when".
+
+### 02 MVP 1 Roadmap
+
+Purpose:
+
+- Shows only MVP 1 work.
+- Current MVP 1 scope is Skill System, Skill Tool, documentation, UML, blog draft, and interview readiness.
+
+### 03 Work Queue
+
+Purpose:
+
+- Main editing table.
+- Use this view when adding, modifying, prioritizing, or rescheduling work.
+
+### 04 Calendar Linked
+
+Purpose:
+
+- Shows items already linked to Google Calendar.
+- Used to confirm which Notion records have actual calendar references.
+
+### 05 No Development / Patch
+
+Purpose:
+
+- Shows patch days, patch -1 buffers, vacation days, and other blocked days.
+- No implementation work should be scheduled here.
+
+### 06 Status Board
+
+Purpose:
+
+- Board grouped by `Calendar Status`.
+- Useful for seeing whether a task is not scheduled, scheduled, linked, needs reschedule, blocked, or done.
+
+### 08 Calendar Create Queue
+
+Purpose:
+
+- Shows items where `Calendar Action = Create Event`.
+- Codex can read this view and create Google Calendar events from it.
+
+### 09 Calendar Reschedule Queue
+
+Purpose:
+
+- Shows items where `Calendar Action = Reschedule`.
+- Codex can read this view and move existing Google Calendar events.
+
 ### Development Timeline
 
 ```text
@@ -108,19 +164,34 @@ Purpose:
 | Property | Type | Purpose |
 | --- | --- | --- |
 | Task | Title | Development item name |
+| Item Type | Select | Development Task, Study, Documentation, Blog, Review, Calendar Block, Patch Buffer, Milestone |
 | Feature | Select | Feature category |
 | Phase | Select | Development cycle phase |
 | Status | Select | Planned, In Progress, Blocked, Review, Done, Deferred |
+| Priority | Select | P0, P1, P2, P3 |
+| Sprint | Select | MVP 1, MVP 2, MVP 3, Backlog, Maintenance |
+| Calendar Status | Select | Not Scheduled, Scheduled, Calendar Linked, Needs Reschedule, No Development, Done |
+| Calendar Action | Select | None, Create Event, Update Event, Reschedule, Cancel |
 | Start | Date | Start date |
 | End | Date | End date |
 | KPI Level | Select | Completion or maturity level from 0 to 5 |
 | Development Hub | URL | Link to detailed Notion development page |
+| Google Calendar | URL | Google Calendar event link |
+| Google Event ID | Rich text | Google Calendar event ID when available |
 | Docs | URL | Link to Markdown document |
 | PlantUML | URL | Link to PlantUML diagram |
 | Git Commit | Rich text | Related commit hash or commit list |
 | Calendar Event | URL | Related Google Calendar event link |
 | Blog Draft | URL | Related Tistory blog draft |
 | Interview Notes | URL | Related interview summary |
+| Planned Hours | Number | Planned effort |
+| Actual Hours | Number | Actual effort |
+| Next Action | Rich text | Immediate next action |
+| Done Criteria | Rich text | Completion criteria |
+| No Development | Checkbox | True for patch/vacation/no-dev blocks |
+| Owner | Select | NY, Codex, or NY + Codex |
+| Schedule Note | Rich text | Scheduling context |
+| Review Date | Date | Review date |
 | Summary | Rich text | Short explanation of what was done |
 | Risk | Select | Low, Medium, High |
 
@@ -237,6 +308,70 @@ Page:
 ```text
 https://www.notion.so/3714bccaf9eb819fb8a7eace8dcbf666
 ```
+
+## Google Calendar Reflected Blocks
+
+The following Google Calendar events were reflected into the timeline database as No Development items:
+
+| Date | Type | Calendar Event |
+| --- | --- | --- |
+| 2026-06-05 | Calendar Block | 이사 + 휴가 |
+| 2026-06-09 | Patch Buffer | 마루패치 -1 |
+| 2026-06-10 | Calendar Block | 마루패치 |
+| 2026-06-30 | Patch Buffer | 커피패치 -1 |
+| 2026-07-01 | Calendar Block | 커피패치 |
+| 2026-07-21 | Patch Buffer | 마루 패치 -1 |
+| 2026-07-22 | Calendar Block | 마루 패치 |
+
+## MVP 1 Draft Schedule
+
+The following draft schedule was added to the database:
+
+| Date | Task | Purpose |
+| --- | --- | --- |
+| 2026-06-01 to 2026-06-02 | MVP1 - Skill System Concept Study | Study core concepts |
+| 2026-06-03 to 2026-06-04 | MVP1 - Skill System Architecture Design | Define runtime architecture |
+| 2026-06-06 to 2026-06-07 | MVP1 - Skill System Mini Experiment | Validate one small data-driven skill |
+| 2026-06-08 | MVP1 - Skill System Implementation A | Start runtime skeleton before patch buffer |
+| 2026-06-11 to 2026-06-14 | MVP1 - Skill System Implementation B | Implement runtime assembly |
+| 2026-06-15 to 2026-06-16 | MVP1 - Skill System Verification and Docs | Verify and document Skill System |
+| 2026-06-17 to 2026-06-18 | MVP1 - Skill Tool Concept and Architecture | Design EditorWindow workflow |
+| 2026-06-19 to 2026-06-21 | MVP1 - Skill Tool Mini Experiment | Validate editor experiment |
+| 2026-06-22 to 2026-06-27 | MVP1 - Skill Tool Implementation | Implement usable Skill Tool |
+| 2026-06-28 to 2026-06-29 | MVP1 - Skill Tool Verification and Docs | Verify and document Skill Tool |
+| 2026-07-02 to 2026-07-05 | MVP1 - Milestone Review | Review MVP 1 readiness after patch day |
+
+## Calendar Sync Workflow
+
+Notion is the source of schedule intent.
+
+Google Calendar is the source of real time blocks.
+
+Codex acts as the sync operator.
+
+```text
+Notion Work Queue
+↓
+Calendar Action = Create Event / Reschedule / Update Event / Cancel
+↓
+Codex reads the queue
+↓
+Codex checks Google Calendar conflicts and patch blocks
+↓
+Codex creates or updates Google Calendar
+↓
+Codex writes Google Calendar URL and Event ID back to Notion
+```
+
+## User Editing Rule
+
+When manually editing the database:
+
+1. Use `03 Work Queue`.
+2. Edit `Task`, `Start`, `End`, `Priority`, `Sprint`, and `Next Action`.
+3. If the task should appear in Google Calendar, set `Calendar Action = Create Event`.
+4. If an existing calendar event should move, set `Calendar Action = Reschedule`.
+5. Never schedule implementation work on rows where `No Development = checked`.
 
 ## Operating Rule
 

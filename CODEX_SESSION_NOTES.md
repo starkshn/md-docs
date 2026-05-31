@@ -391,3 +391,51 @@ Initial completed records added:
 - Portfolio Automation Strategy
 
 Rule: every meaningful development item must be added as a timeline record and linked to docs, PlantUML, commits, blog drafts, and interview notes when available.
+
+## 2026-05-31 22:30:00 +09:00 notion timeline db operational cleanup
+
+Portfolio Development Timeline DB was expanded into an operational schedule dashboard.
+
+Added DB properties:
+
+- Item Type
+- Priority
+- Sprint
+- Calendar Status
+- Calendar Action
+- Google Calendar
+- Google Event ID
+- Planned Hours
+- Actual Hours
+- Next Action
+- Done Criteria
+- No Development
+- Owner
+- Schedule Note
+- Review Date
+
+Added Notion views:
+
+- 01 All Schedule Timeline
+- 02 MVP 1 Roadmap
+- 03 Work Queue
+- 04 Calendar Linked
+- 05 No Development / Patch
+- 06 Status Board
+- 07 Review Queue
+- 08 Calendar Create Queue
+- 09 Calendar Reschedule Queue
+
+Google Calendar reflected blocks:
+
+- 2026-06-05: 이사 + 휴가
+- 2026-06-09: 마루패치 -1 buffer
+- 2026-06-10: 마루패치
+- 2026-06-30: 커피패치 -1 buffer
+- 2026-07-01: 커피패치
+- 2026-07-21: 마루 패치 -1 buffer
+- 2026-07-22: 마루 패치
+
+MVP 1 draft schedule was added from 2026-06-01 to 2026-07-05, avoiding vacation and patch NoDev dates.
+
+Operating rule: Notion DB is the schedule intent source, Google Calendar is the actual time-block source, and Codex syncs rows marked by Calendar Action.
