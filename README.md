@@ -115,3 +115,9 @@ Codex는 기능 구현 시 항상 공부한 개념, 강의 구조 분석, 우리
 ```
 
 이 질문에 답하지 못하면 기능을 추가하지 않는다.
+
+## Master Plan Diagram
+
+전체 포트폴리오 구조, 전략 계층, 개발 사이클, MVP 우선순위, 산출물 흐름은 아래 PlantUML에서 한눈에 확인한다.
+
+- [PortfolioMasterPlan.puml](shared/uml/PortfolioMasterPlan.puml)

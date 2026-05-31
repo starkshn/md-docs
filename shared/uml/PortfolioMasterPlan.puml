@@ -1,0 +1,176 @@
+﻿@startuml
+title Unity Technical Showcase Portfolio Master Plan - 전체 마스터 플랜
+
+skinparam packageStyle rectangle
+skinparam shadowing false
+skinparam ArrowColor #333333
+skinparam defaultFontName Malgun Gothic
+skinparam package {
+  BorderColor #555555
+  BackgroundColor #F8F8F8
+}
+skinparam class {
+  BorderColor #444444
+  BackgroundColor #FFFFFF
+}
+
+rectangle "최종 목표" as Goal {
+  rectangle "기술적으로 설명 가능한\n개발 과정 자체를 포트폴리오화" as PortfolioGoal
+  rectangle "연봉 5,000~7,000만원\n중견 이상 게임 회사 이직" as CareerGoal
+}
+
+package "전략 계층" as Strategy {
+  rectangle "KPI System\nLevel 1~5 완료 기준" as Kpi
+  rectangle "Feature Backlog\nMust / Should / Could / Won't" as Backlog
+  rectangle "Risk Log\n범위 증가 / 지연 / 과몰입 관리" as Risk
+  rectangle "Portfolio Dashboard\n주간 진행률 관리" as Dashboard
+  rectangle "Recruiter Mode\n면접관 관점 요약" as Recruiter
+  rectangle "DX11 -> Unity Mapping\n차별화 근거" as Mapping
+  rectangle "Demo Video Plan\n30초 GIF / 3분 / 10분 영상" as Video
+}
+
+package "개발 사이클" as Cycle {
+  rectangle "Concept Study\n개념 학습" as Concept
+  rectangle "Architecture Design\n설계" as Design
+  rectangle "Mini Experiment\n작은 실험" as Experiment
+  rectangle "Implementation\n구현" as Implementation
+  rectangle "Verification\n검증" as Verification
+  rectangle "Git Commit\n기술 단위 커밋" as Commit
+  rectangle "Markdown Docs\n문서화" as Docs
+  rectangle "PlantUML Update\n구조도 갱신" as Uml
+  rectangle "Tistory Blog Draft\n블로그 초안" as Blog
+  rectangle "Notion Journal\n개발 일지" as Notion
+  rectangle "Interview Notes\n면접 정리" as Interview
+}
+
+package "MVP 1순위" as Mvp1 {
+  rectangle "Modular Skill System" as SkillSystem
+  rectangle "Skill Editor / Tool" as SkillEditor
+  rectangle "Technical Showcase Scene" as ShowcaseScene
+  rectangle "Feature Toggle System" as FeatureToggle
+  rectangle "Before / After Comparison" as Comparison
+  rectangle "Metrics View" as Metrics
+}
+
+package "MVP 2순위" as Mvp2 {
+  rectangle "Animation Tool" as AnimationTool
+  rectangle "Animation Event <-> Skill" as AnimationSkill
+  rectangle "Shader Showcase" as ShaderShowcase
+}
+
+package "MVP 3순위" as Mvp3 {
+  rectangle "Optimization Showcase" as Optimization
+  rectangle "Rendering Debug View" as DebugView
+  rectangle "Blog Series Polish" as BlogPolish
+}
+
+package "공통 아키텍처" as Architecture {
+  rectangle "IFeatureModule\n공통 생명주기" as IFeatureModule
+  rectangle "FeatureToggleManager\nON/OFF / 의존성 / 상태" as ToggleManager
+  rectangle "ComparisonViewSystem\nBefore/After RenderTexture" as ComparisonSystem
+  rectangle "ShowcaseControlPanel\n시연 대시보드" as ControlPanel
+  rectangle "ModuleMetricsProvider\nFPS / GC / DrawCall" as MetricsProvider
+}
+
+package "산출물" as Outputs {
+  rectangle "Unity Project\n실행 가능한 포트폴리오" as UnityProject
+  rectangle "GitHub Repository\nSource / README / Docs / UML" as Github
+  rectangle "Technical Docs\nMarkdown 기준 문서" as TechnicalDocs
+  rectangle "PlantUML Diagrams\n구조 / 시퀀스 / 패키지" as PlantUmlDocs
+  rectangle "Tistory Blog Series\n학습과 재설계 기록" as Tistory
+  rectangle "Notion Journal\n일일 / 주간 회고" as NotionOutput
+  rectangle "Demo Videos\nGIF / 3분 / 10분" as Videos
+  rectangle "Interview Package\n1분 / 3분 / 심화 답변" as InterviewPackage
+}
+
+package "제외 범위" as OutOfScope {
+  rectangle "Server" as Server
+  rectangle "DB" as Db
+  rectangle "Login" as Login
+  rectangle "Matchmaking" as Matchmaking
+  rectangle "ECS / DOTS" as Dots
+  rectangle "대규모 Addressables 심화" as DeepAddressables
+}
+
+PortfolioGoal --> Strategy : 성공 기준 정의
+PortfolioGoal --> Cycle : 개발 방식 고정
+PortfolioGoal --> Outputs : 최종 산출물
+CareerGoal --> Recruiter : 채용 관점 강화
+CareerGoal --> InterviewPackage : 면접 대비
+
+Kpi --> Dashboard : 진행률 판단
+Backlog --> Dashboard : 범위 통제
+Risk --> Dashboard : 위험 추적
+Recruiter --> Interview : 면접 관점 반영
+Mapping --> Blog : DX11 경험 연결
+Video --> Videos : 시연 영상 생성
+
+Concept --> Design
+Design --> Experiment
+Experiment --> Implementation
+Implementation --> Verification
+Verification --> Commit
+Commit --> Docs
+Docs --> Uml
+Uml --> Blog
+Blog --> Notion
+Notion --> Interview
+Interview --> Dashboard : 주간 리뷰 반영
+Dashboard --> Backlog : 우선순위 조정
+Dashboard --> Risk : 리스크 갱신
+
+Mvp1 --> Architecture : 공통 구조 우선 적용
+SkillSystem --> FeatureToggle : 모듈 ON/OFF
+SkillEditor --> ControlPanel : Tool UI 통합
+ShowcaseScene --> ControlPanel : 시연 중심 화면
+FeatureToggle --> ToggleManager : 중앙 제어
+Comparison --> ComparisonSystem : 적용 전후 비교
+Metrics --> MetricsProvider : 성능 지표 수집
+
+Mvp2 --> Architecture : MVP 1 이후 확장
+AnimationTool --> Mapping : DX11 Animation 경험 연결
+ShaderShowcase --> Mapping : DX11 Shader 경험 연결
+AnimationSkill --> SkillSystem : 이벤트 연동
+
+Mvp3 --> Architecture : 확장 기능
+Optimization --> MetricsProvider : 수치 기반 비교
+DebugView --> ComparisonSystem : RenderTexture Debug View
+BlogPolish --> Tistory : 게시용 글 정리
+
+IFeatureModule --> ToggleManager : 등록 / 제어
+ToggleManager --> ComparisonSystem : Before/After 트리거
+ToggleManager --> MetricsProvider : 모듈별 Metrics
+ControlPanel --> ToggleManager : 사용자 조작
+ControlPanel --> ComparisonSystem : View Mode 선택
+ControlPanel --> MetricsProvider : Metrics 표시
+
+Implementation --> UnityProject : 기능 통합
+Commit --> Github : 변경 이력 저장
+Docs --> TechnicalDocs : 설계 문서 저장
+Uml --> PlantUmlDocs : 다이어그램 저장
+Blog --> Tistory : 글 초안 생성
+Notion --> NotionOutput : 개발 일지 작성
+Video --> Videos : 시연 자료 생성
+Interview --> InterviewPackage : 답변 패키지 생성
+
+Backlog -[#red,dashed]-> Server : Won't
+Backlog -[#red,dashed]-> Db : Won't
+Backlog -[#red,dashed]-> Login : Won't
+Backlog -[#red,dashed]-> Matchmaking : Won't
+Backlog -[#red,dashed]-> Dots : Won't
+Backlog -[#red,dashed]-> DeepAddressables : 초기 제외
+
+note bottom of Strategy
+최상위 질문:
+이 기능이 일반 Unity 포트폴리오와 비교해서
+어떤 차별성을 만들고 있는가?
+end note
+
+note bottom of Cycle
+기능 완료 기준:
+구현만으로 완료가 아니다.
+문서, UML, 블로그 초안, 노션 일지,
+면접 정리, Git Commit까지 완료되어야 한다.
+end note
+
+@enduml

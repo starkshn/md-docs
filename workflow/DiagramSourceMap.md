@@ -41,3 +41,8 @@ When a Markdown file changes:
 2. Update the mapped PlantUML files.
 3. Export diagram images only after the `.puml` source is reviewed.
 4. Update links in the project `README.md` if diagram names changed.
+
+## Portfolio Master Plan
+
+- Source: `shared/uml/PortfolioMasterPlan.puml`
+- Purpose: 전체 프로젝트 관리, 개발 사이클, 전략 계층, MVP 우선순위, 산출물 연결 구조를 한 장으로 요약한다.
