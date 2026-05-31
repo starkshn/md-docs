@@ -214,3 +214,21 @@ Important decision:
 otion/UnityProjectAZ_NotionTemplate.md
 
 직접 Notion 페이지에 자동 삽입하려면 Notion API/MCP 권한 또는 브라우저 조작 권한이 필요하다. 현재는 Notion에 붙여 넣기 쉬운 Markdown 템플릿으로 생성했다.
+
+## 2026-05-31 15:29:38 +09:00 - Notion 완료 체크 / 핵심 코드 / 블로그 링크 추적 규칙 추가
+
+사용자가 Codex와 작업한 완료 항목을 Notion에서 체크하고, 특정 기능 핵심 코드 요약, 개발일지, 기술 블로그 링크까지 관리해야 한다고 요청했다.
+
+반영 내용:
+
+- 
+otion/UnityProjectAZ_NotionTemplate.md에 Codex Completion Tracker 추가
+- Core Code Summary Tracker 추가
+- Technical Blog Link Tracker 추가
+- Development Log Index 추가
+- Feature Completion Gate 추가
+- Codex Work Result Template 추가
+- 
+otion/CodexNotionOperationRules.md 신규 생성
+
+앞으로 Codex는 작업 완료 후 Git Commit, 관련 Markdown, PlantUML, Blog Draft, Journal, Interview Notes 상태를 같이 보고해야 한다.

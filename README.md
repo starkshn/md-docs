@@ -127,3 +127,9 @@ Codex는 기능 구현 시 항상 공부한 개념, 강의 구조 분석, 우리
 Notion `Unity Project A-Z` 페이지에 붙여 넣어 사용할 수 있는 운영 템플릿이다.
 
 - [UnityProjectAZ_NotionTemplate.md](notion/UnityProjectAZ_NotionTemplate.md)
+
+## Codex Notion Operation Rules
+
+Codex가 완료한 작업, 핵심 코드 요약, 기술 블로그 링크, 개발일지, 기능 완료 Gate를 Notion에서 추적하기 위한 운영 규칙이다.
+
+- [CodexNotionOperationRules.md](notion/CodexNotionOperationRules.md)

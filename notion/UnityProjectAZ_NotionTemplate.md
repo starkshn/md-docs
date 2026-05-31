@@ -555,3 +555,204 @@ Interview Notes
 | Shader Showcase |  |  |  | Todo |
 | Optimization |  |  |  | Todo |
 | DX11 -> Unity Mapping |  |  |  | Todo |
+
+---
+
+## 15. Codex Completion Tracker
+
+> Codex와 함께 작업하면서 실제로 완료된 항목은 반드시 체크한다. 완료 기준은 “파일 생성”만이 아니라 Git Commit, 문서 링크, 필요 시 PlantUML, 블로그 초안, 개발일지까지 연결된 상태다.
+
+| 날짜 | 작업 항목 | 완료 | Git Commit | 관련 Markdown | 관련 PlantUML | 관련 Blog Draft | 관련 Journal | 비고 |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 2026-05-31 | 기술 포트폴리오 문서 저장소 생성 | ☑ | `a0f6342` | `README.md` |  |  |  | 중앙 docs repo 생성 |
+| 2026-05-31 | Codex 세션 전달 노트 생성 | ☑ | `0128bf2` | `CODEX_SESSION_NOTES.md` |  |  |  | 다른 세션 인수인계용 |
+| 2026-05-31 | PlantUML 한글 라벨 적용 | ☑ | `93eea93` |  | `shared/uml/*.puml` |  |  | 클래스/변수명 영어 유지 |
+| 2026-05-31 | MVP 범위 재정의 | ☑ | `b0176c4` | `projects/unity-technical-showcase/mvp/MvpScopeStrategy.md` | `MvpPriorityStructure.puml` |  |  | MVP 1/2/3 분리 |
+| 2026-05-31 | Feature Toggle / Before-After 구조 추가 | ☑ | `95e53af` | `projects/unity-technical-showcase/feature-toggle/*.md` | `feature-toggle/uml/*.puml` |  |  | 공통 모듈 구조 |
+| 2026-05-31 | GPT 평가 요청 문서 생성 | ☑ | `f244663` | `GPT_EVALUATION_REQUEST.md` |  |  |  | GPT 피드백용 |
+| 2026-05-31 | 학습 기반 개발 사이클 추가 | ☑ | `4b7cb37` | `workflow/*.md` |  |  |  | Blog/Notion/Interview 강제 |
+| 2026-05-31 | KPI / Backlog / Risk / Recruiter Mode 추가 | ☑ | `5187b73` | `strategy/*.md` |  |  |  | 전략 계층 추가 |
+| 2026-05-31 | 전체 마스터 플랜 PlantUML 생성 | ☑ | `66cf663` | `README.md`, `DiagramSourceMap.md` | `shared/uml/PortfolioMasterPlan.puml` |  |  | 전체 구조 한눈에 보기 |
+| 2026-05-31 | 계획 체크포인트 저장 | ☑ | `76fb0b2` | `CODEX_SESSION_NOTES.md` |  |  |  | `/save-md` |
+| 2026-05-31 | Notion Workspace Template 생성 | ☑ | `bbf69e3` | `notion/UnityProjectAZ_NotionTemplate.md` |  |  |  | 이 페이지 템플릿 |
+
+### Codex 완료 체크 규칙
+
+- Codex가 파일을 만들었으면 `완료`에 바로 체크하지 않는다.
+- Git Commit이 끝나야 `완료` 체크 가능하다.
+- 문서 작업이면 관련 Markdown 링크를 반드시 남긴다.
+- UML 작업이면 관련 PlantUML 링크를 반드시 남긴다.
+- 기능 구현 작업이면 핵심 코드 요약과 검증 결과를 반드시 남긴다.
+- 블로그로 쓸 가치가 있으면 Blog Draft 링크 또는 제목 후보를 남긴다.
+
+---
+
+## 16. Core Code Summary Tracker
+
+> 특정 기능의 핵심 코드는 여기에 요약한다. 면접관에게 설명할 때 “어디를 보면 되는지”를 빠르게 찾기 위한 표다.
+
+| 기능 | 핵심 코드 / 파일 | 역할 | 핵심 설계 포인트 | 관련 문서 | 면접 설명 포인트 |
+| --- | --- | --- | --- | --- | --- |
+| Feature Toggle | `IFeatureModule`, `FeatureToggleManager` | 기능 모듈 생명주기 제어 | 모든 기능을 ON/OFF 가능한 독립 모듈로 통합 | `FeatureToggleArchitecture.md` | 기능 나열이 아니라 공통 생명주기 설계 |
+| Before/After Comparison | `ComparisonViewSystem`, `RenderTargetController` | 적용 전후 비교 | RenderTexture 기반 시각 비교 | `BeforeAfterComparisonSystem.md` | 기술 변화가 실행 화면에서 보이게 함 |
+| Skill System | `SkillDefinitionSO`, `SkillFactory`, `SkillInstance` | Runtime Skill Assembly | 강의 구조를 포트폴리오 구조로 재설계 | `InflearnSkillSystemAdaptation.md` | 따라치기가 아니라 재설계 |
+| Skill Tool | `SkillEditorPanel`, `SkillValidationPanel` | 스킬 데이터 편집/검증 | Tool UX와 Validation | `ShowcaseControlPanelDesign.md` | 기획자/툴 관점 고려 |
+| Master Plan | `PortfolioMasterPlan.puml` | 전체 구조 요약 | 전략, 사이클, MVP, 산출물 연결 | `PortfolioMasterPlan.puml` | 프로젝트 관리 능력 증명 |
+
+### 핵심 코드 요약 작성 템플릿
+
+```markdown
+## Core Code Summary - Feature Name
+
+### 핵심 파일
+
+- 
+
+### 이 코드가 해결하는 문제
+
+
+### 핵심 클래스 / 인터페이스
+
+| 이름 | 역할 | 의존성 |
+| --- | --- | --- |
+|  |  |  |
+
+### 핵심 흐름
+
+```text
+
+```
+
+### 설계 선택 이유
+
+
+### 일반 Unity 포트폴리오와의 차별점
+
+
+### 면접에서 볼 코드 위치
+
+- 
+```
+
+---
+
+## 17. Technical Blog Link Tracker
+
+> 블로그는 구현 후 몰아서 쓰는 것이 아니라, 개발 중 초안 링크와 게시 링크를 계속 추적한다.
+
+| 단계 | 글 제목 | 상태 | 관련 기능 | 관련 Markdown | Tistory 링크 | 비고 |
+| --- | --- | --- | --- | --- | --- | --- |
+| 기반 설계 | Unity 기술 포트폴리오를 왜 게임이 아니라 시스템 쇼케이스로 만들었는가 | Draft | Architecture | `PortfolioStudyMasterPlanForGPT.md` |  |  |
+| 모듈화 | 왜 모든 기능을 Feature Module로 설계했는가 | Draft | Feature Toggle | `FeatureToggleArchitecture.md` |  |  |
+| 비교 시스템 | Before / After Comparison Framework 설계 | Draft | Comparison | `BeforeAfterComparisonSystem.md` |  |  |
+| 강의 재설계 | 모듈형 스킬 시스템 강의 구조를 포트폴리오 구조로 바꾸기 | Draft | Skill System | `InflearnSkillSystemAdaptation.md` |  |  |
+| 프로젝트 관리 | 기술 포트폴리오 KPI와 Risk Log를 만든 이유 | Draft | Strategy | `PortfolioKpiSystem.md`, `PortfolioRiskLog.md` |  |  |
+| DX11 연결 | DX11 엔진 경험을 Unity 포트폴리오로 연결하기 | Draft | DX11 Mapping | `DX11ToUnityMapping.md` |  |  |
+
+### Blog 상태 값
+
+- Idea: 주제만 있음
+- Draft: 초안 작성 중
+- Review: 게시 전 검토
+- Published: Tistory 게시 완료
+- Update Needed: 구현 변경으로 수정 필요
+
+---
+
+## 18. Development Log Index
+
+> 개발일지는 일자별로 작성하되, 여기서 전체 목록을 관리한다.
+
+| 날짜 | 주요 작업 | 배운 개념 | Git Commit | 관련 Feature | Journal 링크 | Blog 후보 |
+| --- | --- | --- | --- | --- | --- | --- |
+| 2026-05-31 | 포트폴리오 문서 구조 설계 | 문서화 전략, PlantUML, MVP 분리 | `a0f6342` ~ `bbf69e3` | Planning |  | 기반 설계 글 |
+
+### Journal 작성 규칙
+
+- Codex가 작업한 날은 반드시 Development Log Index에 한 줄을 추가한다.
+- 구현 작업이면 핵심 코드 요약을 추가한다.
+- 설계 작업이면 관련 Markdown / PlantUML 링크를 추가한다.
+- 블로그 가치가 있으면 Blog 후보에 제목을 적는다.
+- Git Commit이 있으면 Commit 해시를 적는다.
+
+---
+
+## 19. Feature Completion Gate
+
+> 기능 완료 전 마지막 확인용 Gate다.
+
+| Gate | 질문 | 통과 여부 | 근거 링크 |
+| --- | --- | --- | --- |
+| Differentiation | 일반 Unity 포트폴리오와 비교해 차별점이 명확한가? | ☐ |  |
+| KPI | KPI Level이 정의되어 있는가? | ☐ |  |
+| Backlog | Must/Should/Could/Won't 위치가 명확한가? | ☐ |  |
+| Code | 핵심 코드가 구현되었는가? | ☐ |  |
+| Verification | 검증 결과가 있는가? | ☐ |  |
+| Git | 설명 가능한 기술 단위로 커밋했는가? | ☐ |  |
+| Docs | Markdown 문서가 있는가? | ☐ |  |
+| UML | PlantUML이 있는가? | ☐ |  |
+| Blog | Blog Draft 또는 링크가 있는가? | ☐ |  |
+| Journal | Notion 개발일지가 있는가? | ☐ |  |
+| Interview | 1분/3분 면접 설명이 있는가? | ☐ |  |
+| Demo | GIF 또는 영상 계획이 있는가? | ☐ |  |
+
+---
+
+## 20. Codex Work Result Template
+
+> Codex가 작업을 끝낸 뒤 Notion에 남겨야 하는 요약 형식이다.
+
+```markdown
+# Codex Work Result - YYYY-MM-DD
+
+## 작업 요약
+
+
+## 완료 체크
+
+- [ ] 구현
+- [ ] 검증
+- [ ] Git Commit
+- [ ] Markdown
+- [ ] PlantUML
+- [ ] Blog Draft
+- [ ] Notion Journal
+- [ ] Interview Notes
+
+## 생성 / 수정 파일
+
+| 파일 | 역할 |
+| --- | --- |
+|  |  |
+
+## 핵심 코드 요약
+
+
+## 배운 개념
+
+
+## 차별화 포인트
+
+```text
+이 작업이 일반 Unity 포트폴리오와 비교해서 만드는 차별성은 무엇인가?
+```
+
+
+## 기술 블로그 후보
+
+- 제목:
+- 핵심 메시지:
+- 관련 문서:
+
+## 면접 설명 포인트
+
+### 1분 설명
+
+
+### 3분 설명
+
+
+## 다음 작업
+
+- [ ] 
+```
