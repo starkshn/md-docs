@@ -250,3 +250,17 @@ otion/CodexNotionOperationRules.md 신규 생성
 - `projects/unity-technical-showcase/framework/*.md`
 - `projects/unity-technical-showcase/framework/uml/*.puml`
 - `docs/conventions/*.md`
+
+## 2026-05-31 19:16:23 +09:00 - /save-md naming governance checkpoint
+
+사용자가 /save-md를 요청했다. NY 네이밍 컨벤션과 모듈 거버넌스 적용 상태를 CODEX_WORK_MEMORY.md에 저장했다.
+
+현재 최종 네이밍 규칙:
+
+- Class: `NY_Category_Role`
+- Interface: `INY_Module`
+- Enum: `ENY_ModuleState`
+- Event: `NYE_ModuleEnabled`
+- ScriptableObject: `NY_Skill_DefinitionSO`
+
+다음 작업 시 새 기능 추가 전 Architecture Governance Report를 먼저 작성해야 한다.
