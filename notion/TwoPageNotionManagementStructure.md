@@ -94,3 +94,47 @@ Development 관련:
 - `Unity Project A-Z - Schedule Dashboard` 페이지 생성 완료
 - 기존 `UnityProjectAZ_NotionTemplate` 페이지 상단에 Navigation / Page Role 추가 완료
 - 두 페이지 간 링크 연결 완료
+
+## Timeline Dashboard Addendum
+
+The Schedule Dashboard now owns the timeline database.
+
+Timeline Database:
+
+```text
+Portfolio Development Timeline
+https://www.notion.so/fa259baed449460693fcdfbd2d0dc4b2
+```
+
+Views:
+
+- `Development Timeline`: visual timeline for when each development item started and ended
+- `Timeline Table`: editable table for status, phase, links, commits, and KPI level
+- `By Feature`: board grouped by feature area
+
+Operating rule:
+
+```text
+Schedule Dashboard = when and what is progressing
+Development Hub = why it matters and how it was built
+Timeline item = clickable bridge between schedule and full development context
+```
+
+Every meaningful development item must be added to the timeline database with:
+
+- Task
+- Feature
+- Phase
+- Status
+- Start
+- End
+- Summary
+
+When available, also connect:
+
+- Docs
+- PlantUML
+- Git Commit
+- Calendar Event
+- Blog Draft
+- Interview Notes

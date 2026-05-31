@@ -364,3 +364,30 @@ otion/CodexNotionOperationRules.md 신규 생성
 - URL: `https://www.notion.so/3714bccaf9eb81cabf9edec06dd3a6da`
 - 기존 페이지 상단에 Navigation / Page Role 추가
 - 로컬 문서 추가: `notion/TwoPageNotionManagementStructure.md`
+
+## 2026-05-31 22:05:00 +09:00 notion development timeline dashboard
+
+Created a Notion timeline database to make the portfolio development process visible at a glance.
+
+- Schedule Dashboard: https://www.notion.so/3714bccaf9eb81cabf9edec06dd3a6da
+- Development Hub: https://www.notion.so/3714bccaf9eb8020bc85e39638c56d7b
+- Timeline Database: https://www.notion.so/fa259baed449460693fcdfbd2d0dc4b2
+- Data Source: collection://99f867b4-09cd-43c3-9f47-0b5e86cde399
+
+Views:
+
+- Development Timeline: timeline view by Start -> End
+- Timeline Table: editable management table
+- By Feature: board grouped by feature category
+
+Initial completed records added:
+
+- Portfolio Documentation Foundation
+- MVP Scope and Learning Workflow
+- Feature Toggle and Before/After Architecture
+- NY Module Naming Governance
+- Selective Lua Scripting Layer
+- Google Calendar and Notion Schedule Workflow
+- Portfolio Automation Strategy
+
+Rule: every meaningful development item must be added as a timeline record and linked to docs, PlantUML, commits, blog drafts, and interview notes when available.
