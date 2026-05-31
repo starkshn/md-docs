@@ -1,4 +1,50 @@
-﻿# Unity Technical Showcase Portfolio Study Master Plan
+﻿# Important MVP Scope Update
+
+The full direction is valid, but the first release must be narrowed.
+
+## MVP 1
+
+- Modular Skill System
+- Skill Editor
+- Technical Showcase Scene
+- Markdown Docs
+- PlantUML
+
+## MVP 2
+
+- Animation Tool
+- Animation Event and Skill integration
+- Shader Showcase
+
+## MVP 3
+
+- Optimization Showcase
+- Rendering Debug View
+- Tistory Blog Series polish
+
+Rule:
+
+Do not try to complete every planned system at once. The first complete portfolio milestone is `Modular Skill System + Skill Editor + Technical Showcase Scene`.
+
+Each feature must use this folder template:
+
+```text
+<feature-name>/
+  00_README.md
+  01_Concept.md
+  02_MiniExperiment.md
+  03_Architecture.md
+  04_Implementation.md
+  05_BlogDraft.md
+  06_Interview.md
+  07_BeforeAfter.md
+  uml/
+```
+
+Every feature must include Before / After proof.
+
+---
+# Unity Technical Showcase Portfolio Study Master Plan
 
 이 문서는 GPT에게 전달하기 위한 단일 마스터 문서다. 목적은 Unity 포트폴리오를 만들면서 어떤 개념을 어떤 순서로 공부하고, 어떤 미니 실험을 거쳐, 어떻게 구현/문서화/블로그화할지 요약하는 것이다.
 
@@ -597,5 +643,6 @@ Docs --> BlogSeries : 블로그 원문 소스로 재사용
 - 각 기능마다 공부할 개념, 미니 실험, 구현 계획, 문서화 계획, 블로그 글 주제, 면접 설명 포인트를 정리해줘.
 - 전체 개발 기간과 주간 워크플로우도 현실적으로 제안해줘.
 ```
+
 
 

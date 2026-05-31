@@ -43,7 +43,7 @@ technical-portfolio-docs/
 - [Common Engine DLL](projects/common-engine-dll/EngineArchitecture.md)
 - [Unity Technical Showcase](projects/unity-technical-showcase/ArchitectureDesign.md)
 
-## Workflow
+## MVP First Release\n\n- [MVP Scope Strategy](projects/unity-technical-showcase/mvp/MvpScopeStrategy.md)\n- [Technical Showcase Scene Design](projects/unity-technical-showcase/showcase-scene/ShowcaseSceneDesign.md)\n- [Before / After Rule](projects/unity-technical-showcase/showcase-scene/BeforeAfterRule.md)\n- [Feature Documentation Template](projects/unity-technical-showcase/feature-template/FeatureDocumentationTemplate.md)\n\n## Workflow
 
 - [Documentation Workflow](workflow/Workflow.md)
 - [Blog and Portfolio Publishing Workflow](workflow/BlogPortfolioPublishing.md)
@@ -55,3 +55,4 @@ technical-portfolio-docs/
 3. Keep each PlantUML file beside the project document it belongs to.
 4. Use `shared/uml` only for duplicated or cross-project diagrams.
 5. Link documents with relative Markdown links so they can be reused in GitHub, a static blog, or a portfolio website.
+
