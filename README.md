@@ -133,3 +133,31 @@ Notion `Unity Project A-Z` 페이지에 붙여 넣어 사용할 수 있는 운�
 Codex가 완료한 작업, 핵심 코드 요약, 기술 블로그 링크, 개발일지, 기능 완료 Gate를 Notion에서 추적하기 위한 운영 규칙이다.
 
 - [CodexNotionOperationRules.md](notion/CodexNotionOperationRules.md)
+
+## Modular Portfolio Framework / Naming Governance
+
+Unity Technical Showcase의 모든 기능은 `NY Core Framework -> NY Module Hub -> Category Modules -> Feature Modules -> Tool Modules` 구조를 따른다.
+
+핵심 문서:
+
+- [ModularPortfolioFramework](projects/unity-technical-showcase/framework/ModularPortfolioFramework.md)
+- [ModuleGovernanceSystem](projects/unity-technical-showcase/framework/ModuleGovernanceSystem.md)
+- [ModuleNamingConvention](projects/unity-technical-showcase/framework/ModuleNamingConvention.md)
+- [ModuleAssemblyDefinitionPlan](projects/unity-technical-showcase/framework/ModuleAssemblyDefinitionPlan.md)
+- [ModuleDashboardDesign](projects/unity-technical-showcase/framework/ModuleDashboardDesign.md)
+
+컨벤션 문서:
+
+- [NamingConvention](docs/conventions/NamingConvention.md)
+- [FolderConvention](docs/conventions/FolderConvention.md)
+- [AssemblyConvention](docs/conventions/AssemblyConvention.md)
+- [GitConvention](docs/conventions/GitConvention.md)
+- [BlogConvention](docs/conventions/BlogConvention.md)
+
+최종 네이밍 규칙:
+
+```text
+NY_Category_Role
+```
+
+예시: `NY_Core_ModuleHub`, `NY_Skill_SystemModule`, `NY_Skill_DefinitionSO`, `NY_Tool_ModuleDashboard`

@@ -742,3 +742,20 @@ Codex는 매 작업마다 다음을 정리해야 한다.
 ```
 
 이 질문에 답하지 못하면 기능을 추가하지 않는다.
+
+# 추가 지침: NY Modular Portfolio Framework / Naming Governance
+
+최종 구조는 `NY Core Framework -> NY Module Hub -> Category Modules -> Feature Modules -> Tool Modules -> Before/After Comparison -> Metrics -> Docs/Blog/Interview Notes`를 따른다.
+
+최종 네이밍 규칙은 `NY_Category_Role`이다.
+
+Codex는 새 클래스를 만들기 전에 다음 문서를 반드시 확인한다.
+
+- `docs/conventions/NamingConvention.md`
+- `docs/conventions/FolderConvention.md`
+- `docs/conventions/AssemblyConvention.md`
+- `projects/unity-technical-showcase/framework/ModuleGovernanceSystem.md`
+
+새로운 기능을 추가하기 전에는 Architecture Governance Report를 먼저 작성한다.
+
+필수 검토 항목: Backlog 위치, KPI Level, ModuleHub 등록 가능 여부, Assembly 영향, 기존 Feature와 결합도, Before/After 가능성, Metrics 가능성, Blog/Interview 가치, 승인 또는 보류 판단.

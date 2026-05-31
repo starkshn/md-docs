@@ -232,3 +232,21 @@ otion/UnityProjectAZ_NotionTemplate.md에 Codex Completion Tracker 추가
 otion/CodexNotionOperationRules.md 신규 생성
 
 앞으로 Codex는 작업 완료 후 Git Commit, 관련 Markdown, PlantUML, Blog Draft, Journal, Interview Notes 상태를 같이 보고해야 한다.
+
+## 2026-05-31 19:10:25 +09:00 - NY Modular Framework / Naming Convention 추가
+
+첨부 텍스트를 분석해 네이밍 컨벤션과 모듈 거버넌스 문서를 추가했다.
+
+결정 사항:
+
+- 일반 C# PascalCase보다 프로젝트 검색성과 모듈 추적성을 우선한다.
+- 최종 클래스 네이밍은 `NY_Category_Role`을 사용한다.
+- 예: `NY_Core_ModuleHub`, `NY_Skill_SystemModule`, `NY_Skill_DefinitionSO`, `NY_Tool_ModuleDashboard`.
+- Interface는 `INY_Module`, Enum은 `ENY_ModuleState`, Event는 `NYE_ModuleEnabled` 형태를 사용한다.
+- 새 기능 추가 전 Architecture Governance Report를 작성한다.
+
+신규 문서:
+
+- `projects/unity-technical-showcase/framework/*.md`
+- `projects/unity-technical-showcase/framework/uml/*.puml`
+- `docs/conventions/*.md`

@@ -117,3 +117,11 @@ How does this feature differentiate this portfolio from a normal Unity portfolio
 ```
 
 If the feature cannot answer that question, do not add it. Keep server, DB, login, matchmaking, ECS, and DOTS out of scope for this portfolio unless the user explicitly changes the strategy.
+
+## NY Modular Portfolio Framework / Naming Governance
+
+Use the project-specific naming convention: `NY_Category_Role`.
+
+Examples: `NY_Core_ModuleHub`, `NY_Skill_SystemModule`, `NY_Skill_DefinitionSO`, `NY_Animation_PreviewModule`, `NY_Shader_DissolveModule`, `NY_Tool_ModuleDashboard`.
+
+This intentionally prioritizes searchability and module traceability over strict idiomatic C# PascalCase. Before adding a new class or feature, read the convention docs and create an Architecture Governance Report if the feature affects module boundaries, assembly references, or roadmap scope.

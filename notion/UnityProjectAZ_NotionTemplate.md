@@ -756,3 +756,39 @@ Interview Notes
 
 - [ ] 
 ```
+
+---
+
+## 21. Naming Convention / Architecture Governance
+
+### 최종 네이밍 규칙
+
+```text
+NY_Category_Role
+```
+
+| 타입 | 예시 | 의미 |
+| --- | --- | --- |
+| Core | `NY_Core_ModuleHub` | 전체 모듈 중앙 허브 |
+| Core | `NY_Core_ModuleRegistry` | 모듈 등록 정보 보관 |
+| Skill | `NY_Skill_SystemModule` | Skill Runtime Module |
+| Skill | `NY_Skill_DefinitionSO` | Skill ScriptableObject 데이터 |
+| Animation | `NY_Animation_PreviewModule` | Animation Preview Module |
+| Shader | `NY_Shader_DissolveModule` | Dissolve Shader Module |
+| Optimization | `NY_Optimization_PoolingModule` | Object Pooling Module |
+| RenderingDebug | `NY_RenderingDebug_DepthViewModule` | Depth Debug View Module |
+| Tool | `NY_Tool_ModuleDashboard` | 전체 모듈 제어 Tool |
+
+### 새 기능 추가 전 Architecture Governance 체크
+
+| 질문 | 체크 | 메모 |
+| --- | --- | --- |
+| Backlog 위치가 명확한가? | ☐ |  |
+| KPI Level 1~5가 정의됐는가? | ☐ |  |
+| `NY_Core_ModuleHub`에 등록 가능한가? | ☐ |  |
+| Assembly 참조 방향을 깨지 않는가? | ☐ |  |
+| 기존 Feature와 직접 결합하지 않는가? | ☐ |  |
+| Before/After 비교가 가능한가? | ☐ |  |
+| Metrics로 증명 가능한가? | ☐ |  |
+| Blog / Interview 가치가 있는가? | ☐ |  |
+| 일반 Unity 포트폴리오와의 차별점이 있는가? | ☐ |  |

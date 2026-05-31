@@ -65,11 +65,11 @@ package "MVP 3순위" as Mvp3 {
 }
 
 package "공통 아키텍처" as Architecture {
-  rectangle "IFeatureModule\n공통 생명주기" as IFeatureModule
-  rectangle "FeatureToggleManager\nON/OFF / 의존성 / 상태" as ToggleManager
-  rectangle "ComparisonViewSystem\nBefore/After RenderTexture" as ComparisonSystem
-  rectangle "ShowcaseControlPanel\n시연 대시보드" as ControlPanel
-  rectangle "ModuleMetricsProvider\nFPS / GC / DrawCall" as MetricsProvider
+  rectangle "INY_Module\\n공통 생명주기" as IFeatureModule
+  rectangle "NY_Core_ModuleHub\\nON/OFF / 의존성 / 상태" as ToggleManager
+  rectangle "NY_Comparison_ViewSystem\\nBefore/After RenderTexture" as ComparisonSystem
+  rectangle "NY_Tool_ModuleDashboard\\n시연 대시보드" as ControlPanel
+  rectangle "NY_Core_ModuleMetricsCenter\\nFPS / GC / DrawCall" as MetricsProvider
 }
 
 package "산출물" as Outputs {
@@ -120,10 +120,10 @@ Dashboard --> Backlog : 우선순위 조정
 Dashboard --> Risk : 리스크 갱신
 
 Mvp1 --> Architecture : 공통 구조 우선 적용
-SkillSystem --> FeatureToggle : 모듈 ON/OFF
+SkillSystem --> FeatureToggle : NY_Module로 ON/OFF
 SkillEditor --> ControlPanel : Tool UI 통합
 ShowcaseScene --> ControlPanel : 시연 중심 화면
-FeatureToggle --> ToggleManager : 중앙 제어
+FeatureToggle --> ToggleManager : ModuleHub 중앙 제어
 Comparison --> ComparisonSystem : 적용 전후 비교
 Metrics --> MetricsProvider : 성능 지표 수집
 
@@ -140,7 +140,7 @@ BlogPolish --> Tistory : 게시용 글 정리
 IFeatureModule --> ToggleManager : 등록 / 제어
 ToggleManager --> ComparisonSystem : Before/After 트리거
 ToggleManager --> MetricsProvider : 모듈별 Metrics
-ControlPanel --> ToggleManager : 사용자 조작
+ControlPanel --> ToggleManager : Dashboard 사용자 조작
 ControlPanel --> ComparisonSystem : View Mode 선택
 ControlPanel --> MetricsProvider : Metrics 표시
 
@@ -174,3 +174,4 @@ note bottom of Cycle
 end note
 
 @enduml
+

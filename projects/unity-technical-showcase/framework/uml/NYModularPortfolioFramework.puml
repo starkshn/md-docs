@@ -1,0 +1,70 @@
+﻿@startuml
+title NY Modular Portfolio Framework - 모듈형 포트폴리오 프레임워크
+
+package "NY Core Framework" {
+  interface INY_Module
+  interface INY_ToolModule
+  interface INY_ComparableModule
+
+  class NY_Core_ModuleHub
+  class NY_Core_ModuleRegistry
+  class NY_Core_ModuleController
+  class NY_Core_ModuleDependencyGraph
+  class NY_Core_ModuleMetricsCenter
+  class NY_Core_ModuleContext
+}
+
+package "Skill Modules" {
+  class NY_Skill_SystemModule
+  class NY_Skill_EditorModule
+  class NY_Skill_ValidationModule
+}
+
+package "Animation Modules" {
+  class NY_Animation_PreviewModule
+  class NY_Animation_BoneViewerModule
+  class NY_Animation_EventModule
+}
+
+package "Shader Modules" {
+  class NY_Shader_ShowcaseModule
+  class NY_Shader_DissolveModule
+  class NY_Shader_OutlineModule
+}
+
+package "Optimization Modules" {
+  class NY_Optimization_PoolingModule
+  class NY_Optimization_LODModule
+  class NY_Optimization_CullingModule
+}
+
+package "Rendering Debug Modules" {
+  class NY_RenderingDebug_RenderTargetComparisonModule
+  class NY_RenderingDebug_DepthViewModule
+  class NY_RenderingDebug_NormalViewModule
+}
+
+INY_Module <|.. NY_Skill_SystemModule
+INY_Module <|.. NY_Animation_PreviewModule
+INY_Module <|.. NY_Shader_ShowcaseModule
+INY_Module <|.. NY_Optimization_PoolingModule
+INY_Module <|.. NY_RenderingDebug_RenderTargetComparisonModule
+
+INY_ToolModule <|.. NY_Skill_EditorModule
+INY_ToolModule <|.. NY_Animation_BoneViewerModule
+
+INY_ComparableModule <|.. NY_Skill_SystemModule
+INY_ComparableModule <|.. NY_Shader_ShowcaseModule
+INY_ComparableModule <|.. NY_Optimization_PoolingModule
+INY_ComparableModule <|.. NY_RenderingDebug_RenderTargetComparisonModule
+
+NY_Core_ModuleHub --> NY_Core_ModuleRegistry : 등록 정보 조회
+NY_Core_ModuleHub --> NY_Core_ModuleController : 생명주기 제어
+NY_Core_ModuleHub --> NY_Core_ModuleDependencyGraph : 의존성 분석
+NY_Core_ModuleHub --> NY_Core_ModuleMetricsCenter : Metrics 수집
+NY_Core_ModuleController --> INY_Module : Enable / Disable / Reset
+NY_Core_ModuleRegistry --> INY_Module : 모듈 보관
+NY_Core_ModuleMetricsCenter --> INY_Module : 지표 수집
+NY_Core_ModuleContext --> NY_Core_ModuleHub : 공통 Context 제공
+
+@enduml

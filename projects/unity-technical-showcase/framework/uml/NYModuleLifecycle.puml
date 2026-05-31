@@ -1,0 +1,13 @@
+﻿@startuml
+title NY Module Lifecycle - 모듈 생명주기
+
+[*] --> Registered : 모듈 등록
+Registered --> Initialized : Initialize()
+Initialized --> Enabled : Enable()
+Enabled --> Running : Tick()
+Running --> Disabled : Disable()
+Disabled --> Enabled : Enable()
+Disabled --> Disposed : Dispose()
+Running --> Disposed : Dispose()
+
+@enduml

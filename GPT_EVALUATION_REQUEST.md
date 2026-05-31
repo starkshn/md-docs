@@ -578,3 +578,22 @@ Concept Study -> Architecture Design -> Mini Experiment -> Implementation -> Ver
 5. 30초 GIF / 3분 영상 / 10분 설명 영상 계획이 과하지 않은가?
 6. Recruiter Mode가 실제 면접/서류 평가에 도움이 되는가?
 7. “이 기능이 일반 Unity 포트폴리오와 비교해서 어떤 차별성을 만들고 있는가?”를 모든 기능의 최상위 질문으로 두는 것이 적절한가?
+
+---
+
+## 추가 평가 요청: NY Modular Portfolio Framework / Naming Convention
+
+프로젝트 네이밍과 모듈 거버넌스 기준을 추가했다.
+
+최종 네이밍은 일반 C# PascalCase보다 검색성과 모듈 추적성을 우선해 `NY_Category_Role` 구조를 사용한다.
+
+예시: `NY_Core_ModuleHub`, `NY_Skill_SystemModule`, `NY_Skill_DefinitionSO`, `NY_Animation_PreviewModule`, `NY_Shader_DissolveModule`, `NY_Tool_ModuleDashboard`.
+
+평가해줘:
+
+1. 포트폴리오 목적상 클래스명에 `_`를 허용하는 것이 타당한가?
+2. `NY_Category_Role` 구조가 검색성과 설명 가능성에 도움이 되는가?
+3. 일반 C# 컨벤션과 어긋나는 점이 면접에서 감점 요소가 될 수 있는가?
+4. `NY_Core_ModuleHub`, `NY_Core_ModuleRegistry`, `NY_Core_ModuleController` 분리가 과한가?
+5. Architecture Governance 프로세스가 기능 확장 억제에 도움이 되는가?
+6. 새 기능 추가 전 충돌/의존성 분석 보고서를 작성하게 하는 규칙이 현실적인가?

@@ -112,3 +112,20 @@ DX11 Framework의 Manager 구조와 유사하게 중앙 관리자가 모듈 생�
 ## 면접에서 설명할 포인트
 
 이 구조는 “기능을 많이 만들었다”가 아니라 “모든 기능을 동일한 생명주기와 제어 방식으로 통합했다”는 점을 보여준다. 특히 Unity 숙련도가 부족한 상태에서 시작하더라도, DX11 엔진 제작 경험을 Unity의 모듈형 아키텍처로 재해석했다는 설명이 가능하다.
+
+## NY 네이밍 적용 메모
+
+초기 문서의 `IFeatureModule`, `FeatureToggleManager`, `ModuleMetricsProvider` 개념은 최종 구현에서 다음 이름으로 사용한다.
+
+| 초기 개념명 | 최종 구현명 |
+| --- | --- |
+| `IFeatureModule` | `INY_Module` |
+| `IFeatureToolModule` | `INY_ToolModule` |
+| `IComparableModule` | `INY_ComparableModule` |
+| `FeatureToggleManager` | `NY_Core_ModuleHub` |
+| `ModuleRegistry` | `NY_Core_ModuleRegistry` |
+| `ModuleMetricsProvider` | `NY_Core_ModuleMetricsCenter` |
+| `ShowcaseControlPanel` | `NY_Tool_ModuleDashboard` |
+| `ComparisonViewSystem` | `NY_Comparison_ViewSystem` |
+
+최신 네이밍 규칙은 `docs/conventions/NamingConvention.md`와 `projects/unity-technical-showcase/framework/ModuleNamingConvention.md`를 따른다.

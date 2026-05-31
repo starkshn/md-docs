@@ -46,3 +46,10 @@ When a Markdown file changes:
 
 - Source: `shared/uml/PortfolioMasterPlan.puml`
 - Purpose: 전체 프로젝트 관리, 개발 사이클, 전략 계층, MVP 우선순위, 산출물 연결 구조를 한 장으로 요약한다.
+
+## NY Modular Portfolio Framework
+
+- Source: `projects/unity-technical-showcase/framework/uml/NYModularPortfolioFramework.puml`
+- Source: `projects/unity-technical-showcase/framework/uml/NYModuleLifecycle.puml`
+- Source: `projects/unity-technical-showcase/framework/uml/NYModuleDependencyGraph.puml`
+- Purpose: NY Core Framework, Module Hub, Module Registry, Tool Module, Comparable Module, Metrics 흐름을 정의한다.
