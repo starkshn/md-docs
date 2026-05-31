@@ -807,3 +807,42 @@ Calendar 일정이 변경되면 Notion Development Log, Weekly Review, Risk Log 
 - 해당 날짜에는 10분 메모, 일정 확인, 휴식만 허용한다.
 - Calendar에 개발 일정이 있으면 Buffer / Deep Work / Review 이후 시간으로 이동한다.
 - Notion에는 Patch Schedule / No Development Days 표로 관리한다.
+
+# 추가 지침: Portfolio Automation Strategy
+
+포트폴리오 개발 프로세스는 다음 3가지 자동화 운영 구조를 가진다.
+
+```text
+1. Architecture Governance Review
+2. Unity CI/CD Pipeline
+3. Weekly Technical Review
+```
+
+새 기능 구현 전에는 Architecture Governance Review를 수행한다.
+
+검토 항목:
+
+- 기존 구조와 충돌 여부
+- ModuleHub 등록 가능 여부
+- Dependency 영향
+- Assembly 영향
+- Tool UI 제어 가능 여부
+- Before/After 비교 가능 여부
+- Metrics 가능 여부
+- Blog 가치
+- Interview 가치
+
+기능 구현 후에는 Unity CI/CD 기준으로 Compile, Test, Build, Docs, UML 상태를 확인한다.
+
+매주 일요일에는 Weekly Technical Review를 수행한다.
+
+출력 항목:
+
+- Progress
+- Documentation Coverage
+- Blog Coverage
+- Interview Coverage
+- Technical Debt
+- Next Week Goals
+
+기능 구현만 되어 있고 Build, Documentation, PlantUML, Interview Notes가 없으면 완료로 보지 않는다.

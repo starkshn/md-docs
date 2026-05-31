@@ -642,3 +642,30 @@ Google Calendar와 Notion을 함께 사용하는 개발 일정 관리 방식을 
 1. 패치 전날/당일을 No Development Day로 두는 것이 현실적인가?
 2. 이 규칙이 장기 지속 가능성을 높이는가?
 3. 패치 일정이 자주 바뀔 때 Notion/Calendar에서 어떻게 관리하는 것이 좋은가?
+
+---
+
+## 추가 평가 요청: Portfolio Automation Strategy
+
+포트폴리오 품질 유지를 위해 3가지 자동화 운영 구조를 추가했다.
+
+1. Architecture Governance Review
+2. Unity CI/CD Pipeline
+3. Weekly Technical Review
+
+Notion에는 다음 관리판을 추가했다.
+
+- Portfolio Automation Dashboard
+- Portfolio Health Dashboard
+- Architecture Governance Review Log
+- Unity CI/CD Pipeline Status
+- CI/CD Failure Log
+- Weekly Technical Review Automation
+
+평가해줘:
+
+1. Architecture Governance Review를 새 기능 추가 전 필수로 두는 것이 현실적인가?
+2. Unity CI/CD를 포트폴리오에 넣는 것이 2~5년차 클라이언트 개발자 포트폴리오에서 강점이 되는가?
+3. Build/Test/Docs/UML 실패 시 기능 완료로 보지 않는 기준이 적절한가?
+4. Weekly Technical Review를 Notion + Calendar + GitHub 기준으로 운영하는 것이 과하지 않은가?
+5. 자동화가 개발 속도를 늦추지 않으면서 품질을 높이려면 어디까지 MVP에 포함해야 하는가?

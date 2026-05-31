@@ -177,3 +177,10 @@ Google Calendar는 실제 시간 블록을 관리하고, Notion은 작업 상태
 
 - [GoogleCalendarNotionScheduleSystem](notion/GoogleCalendarNotionScheduleSystem.md)
 - [GoogleCalendarNotionScheduleWorkflow](notion/GoogleCalendarNotionScheduleWorkflow.puml)
+
+## Portfolio Automation Strategy
+
+프로젝트 품질 관리를 위해 Architecture Governance Review, Unity CI/CD Pipeline, Weekly Technical Review를 운영한다.
+
+- [PortfolioAutomationStrategy](workflow/PortfolioAutomationStrategy.md)
+- [PortfolioAutomationWorkflow](workflow/PortfolioAutomationWorkflow.puml)

@@ -141,3 +141,13 @@ All Lua calls must go through `NY_Scripting_Gateway`, return `NY_Scripting_Resul
 Use Google Calendar for actual time blocks and Notion for work state, journals, outputs, and reviews. Calendar updates should be reflected in Notion Development Log or Weekly Review. Before changing calendar events, compare the plan against KPI, Backlog, Risk, and current Portfolio Dashboard unless the user gives a direct concrete update command.
 
 Patch week rule: do not schedule portfolio development on patch day or the day before patch day because overtime is highly likely. If portfolio events exist on those days, propose moving them to a buffer/deep-work/review slot and record the reason in Notion.
+
+## Portfolio Automation Strategy Rule
+
+Run three process-level automation checks as the project grows:
+
+1. Architecture Governance Review before adding new features.
+2. Unity CI/CD Pipeline after implementation to check compile, tests, build, docs, and UML.
+3. Weekly Technical Review every Sunday to summarize progress, documentation coverage, blog coverage, interview coverage, technical debt, and next goals.
+
+A feature is not complete if implementation exists but build/test/docs/UML/interview notes are missing.

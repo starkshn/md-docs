@@ -308,3 +308,24 @@ otion/CodexNotionOperationRules.md 신규 생성
 - 패치 전날/당일에는 구현, 긴 문서 작성, 고집중 작업 금지
 - 허용 작업은 10분 메모, 일정 확인, 휴식 정도로 제한
 - Calendar에서 해당 날짜에 Portfolio 일정이 있으면 Buffer / Deep Work / Review 이후로 이동 제안
+
+## 2026-05-31 - Portfolio Automation Strategy 추가
+
+사용자가 Architecture Governance Review, Unity CI/CD Pipeline, Weekly Technical Review를 포함한 자동화 전략을 제안하고, 현재 Notion 문서와 비교해 어떻게 관리하고 자동화할지 고려해달라고 요청했다.
+
+반영 내용:
+
+- `workflow/PortfolioAutomationStrategy.md` 추가
+- `workflow/PortfolioAutomationWorkflow.puml` 추가
+- Notion 템플릿에 `Portfolio Automation Dashboard` 추가
+- Architecture Governance Review Log 추가
+- Unity CI/CD Pipeline Status 추가
+- CI/CD Failure Log 추가
+- Weekly Technical Review Automation 추가
+- GPT/Claude/마스터 전달 문서에 자동화 전략 반영
+
+운영 기준:
+
+- 새 기능 구현 전: Architecture Governance Review
+- 기능 구현 후: Build / Test / Docs / UML / Interview Notes 확인
+- 매주 일요일: Weekly Technical Review

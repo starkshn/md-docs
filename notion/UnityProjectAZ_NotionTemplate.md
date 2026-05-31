@@ -922,3 +922,98 @@ NY_Skill_Instance -> NY_Scripting_Gateway -> NY_Scripting_LuaRuntime -> Lua Scri
 충돌되거나 과한 일정이 있으면 수정안을 제안하고, 내가 승인하면 Google Calendar를 수정해줘.
 Notion Development Log와 Weekly Review에도 반영해줘.
 ```
+
+---
+
+## 24. Portfolio Automation Dashboard
+
+> 포트폴리오 품질을 유지하기 위한 자동화 상태판이다. 기능 구현보다 우선순위는 낮지만, 프로젝트가 커질수록 품질을 지키는 핵심 장치다.
+
+### Automation Overview
+
+| Automation | 목적 | 현재 상태 | 다음 작업 | 연결 도구 |
+| --- | --- | --- | --- | --- |
+| Architecture Governance Review | 새 기능 추가 전 구조 영향 검토 | Ready | 기능 제안 시 Review Log 작성 | Codex / Notion |
+| Unity CI/CD Pipeline | Compile / Test / Build 품질 확인 | Planned | GitHub Actions 설계 | GitHub Actions / Unity |
+| Weekly Technical Review | 매주 진행률, 기술 부채, 블로그 후보 점검 | Ready | 일요일 Review 일정 등록 | Calendar / Notion / Codex |
+
+### Portfolio Health Dashboard
+
+| 항목 | 상태 | 기준 | 비고 |
+| --- | --- | --- | --- |
+| Progress Health | Unknown | KPI Level 기준 |  |
+| Documentation Coverage | Unknown | 구현 대비 Markdown / PlantUML |  |
+| Blog Coverage | Unknown | 기술 가치 있는 기능 대비 Blog Draft |  |
+| Interview Coverage | Unknown | 주요 기능 대비 1분/3분 설명 |  |
+| Build Health | Not Started | Unity Compile / Test / Build |  |
+| Schedule Health | Unknown | Calendar 계획 대비 완료율 |  |
+| Risk Health | Open | Risk Log 기준 |  |
+
+### Architecture Governance Review Log
+
+| 날짜 | 기능 아이디어 | Backlog 위치 | ModuleHub 영향 | Assembly 영향 | Comparison | Metrics | Blog Value | Interview Value | 결과 | 비고 |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+|  |  | Must/Should/Could/Won't | Low/Med/High | Low/Med/High | Yes/No | Yes/No | Low/Med/High | Low/Med/High | Approved/Conditional/Rejected |  |
+
+### Architecture Review Checklist
+
+| 영역 | 질문 | 체크 |
+| --- | --- | --- |
+| Architecture | 기존 구조와 충돌하는가? | ☐ |
+| Architecture | `NY_Core_ModuleHub`에 등록 가능한가? | ☐ |
+| Architecture | 카테고리가 적절한가? | ☐ |
+| Dependency | 다른 모듈과 강하게 결합되는가? | ☐ |
+| Dependency | 제거 시 문제가 발생하는가? | ☐ |
+| Tool | `NY_Tool_ModuleDashboard`에서 제어 가능한가? | ☐ |
+| Comparison | Before / After 비교가 가능한가? | ☐ |
+| Metrics | 측정 가능한 데이터가 있는가? | ☐ |
+| Blog | 기술 블로그 주제로 가치가 있는가? | ☐ |
+| Interview | 면접에서 설명 가능한가? | ☐ |
+
+### Unity CI/CD Pipeline Status
+
+| 항목 | 상태 | 마지막 결과 | 링크 / 메모 |
+| --- | --- | --- | --- |
+| GitHub Actions | Not Started |  |  |
+| Compile | Not Started |  |  |
+| Unit Test | Not Started |  |  |
+| Integration Test | Not Started |  |  |
+| Unity Build | Not Started |  |  |
+| Artifact Upload | Not Started |  |  |
+| Missing Docs Check | Not Started |  |  |
+| Missing UML Check | Not Started |  |  |
+
+### CI/CD Failure Log
+
+| 날짜 | 실패 유형 | 원인 | 수정 | 관련 Commit |
+| --- | --- | --- | --- | --- |
+|  | Build Failed / Test Failed / Missing Docs / Missing UML |  |  |  |
+
+### Weekly Technical Review Automation
+
+| 주차 | Progress | Docs Coverage | Blog Coverage | Interview Coverage | Technical Debt | Next Week Goals | Calendar 반영 |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+|  |  |  |  |  |  |  | ☐ |
+
+### Codex Automation Request Templates
+
+Architecture Review:
+
+```text
+새 기능 아이디어에 대해 Architecture Governance Review를 작성해줘.
+ModuleHub, Assembly, Dependency, Before/After, Metrics, Blog, Interview 관점으로 Approved / Conditional / Rejected 판단까지 내려줘.
+```
+
+Weekly Technical Review:
+
+```text
+이번 주 Git commit, Markdown, PlantUML, Notion Journal, Blog Draft, Interview Notes 상태를 기준으로 Weekly Technical Review를 작성해줘.
+기술 부채와 다음 주 목표도 정리하고 Calendar 수정이 필요하면 제안해줘.
+```
+
+CI/CD Review:
+
+```text
+Unity CI/CD Pipeline 관점에서 현재 프로젝트에 필요한 GitHub Actions, Unity Test Runner, Build, Artifact Upload 구조를 설계해줘.
+기능 완료 Gate에 Build/Test/Docs/UML 상태가 반영되도록 문서도 수정해줘.
+```

@@ -64,3 +64,8 @@ When a Markdown file changes:
 
 - Source: `notion/GoogleCalendarNotionScheduleWorkflow.puml`
 - Purpose: Google Calendar 일정, Notion 개발일지, Codex 일정 검토/수정 흐름을 정의한다.
+
+## Portfolio Automation Strategy
+
+- Source: `workflow/PortfolioAutomationWorkflow.puml`
+- Purpose: Architecture Governance Review, Unity CI/CD Pipeline, Weekly Technical Review 자동화 운영 흐름을 정의한다.
