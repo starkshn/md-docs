@@ -554,3 +554,27 @@ Concept Study -> Architecture Design -> Mini Experiment -> Implementation -> Ver
 5. Notion Development Journal과 Weekly Review를 병행하는 것이 실질적으로 도움이 되는가?
 6. 기능 완료 기준에 Blog Draft와 Interview Notes까지 넣는 것이 좋은가?
 7. 이 전략을 6개월 현실 버전으로 줄이면 어떤 항목을 남겨야 하는가?
+
+---
+
+## 추가 평가 요청: KPI / Backlog / Risk / Recruiter Mode
+
+추가 전략 문서를 반영했다.
+
+1. KPI System: 각 기능을 Level 1~5로 나누어 언제 성공으로 볼지 정의
+2. Feature Backlog: Must / Should / Could / Won't로 무한 확장 방지
+3. Risk Log: 범위 증가, Shader 과몰입, Tool 지연, 문서화 과부하 등 위험 관리
+4. Portfolio Dashboard: 매주 진행률과 다음 목표 확인
+5. DX11 -> Unity Mapping: DX11 경험을 Unity API와 구조로 연결
+6. Demo Video Plan: 30초 GIF, 3분 영상, 10분 설명 영상 계획
+7. Recruiter Mode: 면접관/채용 담당자 관점 요약
+
+평가해줘:
+
+1. KPI Level 1~5 방식이 현실적인가?
+2. Must / Should / Could / Won't 분류가 적절한가?
+3. Won't에서 서버, DB, 로그인, 매칭, ECS, DOTS를 제외한 판단이 맞는가?
+4. DX11 -> Unity Mapping 문서가 이 포트폴리오의 차별화 포인트로 충분히 강한가?
+5. 30초 GIF / 3분 영상 / 10분 설명 영상 계획이 과하지 않은가?
+6. Recruiter Mode가 실제 면접/서류 평가에 도움이 되는가?
+7. “이 기능이 일반 Unity 포트폴리오와 비교해서 어떤 차별성을 만들고 있는가?”를 모든 기능의 최상위 질문으로 두는 것이 적절한가?

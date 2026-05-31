@@ -169,3 +169,19 @@ Important decision:
 - Codex 역할을 Architect/Reviewer/Docs/UML/Blog/Interview Coach로 정의
 
 다음 세션은 workflow 폴더의 4개 신규 문서와 GPT_EVALUATION_REQUEST.md를 먼저 확인하면 된다.
+
+## 2026-05-31 15:19:06 +09:00 - KPI / Backlog / Risk / Recruiter Mode 추가
+
+사용자 피드백을 반영해 strategy 폴더를 추가했다.
+
+신규 문서:
+
+- strategy/PortfolioKpiSystem.md
+- strategy/FeatureBacklog.md
+- strategy/PortfolioRiskLog.md
+- strategy/PortfolioDashboard.md
+- strategy/DX11ToUnityMapping.md
+- strategy/DemoVideoPlan.md
+- strategy/RecruiterMode.md
+
+앞으로 모든 기능은 KPI, Backlog, Risk, DX11 매핑, 영상 계획, Recruiter Summary 기준을 통과해야 한다.

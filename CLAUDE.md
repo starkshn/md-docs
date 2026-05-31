@@ -105,3 +105,15 @@ Concept Study -> Architecture Design -> Mini Experiment -> Implementation -> Ver
 ```
 
 When continuing this project, always preserve the learning narrative: what was studied, why it matters, how Unity applies it, how it connects to DX11/Unreal experience, what was redesigned from lecture material, and why the final structure is stronger than a normal portfolio implementation.
+
+## Strategy Layer Rule
+
+Before adding or implementing any feature, check KPI, Backlog, Risk, DX11-to-Unity Mapping, Demo Video Plan, and Recruiter Mode.
+
+The highest-priority question is:
+
+```text
+How does this feature differentiate this portfolio from a normal Unity portfolio?
+```
+
+If the feature cannot answer that question, do not add it. Keep server, DB, login, matchmaking, ECS, and DOTS out of scope for this portfolio unless the user explicitly changes the strategy.

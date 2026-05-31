@@ -95,3 +95,23 @@ Interview Notes
 - [DifferentiationTrackingSystem](workflow/DifferentiationTrackingSystem.md)
 
 Codex는 기능 구현 시 항상 공부한 개념, 강의 구조 분석, 우리 구조와의 차이점, 변경 이유, 모듈화 포인트, 확장성 포인트, 기술 블로그 초안, 면접 설명 포인트, PlantUML, 최종 아키텍처 반영 내용을 함께 산출해야 한다.
+
+## Strategy Layer: KPI / Risk / Recruiter Mode
+
+포트폴리오가 무한 확장되지 않도록 전략 계층을 추가한다. 앞으로 기능을 추가하거나 완료 판단을 할 때는 아래 문서를 먼저 확인한다.
+
+- [PortfolioKpiSystem](strategy/PortfolioKpiSystem.md)
+- [FeatureBacklog](strategy/FeatureBacklog.md)
+- [PortfolioRiskLog](strategy/PortfolioRiskLog.md)
+- [PortfolioDashboard](strategy/PortfolioDashboard.md)
+- [DX11ToUnityMapping](strategy/DX11ToUnityMapping.md)
+- [DemoVideoPlan](strategy/DemoVideoPlan.md)
+- [RecruiterMode](strategy/RecruiterMode.md)
+
+최상위 질문:
+
+```text
+이 기능이 일반 Unity 포트폴리오와 비교해서 어떤 차별성을 만들고 있는가?
+```
+
+이 질문에 답하지 못하면 기능을 추가하지 않는다.
