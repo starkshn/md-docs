@@ -70,3 +70,52 @@ Important note:
 
 - Existing source/binary dirty changes in the DX11 repositories remain untouched.
 - Only documentation and PlantUML files were committed.
+
+## Session Update - MVP Scope And Showcase Feedback Applied
+
+Date: 2026-05-31
+
+User feedback:
+
+- Overall direction is good, but the scope is too wide.
+- First release should focus on Modular Skill System + Skill Editor + Technical Showcase Scene.
+- Documentation should enforce a fixed feature folder template.
+- Showcase Scene should be designed as a technical dashboard.
+- Every feature must include Before / After proof.
+
+Completed:
+
+- Added MVP priority strategy.
+- Added fixed feature documentation template.
+- Added Technical Showcase Scene dashboard design.
+- Added Before / After demonstration rule.
+- Created MVP 1 feature folders:
+  - `projects/unity-technical-showcase/skill-system/`
+  - `projects/unity-technical-showcase/skill-editor/`
+- Added template files:
+  - `00_README.md`
+  - `01_Concept.md`
+  - `02_MiniExperiment.md`
+  - `03_Architecture.md`
+  - `04_Implementation.md`
+  - `05_BlogDraft.md`
+  - `06_Interview.md`
+  - `07_BeforeAfter.md`
+  - `uml/`
+- Added PlantUML diagrams:
+  - `MvpPriorityStructure.puml`
+  - `ShowcaseDashboardLayout.puml`
+
+Commits:
+
+- `C:\kny\technical-portfolio-docs`
+  - `docs: refine MVP scope and feature documentation structure`
+- `C:\kny\Project\DirectX\GunFireReborn\DX11_FrameWork`
+  - `docs: refine MVP scope and showcase documentation`
+- `C:\kny\Project\DirectX\AnimTool`
+  - `docs: add Unity showcase MVP reference docs`
+
+Important decision:
+
+- MVP 1 is now limited to Skill System, Skill Editor, Technical Showcase Scene, Markdown Docs, and PlantUML.
+- Animation, Shader, Optimization, Rendering Debug View, and full blog polish are later phases.
