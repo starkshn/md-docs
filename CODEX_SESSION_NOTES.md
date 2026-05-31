@@ -296,3 +296,15 @@ otion/CodexNotionOperationRules.md 신규 생성
 - Notion 템플릿에 Calendar Schedule Dashboard 추가
 - `notion/GoogleCalendarNotionScheduleSystem.md` 추가
 - `notion/GoogleCalendarNotionScheduleWorkflow.puml` 추가
+
+## 2026-05-31 - Patch Week No Development Rule 추가
+
+사용자가 패치 당일과 패치 전날은 야근 가능성이 높으므로 개발하지 않는 규칙을 추가하자고 요청했다.
+
+반영 내용:
+
+- Google Calendar + Notion 일정 관리 문서에 Patch Week Rule 추가
+- Notion 템플릿에 Patch Schedule / No Development Days 표 추가
+- 패치 전날/당일에는 구현, 긴 문서 작성, 고집중 작업 금지
+- 허용 작업은 10분 메모, 일정 확인, 휴식 정도로 제한
+- Calendar에서 해당 날짜에 Portfolio 일정이 있으면 Buffer / Deep Work / Review 이후로 이동 제안

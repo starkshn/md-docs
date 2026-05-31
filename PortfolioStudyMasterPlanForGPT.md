@@ -799,3 +799,11 @@ Google Calendar와 Notion은 역할을 분리한다.
 - 격주 일요일: Blog Draft Block
 
 Calendar 일정이 변경되면 Notion Development Log, Weekly Review, Risk Log 중 관련 위치에 반영한다.
+
+패치 주간 규칙:
+
+- 패치 전날과 패치 당일은 포트폴리오 개발 일정을 잡지 않는다.
+- 이유는 야근 가능성이 높고 퇴근 시간이 불확실하기 때문이다.
+- 해당 날짜에는 10분 메모, 일정 확인, 휴식만 허용한다.
+- Calendar에 개발 일정이 있으면 Buffer / Deep Work / Review 이후 시간으로 이동한다.
+- Notion에는 Patch Schedule / No Development Days 표로 관리한다.

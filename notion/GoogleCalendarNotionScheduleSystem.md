@@ -16,6 +16,7 @@ Unity Technical Showcase 개발 일정은 Google Calendar와 Notion을 함께 �
 - Notion은 “무엇을 왜 했고 어떤 산출물이 남았는가”를 관리한다.
 - Codex는 Calendar 일정을 보고 현재 계획이 현실적인지 검토한다.
 - 일정이 밀리면 Calendar를 수정하고, Notion의 Risk / Weekly Review에도 반영한다.
+- 패치 당일과 패치 전날은 개발 일정을 잡지 않는다. 야근 가능성이 높기 때문이다.
 
 ## Calendar Event Naming
 
@@ -61,6 +62,80 @@ Google Calendar 일정 이름은 아래 형식을 따른다.
 | 토 | Deep Work | 구현 집중 |
 | 일 | Weekly Review / Blog Draft | 회고와 블로그 초안 |
 
+## Patch Week Rule
+
+패치 일정이 있는 주는 일반 주간 계획보다 패치 규칙을 우선한다.
+
+### No Development Day
+
+아래 날짜에는 포트폴리오 개발 일정을 잡지 않는다.
+
+```text
+Patch Day - 1
+Patch Day
+```
+
+이유:
+
+- 야근 가능성이 높다.
+- 퇴근 시간이 불확실하다.
+- 집중 개발보다 휴식/회복이 더 중요하다.
+- 무리해서 일정을 잡으면 주간 계획 전체가 밀린다.
+
+### 허용되는 작업
+
+패치 전날/당일에는 아래 정도만 허용한다.
+
+- 10분 이내 메모 정리
+- 다음 작업 아이디어 기록
+- Calendar / Notion 일정 확인
+- 휴식
+
+### 금지되는 작업
+
+- 새로운 기능 구현
+- 긴 문서 작성
+- Shader / Animation / Tool 같은 고집중 작업
+- 일정상 반드시 끝내야 하는 작업 배치
+
+## Patch Schedule Table
+
+Notion에는 패치 일정을 직접 수정할 수 있는 표를 둔다.
+
+| Patch Name | Patch Date | Patch -1 No Dev | Patch Day No Dev | Resume Date | 비고 |
+| --- | --- | --- | --- | --- | --- |
+|  |  | ☐ | ☐ |  |  |
+
+## Patch Week Calendar Rule
+
+Google Calendar에서 패치 일정이 확인되면 Codex는 다음을 수행한다.
+
+1. Patch Day를 확인한다.
+2. Patch Day - 1과 Patch Day에 Portfolio 개발 일정이 있는지 확인한다.
+3. 해당 날짜에 개발 일정이 있으면 이동 후보를 제안한다.
+4. 이동 후보는 가장 가까운 금요일 Buffer, 토요일 Deep Work, 일요일 Review 이후로 잡는다.
+5. Notion의 Calendar Changes와 Risk Log에 변경 사유를 남긴다.
+
+### Calendar Event Naming
+
+패치 일정은 가능하면 아래 이름을 사용한다.
+
+```text
+[Work][Patch] Patch Name
+```
+
+패치 전날 No Development Block:
+
+```text
+[Portfolio][NoDev] Patch -1 Buffer
+```
+
+패치 당일 No Development Block:
+
+```text
+[Portfolio][NoDev] Patch Day Buffer
+```
+
 ## Calendar ↔ Notion Sync Rule
 
 | Calendar 변경 | Notion 반영 |
@@ -70,6 +145,7 @@ Google Calendar 일정 이름은 아래 형식을 따른다.
 | 일정 삭제 | Backlog 또는 Won't 사유 확인 |
 | 일정 추가 | Backlog 위치와 KPI Level 확인 |
 | 주간 계획 변경 | Current Week Plan 갱신 |
+| 패치 전날/당일 개발 일정 발견 | No Development Day 규칙에 따라 이동 |
 
 ## Codex Calendar Review Flow
 

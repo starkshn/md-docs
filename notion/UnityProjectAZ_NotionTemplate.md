@@ -862,6 +862,31 @@ NY_Skill_Instance -> NY_Scripting_Gateway -> NY_Scripting_LuaRuntime -> Lua Scri
 | 일정 완료 | Development Log Index에 반영 |
 | 일정 연기 | Risk Log 또는 Weekly Review에 사유 기록 |
 | 일정 추가 | Backlog 위치와 KPI Level 확인 |
+| 패치 전날/당일 | 개발 일정 금지, No Development Day 처리 |
+
+### Patch Schedule / No Development Days
+
+> 패치 전날과 패치 당일은 야근 가능성이 높으므로 개발 일정을 잡지 않는다. 이 표는 직접 수정해서 관리한다.
+
+| Patch Name | Patch Date | Patch -1 No Dev | Patch Day No Dev | Resume Date | Calendar 반영 | 비고 |
+| --- | --- | --- | --- | --- | --- | --- |
+|  |  | ☐ | ☐ |  | ☐ |  |
+
+### Patch Week Rule
+
+| 상황 | 처리 |
+| --- | --- |
+| Patch Day - 1에 개발 일정 있음 | 다른 날로 이동 |
+| Patch Day에 개발 일정 있음 | 다른 날로 이동 |
+| Patch Day - 1 / Patch Day에 가능한 작업 | 10분 메모, 일정 확인, 휴식 |
+| 금지 작업 | 구현, 긴 문서 작성, Shader/Animation/Tool 고집중 작업 |
+
+### No Development Calendar Blocks
+
+| 이름 | 용도 |
+| --- | --- |
+| `[Portfolio][NoDev] Patch -1 Buffer` | 패치 전날 개발 금지 |
+| `[Portfolio][NoDev] Patch Day Buffer` | 패치 당일 개발 금지 |
 
 ### This Week Calendar Plan
 

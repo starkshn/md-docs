@@ -139,3 +139,5 @@ All Lua calls must go through `NY_Scripting_Gateway`, return `NY_Scripting_Resul
 ## Google Calendar + Notion Schedule Rule
 
 Use Google Calendar for actual time blocks and Notion for work state, journals, outputs, and reviews. Calendar updates should be reflected in Notion Development Log or Weekly Review. Before changing calendar events, compare the plan against KPI, Backlog, Risk, and current Portfolio Dashboard unless the user gives a direct concrete update command.
+
+Patch week rule: do not schedule portfolio development on patch day or the day before patch day because overtime is highly likely. If portfolio events exist on those days, propose moving them to a buffer/deep-work/review slot and record the reason in Notion.
