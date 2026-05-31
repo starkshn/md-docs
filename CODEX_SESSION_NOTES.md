@@ -135,3 +135,21 @@ Important decision:
 - `projects/unity-technical-showcase/feature-toggle/`
 
 다음 세션에서 이 폴더와 `PortfolioStudyMasterPlanForGPT.md`를 먼저 읽으면 전체 설계 방향을 빠르게 파악할 수 있다.
+
+## 2026-05-31 15:11:26 +09:00 - /save-md 및 GPT 평가 요청 문서 생성
+
+사용자가 /save-md를 요청했다. 현재 Unity Technical Showcase 포트폴리오 설계를 GPT에게 평가받을 수 있도록 GPT_EVALUATION_REQUEST.md를 생성했다.
+
+주요 평가 요청 축:
+
+- 2~5년차 게임 클라이언트 포트폴리오 경쟁력
+- MVP 1순위 현실성
+- Feature Toggle / Before-After 구조의 적절성
+- Skill System / Skill Editor 우선순위
+- Unity 숙련도 부족 상태에서의 학습 로드맵
+- 면접 시연 흐름
+- 6개월 / 12개월 버전
+
+경로:
+
+- C:\kny\technical-portfolio-docs\GPT_EVALUATION_REQUEST.md
