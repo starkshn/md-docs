@@ -1,23 +1,25 @@
 ﻿@startuml
+title Unity 기능 개발 워크플로우
+
 start
-:Pick weekly milestone;
-:Implement Runtime slice;
-if (Needs data?) then (yes)
-  :Create/Update ScriptableObject schema;
+:주간 Milestone 선택;
+:Runtime 최소 기능 구현;
+if (데이터 구조가 필요한가?) then (예)
+  :ScriptableObject Schema 생성/수정;
 endif
-if (Needs tool?) then (yes)
-  :Add EditorWindow or Inspector UI;
+if (툴이 필요한가?) then (예)
+  :EditorWindow 또는 Inspector UI 추가;
 endif
-:Create demo scene interaction;
-:Add validation and debug UI;
-:Add focused tests;
-:Record short capture;
-:Update Markdown docs;
-:Update PlantUML diagram;
-if (Feature proves value?) then (yes)
-  :Merge to dev/main milestone;
-else (no)
-  :Reduce scope or refactor;
+:Demo Scene 상호작용 구성;
+:Validation 및 Debug UI 추가;
+:집중 테스트 추가;
+:짧은 캡처 기록;
+:Markdown 문서 업데이트;
+:PlantUML 다이어그램 업데이트;
+if (포트폴리오 가치가 증명되는가?) then (예)
+  :dev/main Milestone에 병합;
+else (아니오)
+  :범위 축소 또는 구조 개선;
 endif
 stop
 @enduml

@@ -1,19 +1,21 @@
 ﻿@startuml
+title 학습-실험-구현-문서화 사이클
+
 start
-:Concept Study;
-:Unity API Analysis;
-:DX11 / Unreal Comparison;
-:Design Decision;
-:Mini Experiment;
-if (Experiment validated?) then (yes)
-  :Portfolio Integration;
-  :Markdown Documentation;
-  :PlantUML Update;
-  :Tistory Blog Draft;
-  :Interview Summary;
-else (no)
-  :Revise concept or scope;
-  :Run smaller experiment;
+:개념 학습;
+:Unity API 분석;
+:DX11 / Unreal 경험과 비교;
+:설계 방식 결정;
+:미니 실험;
+if (실험이 검증되었는가?) then (예)
+  :포트폴리오 통합;
+  :Markdown 문서화;
+  :PlantUML 업데이트;
+  :Tistory 블로그 초안 작성;
+  :면접 설명 포인트 정리;
+else (아니오)
+  :개념 또는 범위 재조정;
+  :더 작은 실험 수행;
 endif
 stop
 @enduml

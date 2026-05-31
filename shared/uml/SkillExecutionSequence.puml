@@ -1,5 +1,7 @@
 ﻿@startuml
-actor Player
+title Unity Skill 실행 시퀀스
+
+actor Player as "입력 주체"
 participant SkillController
 participant SkillFactory
 participant SkillInstance
@@ -11,15 +13,15 @@ participant AnimationEventDispatcher
 
 Player -> SkillController : TryExecute(skillId)
 SkillController -> SkillFactory : GetOrCreate(definition)
-SkillFactory --> SkillController : SkillInstance
+SkillFactory --> SkillController : SkillInstance 반환
 SkillController -> SkillInstance : Execute(context)
 SkillInstance -> ConditionModule : CanExecute(context)
 SkillInstance -> CooldownModule : IsReady(context)
 SkillInstance -> TargetResolver : Resolve(context)
-TargetResolver --> SkillInstance : targets
-SkillInstance -> AnimationEventDispatcher : Play cast animation / wait event
+TargetResolver --> SkillInstance : targets 반환
+SkillInstance -> AnimationEventDispatcher : 시전 Animation 재생 / Event 대기
 AnimationEventDispatcher --> SkillInstance : OnSkillImpact
-loop targets
+loop 모든 target 처리
   SkillInstance -> EffectModule : Apply(context, target)
 end
 SkillInstance -> CooldownModule : Consume(context)

@@ -1,5 +1,8 @@
 ﻿@startuml
 skinparam classAttributeIconSize 0
+
+title GameObject 계층 구조
+
 abstract class CBase {
   -uint m_iRefCnt
   +AddRef()
@@ -38,17 +41,17 @@ class CEffect
 class CUIPanel
 class CUIElement
 
-CBase <|-- CGameObject
-CGameObject <|-- CAlphaObject
-CGameObject <|-- CContainerObject
-CGameObject <|-- CPartObject
-CGameObject <|-- CUIObject
-CContainerObject <|-- CPlayer
-CContainerObject <|-- CMonsterBase
-CGameObject <|-- CProjectile
-CAlphaObject <|-- CEffect
-CUIObject <|-- CUIPanel
-CUIObject <|-- CUIElement
-CGameObject *-- CComponent
-CGameObject *-- CTransform
+CBase <|-- CGameObject : 참조 카운트 기반 객체
+CGameObject <|-- CAlphaObject : 알파 정렬 대상
+CGameObject <|-- CContainerObject : PartObject 조립 객체
+CGameObject <|-- CPartObject : Body / Weapon 등 부품 객체
+CGameObject <|-- CUIObject : UI 렌더 대상
+CContainerObject <|-- CPlayer : 플레이어 컨테이너
+CContainerObject <|-- CMonsterBase : 몬스터 컨테이너
+CGameObject <|-- CProjectile : 투사체 계층
+CAlphaObject <|-- CEffect : 알파 이펙트 계층
+CUIObject <|-- CUIPanel : UI 패널
+CUIObject <|-- CUIElement : UI 요소
+CGameObject *-- CComponent : 기능 컴포넌트 보유
+CGameObject *-- CTransform : 기본 Transform 보유
 @enduml

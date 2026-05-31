@@ -1,4 +1,6 @@
 ﻿@startuml
+title Animation 재생과 Bone Matrix 갱신 흐름
+
 participant CGameObject as Obj
 participant CModel as Model
 participant CAnimation as Anim
@@ -7,16 +9,16 @@ participant CBone as Bone
 participant CShader as Shader
 
 Obj -> Model : SetupAnimation(index, playType)
-loop each frame
+loop 매 프레임
   Obj -> Model : PlayAnimation(dt)
   Model -> Anim : UpdateTransformationMatrices(bones, loop, dt)
-  loop channels
+  loop 모든 Channel 순회
     Anim -> Channel : UpdateTransformationMatrix(trackPos, keyIndex, bones)
-    Channel -> Bone : Set local transform
+    Channel -> Bone : Local Transform 갱신
   end
-  Model -> Bone : update combined matrices
+  Model -> Bone : Combined Matrix 갱신
 end
 Obj -> Model : BindBoneMatrices(shader, constant, meshIndex)
-Model -> Shader : BindMatrixArray(boneMatrices)
+Model -> Shader : Bone Matrix 배열 바인딩
 Obj -> Model : Render(meshIndex)
 @enduml

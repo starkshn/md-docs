@@ -1,5 +1,7 @@
 ﻿@startuml
-actor Client
+title Prototype 기반 객체 생성 시퀀스
+
+actor Client as "Client 코드"
 participant CGameInstance as GI
 participant CObject_Manager as OM
 participant CPrototype_Manager as PM
@@ -12,14 +14,15 @@ GI -> OM : AddGameObjectToLayer(...)
 OM -> GI : ClonePrototype(PROTO_GAMEOBJ, protoLevel, protoTag, arg)
 GI -> PM : ClonePrototype(...)
 PM -> ProtoObj : Clone(arg)
-ProtoObj --> PM : Obj
-PM --> GI : Obj
-GI --> OM : Obj
+ProtoObj --> PM : Obj 반환
+PM --> GI : Obj 반환
+GI --> OM : Obj 반환
 OM -> OM : FindLayer(level, layerTag)
-alt layer not found
+alt Layer가 없음
   OM -> Layer : Create()
   OM -> Layer : AddGameObject(Obj)
-else layer exists
+  OM -> OM : Layer를 level map에 등록
+else Layer가 이미 있음
   OM -> Layer : AddGameObject(Obj)
 end
 Layer --> OM : S_OK

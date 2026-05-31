@@ -1,5 +1,8 @@
 ﻿@startuml
 skinparam classAttributeIconSize 0
+
+title Component 계층과 Animation 구성
+
 abstract class CComponent {
   -ID3D11Device* m_pDevice
   -ID3D11DeviceContext* m_pContext
@@ -24,19 +27,19 @@ class CChannel
 class CBone
 class CMesh
 
-CComponent <|-- CTransform
-CComponent <|-- CModel
-CComponent <|-- CShader
-CComponent <|-- CTexture
-CComponent <|-- CVIBuffer
-CComponent <|-- CCollider
-CComponent <|-- CNavigation
-CVIBuffer <|-- CVIBufferRect
-CVIBuffer <|-- CVIBufferTrail
-CVIBuffer <|-- CVIBuffer_Terrain
-CModel *-- CMesh
-CModel *-- CBone
-CModel *-- CAnimation
-CAnimation *-- CChannel
-CChannel --> CBone : updates transform
+CComponent <|-- CTransform : 위치/회전/스케일
+CComponent <|-- CModel : Mesh / Material / Bone / Animation 관리
+CComponent <|-- CShader : HLSL 셰이더 래퍼
+CComponent <|-- CTexture : 텍스처 리소스
+CComponent <|-- CVIBuffer : 정점/인덱스 버퍼
+CComponent <|-- CCollider : 충돌 컴포넌트
+CComponent <|-- CNavigation : NavMesh 이동 보조
+CVIBuffer <|-- CVIBufferRect : 사각형 버퍼
+CVIBuffer <|-- CVIBufferTrail : Trail 버퍼
+CVIBuffer <|-- CVIBuffer_Terrain : 지형 버퍼
+CModel *-- CMesh : Mesh 목록 소유
+CModel *-- CBone : Skeleton Bone 소유
+CModel *-- CAnimation : Animation Clip 소유
+CAnimation *-- CChannel : Bone별 KeyFrame Track 소유
+CChannel --> CBone : 보간된 Transform 반영
 @enduml

@@ -2,7 +2,9 @@
 skinparam packageStyle rectangle
 skinparam classAttributeIconSize 0
 
-package Engine {
+title 공통 Engine DLL 전체 구조
+
+package "엔진 코어 (Engine)" {
   class CGameInstance <<Singleton, Facade>>
   class CGraphic_Device
   class CRenderer
@@ -21,23 +23,23 @@ package Engine {
   class CSoundManager
 }
 
-CGameInstance *-- CGraphic_Device
-CGameInstance *-- CRenderer
-CGameInstance *-- CRenderTargetManager
-CGameInstance *-- CPrototype_Manager
-CGameInstance *-- CObject_Manager
-CGameInstance *-- CLevel_Manager
-CGameInstance *-- CTimer_Manager
-CGameInstance *-- CInput_Device
-CGameInstance *-- CPipeLine
-CGameInstance *-- CLightManager
-CGameInstance *-- CFontManager
-CGameInstance *-- CPicking
-CGameInstance *-- CFrustum
-CGameInstance *-- CUIManager
-CGameInstance *-- CSoundManager
+CGameInstance *-- CGraphic_Device : 그래픽 장치 소유
+CGameInstance *-- CRenderer : 렌더러 소유
+CGameInstance *-- CRenderTargetManager : 렌더 타겟 관리
+CGameInstance *-- CPrototype_Manager : 원형 객체 관리
+CGameInstance *-- CObject_Manager : 런타임 객체 관리
+CGameInstance *-- CLevel_Manager : 레벨 전환 관리
+CGameInstance *-- CTimer_Manager : 시간 관리
+CGameInstance *-- CInput_Device : 입력 처리
+CGameInstance *-- CPipeLine : 행렬/카메라 상태 관리
+CGameInstance *-- CLightManager : 조명 관리
+CGameInstance *-- CFontManager : 폰트 렌더링
+CGameInstance *-- CPicking : 피킹 처리
+CGameInstance *-- CFrustum : 프러스텀 판정
+CGameInstance *-- CUIManager : UI 관리
+CGameInstance *-- CSoundManager : 사운드 관리
 
-CRenderer --> CRenderTargetManager : AddRenderTarget / BeginMRT
-CRenderer --> CLightManager : RenderLights
-CObject_Manager --> CPrototype_Manager : ClonePrototype via GameInstance
+CRenderer --> CRenderTargetManager : RenderTarget / MRT 사용
+CRenderer --> CLightManager : 조명 누적 패스 요청
+CObject_Manager --> CPrototype_Manager : CGameInstance를 통해 Clone 요청
 @enduml
