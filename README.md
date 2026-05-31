@@ -121,3 +121,9 @@ Codex는 기능 구현 시 항상 공부한 개념, 강의 구조 분석, 우리
 전체 포트폴리오 구조, 전략 계층, 개발 사이클, MVP 우선순위, 산출물 흐름은 아래 PlantUML에서 한눈에 확인한다.
 
 - [PortfolioMasterPlan.puml](shared/uml/PortfolioMasterPlan.puml)
+
+## Notion Workspace Template
+
+Notion `Unity Project A-Z` 페이지에 붙여 넣어 사용할 수 있는 운영 템플릿이다.
+
+- [UnityProjectAZ_NotionTemplate.md](notion/UnityProjectAZ_NotionTemplate.md)

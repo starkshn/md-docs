@@ -203,3 +203,14 @@ Important decision:
 다음 작업 시 최상위 질문을 유지한다:
 
 이 기능이 일반 Unity 포트폴리오와 비교해서 어떤 차별성을 만들고 있는가?
+
+## 2026-05-31 15:26:59 +09:00 - Notion 템플릿 추가
+
+사용자가 Notion Unity Project A-Z 페이지에서 Codex와 함께 작업한 내용, 개발 과정 일지, 진행률, KPI, Risk, Blog, Interview Notes를 한눈에 관리하고 싶다고 요청했다.
+
+생성 문서:
+
+- 
+otion/UnityProjectAZ_NotionTemplate.md
+
+직접 Notion 페이지에 자동 삽입하려면 Notion API/MCP 권한 또는 브라우저 조작 권한이 필요하다. 현재는 Notion에 붙여 넣기 쉬운 Markdown 템플릿으로 생성했다.
