@@ -56,3 +56,42 @@ technical-portfolio-docs/
 4. Use `shared/uml` only for duplicated or cross-project diagrams.
 5. Link documents with relative Markdown links so they can be reused in GitHub, a static blog, or a portfolio website.
 
+
+## Learning / Blog / Journal Workflow
+
+이 포트폴리오는 기능 구현 자체보다 “학습한 개념을 실무 수준의 구조로 재설계하고 설명하는 과정”을 증명하는 것이 목표다.
+
+필수 개발 사이클:
+
+```text
+Concept Study
+↓
+Architecture Design
+↓
+Mini Experiment
+↓
+Implementation
+↓
+Verification
+↓
+Git Commit
+↓
+Markdown Documentation
+↓
+PlantUML Update
+↓
+Tistory Blog Draft
+↓
+Notion Development Journal
+↓
+Interview Notes
+```
+
+관련 문서:
+
+- [LearningBlogPortfolioStrategy](workflow/LearningBlogPortfolioStrategy.md)
+- [DevelopmentCycleEnforcement](workflow/DevelopmentCycleEnforcement.md)
+- [NotionJournalAndWeeklyReview](workflow/NotionJournalAndWeeklyReview.md)
+- [DifferentiationTrackingSystem](workflow/DifferentiationTrackingSystem.md)
+
+Codex는 기능 구현 시 항상 공부한 개념, 강의 구조 분석, 우리 구조와의 차이점, 변경 이유, 모듈화 포인트, 확장성 포인트, 기술 블로그 초안, 면접 설명 포인트, PlantUML, 최종 아키텍처 반영 내용을 함께 산출해야 한다.

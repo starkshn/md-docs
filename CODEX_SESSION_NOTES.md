@@ -153,3 +153,19 @@ Important decision:
 경로:
 
 - C:\kny\technical-portfolio-docs\GPT_EVALUATION_REQUEST.md
+
+## 2026-05-31 15:16:03 +09:00 - 학습 기반 개발 사이클 및 블로그/노션 연계 규칙 추가
+
+사용자가 추가한 14~30번 규칙을 반영했다.
+
+핵심 변경:
+
+- 기능 구현보다 학습 과정과 설명 가능성을 우선하는 전략 명문화
+- Concept Study -> Architecture Design -> Mini Experiment -> Implementation -> Verification -> Git Commit -> Markdown -> PlantUML -> Blog Draft -> Notion Journal -> Interview Notes 사이클 추가
+- 기능 완료 체크리스트 추가
+- 기술적 가치가 있는 기능만 블로그로 작성하는 기준 추가
+- Notion Development Journal 및 Weekly Review 템플릿 추가
+- 차별화 포인트 추적 시스템 추가
+- Codex 역할을 Architect/Reviewer/Docs/UML/Blog/Interview Coach로 정의
+
+다음 세션은 workflow 폴더의 4개 신규 문서와 GPT_EVALUATION_REQUEST.md를 먼저 확인하면 된다.

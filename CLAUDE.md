@@ -93,3 +93,15 @@ Core showcase modules:
 - Shader Showcase
 - Optimization Showcase
 - Rendering Debug View
+
+## Mandatory Learning-Based Development Rule
+
+This portfolio must not be treated as a simple implementation task. Every meaningful feature must produce code, Git commits, Markdown docs, PlantUML, Tistory blog draft, Notion journal entry, and interview notes.
+
+A feature is not considered complete until the following cycle is done:
+
+```text
+Concept Study -> Architecture Design -> Mini Experiment -> Implementation -> Verification -> Git Commit -> Markdown Documentation -> PlantUML Update -> Tistory Blog Draft -> Notion Development Journal -> Interview Notes
+```
+
+When continuing this project, always preserve the learning narrative: what was studied, why it matters, how Unity applies it, how it connects to DX11/Unreal experience, what was redesigned from lecture material, and why the final structure is stronger than a normal portfolio implementation.

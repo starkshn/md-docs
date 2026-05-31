@@ -695,3 +695,30 @@ Unity Technical Showcase의 모든 기능은 `IFeatureModule` 기반 독립 모�
 4. Skill System과 Skill Editor를 MVP 1순위로 둔 판단이 적절한가?
 5. 인프런 강의 구조를 포트폴리오 구조로 재설계하는 방향이 타당한가?
 6. 문서, PlantUML, 블로그, 면접 설명 흐름이 하나로 연결되는가?
+
+# 추가 지침: 학습 기반 포트폴리오 개발 강제 규칙
+
+포트폴리오의 목표는 “Unity 기능 구현”이 아니라 “기술적으로 설명 가능한 개발 과정 자체를 포트폴리오화”하는 것이다.
+
+각 기능은 반드시 아래 산출물을 남긴다.
+
+- Source Code
+- Git Commit
+- Markdown
+- PlantUML
+- Tistory Blog Draft
+- Notion Development Journal
+- Interview Notes
+
+기능 완료 기준은 구현 완료가 아니다. Concept Study, Architecture Design, Mini Experiment, Implementation, Verification, Git Commit, Markdown Documentation, PlantUML Update, Tistory Blog Draft, Notion Development Journal, Interview Notes가 모두 끝나야 완료로 본다.
+
+Codex는 매 작업마다 다음을 정리해야 한다.
+
+- 이번 작업에서 배운 개념
+- 강의 구조와 우리 구조의 차이
+- 변경 이유
+- 모듈화 포인트
+- 확장성 포인트
+- 차별화 포인트
+- 블로그로 작성 가능한 내용
+- 면접에서 설명할 수 있는 내용

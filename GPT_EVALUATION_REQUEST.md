@@ -532,3 +532,25 @@ projects/unity-technical-showcase/feature-toggle/
 11. 연봉 5,000~7,000만원 이직 목표 기준 경쟁력 평가
 12. 최종 추천 방향
 ```
+
+---
+
+## 추가 평가 요청: 학습 기반 개발 사이클
+
+이번 포트폴리오는 기능 구현보다 “학습 과정 자체를 포트폴리오화”하는 전략을 따른다.
+
+각 기능은 다음 사이클을 완료해야 기능 완료로 간주한다.
+
+```text
+Concept Study -> Architecture Design -> Mini Experiment -> Implementation -> Verification -> Git Commit -> Markdown Documentation -> PlantUML Update -> Tistory Blog Draft -> Notion Development Journal -> Interview Notes
+```
+
+평가해줘:
+
+1. 이 정도 강제 사이클이 현실적인가?
+2. 문서/블로그/노션/면접 정리를 매 기능마다 요구하는 것이 과한가?
+3. 2~5년차 클라이언트 개발자 이직 포트폴리오로 차별화가 되는가?
+4. 기술적으로 가치 있는 기능만 블로그화한다는 기준이 적절한가?
+5. Notion Development Journal과 Weekly Review를 병행하는 것이 실질적으로 도움이 되는가?
+6. 기능 완료 기준에 Blog Draft와 Interview Notes까지 넣는 것이 좋은가?
+7. 이 전략을 6개월 현실 버전으로 줄이면 어떤 항목을 남겨야 하는가?
