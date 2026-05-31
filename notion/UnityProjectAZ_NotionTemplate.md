@@ -846,3 +846,54 @@ NY_Skill_Instance -> NY_Scripting_Gateway -> NY_Scripting_LuaRuntime -> Lua Scri
 | Timeout / Error / Metrics가 있는가? | ☐ |
 | Before/After 비교가 가능한가? | ☐ |
 | Blog Draft 가치가 있는가? | ☐ |
+
+---
+
+## 23. Google Calendar Schedule Dashboard
+
+> Google Calendar는 실제 시간 블록을 관리하고, Notion은 작업 상태와 결과를 관리한다.
+
+### Calendar Quick Rules
+
+| 항목 | 규칙 |
+| --- | --- |
+| 일정 이름 | `[Portfolio][Type] Phase - Task` |
+| 일정 설명 | Goal, Docs, Notion, Completion Gate 포함 |
+| 일정 완료 | Development Log Index에 반영 |
+| 일정 연기 | Risk Log 또는 Weekly Review에 사유 기록 |
+| 일정 추가 | Backlog 위치와 KPI Level 확인 |
+
+### This Week Calendar Plan
+
+| 날짜 | 시간 | Calendar Event | 연결 Feature | Notion 작업 | 상태 |
+| --- | --- | --- | --- | --- | --- |
+|  |  |  |  |  | Todo |
+
+### Calendar Changes
+
+| 날짜 | 변경 전 | 변경 후 | 변경 이유 | Notion 반영 |
+| --- | --- | --- | --- | --- |
+|  |  |  |  |  |
+
+### Missed / Rescheduled Blocks
+
+| 일정 | 놓친 이유 | 재배치 일정 | Risk 반영 | 다음 행동 |
+| --- | --- | --- | --- | --- |
+|  |  |  |  |  |
+
+### Recommended Recurring Events
+
+| 일정 | 반복 | 목적 | 상태 |
+| --- | --- | --- | --- |
+| `[Portfolio][Planning] Weekly Planning` | 매주 월요일 | 이번 주 목표 설정 | Todo |
+| `[Portfolio][DeepWork] Portfolio Deep Work` | 매주 토요일 | 구현 집중 | Todo |
+| `[Portfolio][Review] Weekly Portfolio Review` | 매주 일요일 | KPI / Risk / Blog / Interview 정리 | Todo |
+| `[Portfolio][Blog] Blog Draft Block` | 격주 일요일 | Tistory 초안 정리 | Todo |
+
+### Codex Calendar Update Request Template
+
+```text
+이번 주 Portfolio 일정을 확인하고, Skill System / Skill Tool / Docs 작업이 현실적인지 검토해줘.
+충돌되거나 과한 일정이 있으면 수정안을 제안하고, 내가 승인하면 Google Calendar를 수정해줘.
+Notion Development Log와 Weekly Review에도 반영해줘.
+```

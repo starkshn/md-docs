@@ -782,3 +782,20 @@ NY_Skill_Instance -> NY_Scripting_Gateway -> NY_Scripting_LuaRuntime -> Lua Scri
 - `NY_Scripting_Metrics`
 
 우선순위는 Skill System, Skill Tool, Before/After Comparison, ModuleHub 이후다. Lua Script가 실패해도 C# Core Framework가 깨지면 안 된다.
+
+# 추가 지침: Google Calendar + Notion 일정 관리
+
+Google Calendar와 Notion은 역할을 분리한다.
+
+- Google Calendar: 실제 시간 블록, 반복 일정, 일정 수정
+- Notion: KPI, Backlog, Risk, 개발일지, 산출물 링크, 블로그, 면접 준비
+- Codex: Calendar 일정 확인, 과한 일정 탐지, 수정안 제안, 사용자의 명확한 지시가 있을 때 일정 수정
+
+권장 반복 일정:
+
+- 매주 월요일: Portfolio Weekly Planning
+- 매주 토요일: Portfolio Deep Work
+- 매주 일요일: Portfolio Weekly Review
+- 격주 일요일: Blog Draft Block
+
+Calendar 일정이 변경되면 Notion Development Log, Weekly Review, Risk Log 중 관련 위치에 반영한다.

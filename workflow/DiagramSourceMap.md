@@ -59,3 +59,8 @@ When a Markdown file changes:
 - Source: `projects/unity-technical-showcase/scripting/uml/SelectiveLuaScriptingLayer.puml`
 - Source: `projects/unity-technical-showcase/scripting/uml/LuaSkillFormulaSequence.puml`
 - Purpose: C# Core 위에서 Lua를 선택적 Gameplay Logic 확장 포인트로만 사용하는 구조를 정의한다.
+
+## Google Calendar + Notion Schedule
+
+- Source: `notion/GoogleCalendarNotionScheduleWorkflow.puml`
+- Purpose: Google Calendar 일정, Notion 개발일지, Codex 일정 검토/수정 흐름을 정의한다.

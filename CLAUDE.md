@@ -135,3 +135,7 @@ Lua is only allowed as a selective extension point for small gameplay logic such
 Priority: Skill System -> Skill Tool -> Before/After Comparison -> ModuleHub -> Selective Lua Scripting Layer.
 
 All Lua calls must go through `NY_Scripting_Gateway`, return `NY_Scripting_Result`, record errors/metrics, and fallback safely if script execution fails.
+
+## Google Calendar + Notion Schedule Rule
+
+Use Google Calendar for actual time blocks and Notion for work state, journals, outputs, and reviews. Calendar updates should be reflected in Notion Development Log or Weekly Review. Before changing calendar events, compare the plan against KPI, Backlog, Risk, and current Portfolio Dashboard unless the user gives a direct concrete update command.

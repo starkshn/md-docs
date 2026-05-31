@@ -1,0 +1,30 @@
+@startuml
+title Google Calendar + Notion Schedule Workflow - 일정 관리 흐름
+
+skinparam shadowing false
+skinparam defaultFontName Malgun Gothic
+
+actor User
+participant "Google Calendar" as Calendar
+participant "Codex" as Codex
+participant "Notion\nUnity Project A-Z" as Notion
+participant "GitHub Docs Repo" as Docs
+
+User -> Calendar : Portfolio 일정 등록/수정
+Codex -> Calendar : 이번 주 일정 조회
+Codex -> Notion : KPI / Backlog / Risk 상태 확인
+Codex -> Docs : 관련 Markdown / PlantUML 확인
+Codex -> Codex : 일정 현실성 분석
+Codex -> User : 수정안 제안
+
+alt 사용자가 일정 수정 요청
+  User -> Codex : 일정 수정 지시
+  Codex -> Calendar : 이벤트 생성/수정
+  Codex -> Notion : Development Log / Weekly Review 반영
+else 일정 수정 보류
+  Codex -> Notion : Risk 또는 Next Actions에 기록
+end
+
+Notion -> User : 진행률 / 일지 / 산출물 확인
+
+@enduml

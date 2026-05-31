@@ -283,3 +283,16 @@ otion/CodexNotionOperationRules.md 신규 생성
 - `projects/unity-technical-showcase/scripting/SelectiveLuaScriptingLayer.md`
 - `projects/unity-technical-showcase/scripting/LuaSkillFormulaExperiment.md`
 - `projects/unity-technical-showcase/scripting/uml/*.puml`
+
+## 2026-05-31 - Google Calendar + Notion 일정 관리 구조 추가
+
+사용자가 Google Calendar와 Notion 조합으로 개발 일정을 직관적으로 관리하고, Calendar 일정을 보고 항상 수정할 수 있는 기능을 추가하자고 요청했다.
+
+반영 내용:
+
+- Google Calendar는 실제 시간 블록 관리
+- Notion은 개발 상태, 일지, 산출물, Risk, Weekly Review 관리
+- Codex는 Calendar 일정 확인, 현실성 분석, 수정안 제안, 명확한 지시가 있을 때 Calendar 수정
+- Notion 템플릿에 Calendar Schedule Dashboard 추가
+- `notion/GoogleCalendarNotionScheduleSystem.md` 추가
+- `notion/GoogleCalendarNotionScheduleWorkflow.puml` 추가

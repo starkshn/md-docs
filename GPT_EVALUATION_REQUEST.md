@@ -611,3 +611,23 @@ C# Core Framework를 유지하면서 Lua를 선택적 확장 포인트로만 사
 3. 라이브 서비스 Hotfix / Script Layer 이해도를 보여주는 포트폴리오 요소로 가치가 있는가?
 4. `NY_Scripting_Gateway`를 통해 Lua를 격리하고 실패 시 C# fallback을 사용하는 구조가 실무적으로 설득력 있는가?
 5. Unity 클라이언트 포트폴리오에서 Lua Layer가 과해 보일 위험은 없는가?
+
+---
+
+## 추가 평가 요청: Google Calendar + Notion 일정 관리
+
+Google Calendar와 Notion을 함께 사용하는 개발 일정 관리 방식을 추가했다.
+
+역할:
+
+- Google Calendar: 실제 시간 블록, 반복 일정, 일정 수정
+- Notion: 진행률, KPI, Risk, 개발일지, 산출물 링크, 회고
+- Codex: Calendar 일정 검토, 수정안 제안, Notion 반영
+
+평가해줘:
+
+1. Calendar와 Notion 역할 분리가 적절한가?
+2. 매주 월요일 계획, 토요일 Deep Work, 일요일 Weekly Review 구조가 현실적인가?
+3. Calendar 변경을 Notion Risk / Journal / Weekly Review에 반영하는 규칙이 과하지 않은가?
+4. 포트폴리오 개발을 실제 프로젝트처럼 운영한다는 점이 면접에서 장점이 되는가?
+5. 일정 관리가 문서화 부담을 늘려 개발을 방해할 위험은 없는가?

@@ -170,3 +170,10 @@ C# Core Framework를 유지하면서 Skill Formula, Condition, Trigger 같은 �
 - [LuaSkillFormulaExperiment](projects/unity-technical-showcase/scripting/LuaSkillFormulaExperiment.md)
 - [SelectiveLuaScriptingLayer.puml](projects/unity-technical-showcase/scripting/uml/SelectiveLuaScriptingLayer.puml)
 - [LuaSkillFormulaSequence.puml](projects/unity-technical-showcase/scripting/uml/LuaSkillFormulaSequence.puml)
+
+## Google Calendar + Notion Schedule System
+
+Google Calendar는 실제 시간 블록을 관리하고, Notion은 작업 상태와 개발일지/산출물을 관리한다.
+
+- [GoogleCalendarNotionScheduleSystem](notion/GoogleCalendarNotionScheduleSystem.md)
+- [GoogleCalendarNotionScheduleWorkflow](notion/GoogleCalendarNotionScheduleWorkflow.puml)
