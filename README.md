@@ -184,3 +184,11 @@ Google Calendar는 실제 시간 블록을 관리하고, Notion은 작업 상태
 
 - [PortfolioAutomationStrategy](workflow/PortfolioAutomationStrategy.md)
 - [PortfolioAutomationWorkflow](workflow/PortfolioAutomationWorkflow.puml)
+
+## Two Page Notion Management Structure
+
+Notion은 일정 전용 `Schedule Dashboard`와 세부 기록용 `Development Hub` 두 페이지로 분리한다.
+
+- [TwoPageNotionManagementStructure](notion/TwoPageNotionManagementStructure.md)
+- Schedule Dashboard: https://www.notion.so/3714bccaf9eb81cabf9edec06dd3a6da
+- Development Hub: https://www.notion.so/3714bccaf9eb8020bc85e39638c56d7b

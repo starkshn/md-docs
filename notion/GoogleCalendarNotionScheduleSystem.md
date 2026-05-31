@@ -1,8 +1,24 @@
-# Google Calendar + Notion Schedule System
+﻿# Google Calendar + Notion Schedule System
 
 ## 목적
 
 Unity Technical Showcase 개발 일정은 Google Calendar와 Notion을 함께 사용해서 관리한다.
+
+Notion은 2개 페이지로 분리한다.
+
+```text
+Schedule Dashboard = 언제 할 것인가
+Development Hub = 무엇을 배웠고 무엇을 만들었는가
+```
+
+Schedule Dashboard:
+
+- https://www.notion.so/3714bccaf9eb81cabf9edec06dd3a6da
+
+Development Hub:
+
+- https://www.notion.so/3714bccaf9eb8020bc85e39638c56d7b
+
 
 | 도구 | 역할 |
 | --- | --- |
@@ -225,3 +241,4 @@ Codex Note:
 - Notion으로 작업 결과와 의사결정을 기록했다.
 - Git / Docs / PlantUML / Blog / Interview Notes를 일정과 연결했다.
 - 일정이 밀릴 때 Risk Log와 Weekly Review에 사유를 남겼다.
+

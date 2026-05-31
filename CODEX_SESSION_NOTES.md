@@ -348,3 +348,19 @@ otion/CodexNotionOperationRules.md 신규 생성
 - Weekly Technical Review Automation
 - Calendar / Notion 운영 규칙
 - Codex Request Templates
+
+## 2026-05-31 21:44:41 +09:00 - Notion 2 Page Management Structure 적용
+
+사용자가 한 페이지에 일정과 세부 내용을 모두 넣는 구조는 장기적으로 적합하지 않다고 판단했다.
+
+새 구조:
+
+- Schedule Dashboard: 전체 일정, Calendar Plan, Patch No Development Day, Calendar Changes 관리
+- Development Hub: 학습, 개발일지, 핵심 코드, 문서, 블로그, 면접, 자동화 관리
+
+생성/수정:
+
+- 새 Notion 페이지 생성: `Unity Project A-Z - Schedule Dashboard`
+- URL: `https://www.notion.so/3714bccaf9eb81cabf9edec06dd3a6da`
+- 기존 페이지 상단에 Navigation / Page Role 추가
+- 로컬 문서 추가: `notion/TwoPageNotionManagementStructure.md`
