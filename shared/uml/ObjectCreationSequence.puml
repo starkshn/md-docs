@@ -1,0 +1,28 @@
+﻿@startuml
+actor Client
+participant CGameInstance as GI
+participant CObject_Manager as OM
+participant CPrototype_Manager as PM
+participant CGameObject as ProtoObj
+participant CGameObject as Obj
+participant CLayer as Layer
+
+Client -> GI : AddGameObjectToLayer(protoLevel, protoTag, level, layerTag, arg)
+GI -> OM : AddGameObjectToLayer(...)
+OM -> GI : ClonePrototype(PROTO_GAMEOBJ, protoLevel, protoTag, arg)
+GI -> PM : ClonePrototype(...)
+PM -> ProtoObj : Clone(arg)
+ProtoObj --> PM : Obj
+PM --> GI : Obj
+GI --> OM : Obj
+OM -> OM : FindLayer(level, layerTag)
+alt layer not found
+  OM -> Layer : Create()
+  OM -> Layer : AddGameObject(Obj)
+else layer exists
+  OM -> Layer : AddGameObject(Obj)
+end
+Layer --> OM : S_OK
+OM --> GI : S_OK
+GI --> Client : S_OK
+@enduml

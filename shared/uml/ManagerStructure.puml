@@ -1,0 +1,50 @@
+﻿@startuml
+skinparam classAttributeIconSize 0
+class CGameInstance <<Singleton>> {
+  +InitializeEngine()
+  +UpdateEngine(dt)
+  +Draw()
+  +AddPrototype(level, tag, proto)
+  +ClonePrototype(type, level, tag, arg)
+  +AddGameObjectToLayer(...)
+  +AddRenderObject(group, object)
+}
+class CPrototype_Manager {
+  -map<wstring, CBase*>* m_pPrototypes
+  +AddPrototype()
+  +ClonePrototype()
+  +Clear(level)
+}
+class CObject_Manager {
+  -map<wstring, CLayer*>* m_pLayers
+  +AddGameObjectToLayer()
+  +SpawnObject()
+  +FindLayer()
+  +PriorityUpdate()
+  +Update()
+  +LateUpdate()
+}
+class CLayer {
+  -list<CGameObject*> m_GameObjects
+  +AddGameObject()
+  +GetComponent()
+  +CheckIntersect()
+}
+class CRenderer {
+  -list<CGameObject*> m_RenderObjects[RG_END]
+  +AddRenderObject()
+  +DrawRenderObject()
+}
+class CRenderTargetManager
+class CLevel_Manager
+class CUIManager
+
+CGameInstance --> CPrototype_Manager
+CGameInstance --> CObject_Manager
+CGameInstance --> CRenderer
+CGameInstance --> CRenderTargetManager
+CGameInstance --> CLevel_Manager
+CGameInstance --> CUIManager
+CObject_Manager *-- CLayer
+CLayer o-- CGameObject
+@enduml

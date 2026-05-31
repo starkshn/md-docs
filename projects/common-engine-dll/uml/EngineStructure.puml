@@ -1,0 +1,43 @@
+﻿@startuml
+skinparam packageStyle rectangle
+skinparam classAttributeIconSize 0
+
+package Engine {
+  class CGameInstance <<Singleton, Facade>>
+  class CGraphic_Device
+  class CRenderer
+  class CRenderTargetManager
+  class CPrototype_Manager
+  class CObject_Manager
+  class CLevel_Manager
+  class CTimer_Manager
+  class CInput_Device
+  class CPipeLine
+  class CLightManager
+  class CFontManager
+  class CPicking
+  class CFrustum
+  class CUIManager
+  class CSoundManager
+}
+
+CGameInstance *-- CGraphic_Device
+CGameInstance *-- CRenderer
+CGameInstance *-- CRenderTargetManager
+CGameInstance *-- CPrototype_Manager
+CGameInstance *-- CObject_Manager
+CGameInstance *-- CLevel_Manager
+CGameInstance *-- CTimer_Manager
+CGameInstance *-- CInput_Device
+CGameInstance *-- CPipeLine
+CGameInstance *-- CLightManager
+CGameInstance *-- CFontManager
+CGameInstance *-- CPicking
+CGameInstance *-- CFrustum
+CGameInstance *-- CUIManager
+CGameInstance *-- CSoundManager
+
+CRenderer --> CRenderTargetManager : AddRenderTarget / BeginMRT
+CRenderer --> CLightManager : RenderLights
+CObject_Manager --> CPrototype_Manager : ClonePrototype via GameInstance
+@enduml

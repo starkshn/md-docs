@@ -1,0 +1,40 @@
+﻿@startuml
+skinparam packageStyle rectangle
+package "AnimTool" {
+  [Client] as ATClient
+  [Engine.dll] as ATEngine
+  [EngineSDK/Inc] as ATInc
+  [EngineSDK/Lib] as ATLib
+  [ImGui/imnodes/ImSequencer] as ToolUI
+}
+package "GunFireReborn DX11_FrameWork" {
+  [Client] as GFClient
+  [Engine] as GFEngine
+  [EngineSDK] as GFSDK
+  [Map_Tool] as GFMapTool
+  [Class] as GFClass
+}
+package "ThirdParty" {
+  [DirectX11]
+  [DirectXTK]
+  [Assimp]
+  [Effects11]
+  [FMOD]
+  [tinyxml2]
+}
+
+ATClient --> ATEngine
+ATClient --> ToolUI
+ATEngine --> DirectX11
+ATEngine --> Assimp
+ATEngine --> tinyxml2
+GFClient --> GFEngine
+GFMapTool --> GFEngine
+GFClass --> GFEngine
+GFEngine --> DirectX11
+GFEngine --> DirectXTK
+GFEngine --> Assimp
+GFEngine --> Effects11
+GFEngine --> FMOD
+GFEngine --> tinyxml2
+@enduml

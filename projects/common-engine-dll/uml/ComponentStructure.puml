@@ -1,0 +1,42 @@
+﻿@startuml
+skinparam classAttributeIconSize 0
+abstract class CComponent {
+  -ID3D11Device* m_pDevice
+  -ID3D11DeviceContext* m_pContext
+  -CGameObject* m_pOwner
+  +InitializePrototype()
+  +Initialize(arg)
+  +Clone(arg)
+  +SetComOwner(owner)
+}
+class CTransform
+class CModel
+class CShader
+class CTexture
+abstract class CVIBuffer
+class CVIBufferRect
+class CVIBufferTrail
+class CVIBuffer_Terrain
+class CCollider
+class CNavigation
+class CAnimation
+class CChannel
+class CBone
+class CMesh
+
+CComponent <|-- CTransform
+CComponent <|-- CModel
+CComponent <|-- CShader
+CComponent <|-- CTexture
+CComponent <|-- CVIBuffer
+CComponent <|-- CCollider
+CComponent <|-- CNavigation
+CVIBuffer <|-- CVIBufferRect
+CVIBuffer <|-- CVIBufferTrail
+CVIBuffer <|-- CVIBuffer_Terrain
+CModel *-- CMesh
+CModel *-- CBone
+CModel *-- CAnimation
+CAnimation *-- CChannel
+CChannel --> CBone : updates transform
+@enduml

@@ -1,0 +1,22 @@
+﻿@startuml
+participant CGameObject as Obj
+participant CModel as Model
+participant CAnimation as Anim
+participant CChannel as Channel
+participant CBone as Bone
+participant CShader as Shader
+
+Obj -> Model : SetupAnimation(index, playType)
+loop each frame
+  Obj -> Model : PlayAnimation(dt)
+  Model -> Anim : UpdateTransformationMatrices(bones, loop, dt)
+  loop channels
+    Anim -> Channel : UpdateTransformationMatrix(trackPos, keyIndex, bones)
+    Channel -> Bone : Set local transform
+  end
+  Model -> Bone : update combined matrices
+end
+Obj -> Model : BindBoneMatrices(shader, constant, meshIndex)
+Model -> Shader : BindMatrixArray(boneMatrices)
+Obj -> Model : Render(meshIndex)
+@enduml

@@ -1,0 +1,29 @@
+﻿@startuml
+package "Unity Project" {
+  [Runtime Systems]
+  [Editor Tools]
+  [Technical Showcase Scene]
+}
+package "GitHub Repository" {
+  [Source Code]
+  [README]
+  [docs]
+  [PlantUML]
+}
+package "Markdown Technical Docs" {
+  [Concept Notes]
+  [Architecture Docs]
+  [Implementation Notes]
+  [Performance Results]
+}
+package "Tistory Blog Series" {
+  [Study Articles]
+  [Implementation Articles]
+  [Retrospective Articles]
+}
+[Runtime Systems] --> [Architecture Docs]
+[Editor Tools] --> [Implementation Articles]
+[PlantUML] --> [Architecture Docs]
+[Concept Notes] --> [Study Articles]
+[Performance Results] --> [Retrospective Articles]
+@enduml

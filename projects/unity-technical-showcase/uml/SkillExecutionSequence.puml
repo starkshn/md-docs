@@ -1,0 +1,26 @@
+﻿@startuml
+actor Player
+participant SkillController
+participant SkillFactory
+participant SkillInstance
+participant ConditionModule
+participant CooldownModule
+participant TargetResolver
+participant EffectModule
+participant AnimationEventDispatcher
+
+Player -> SkillController : TryExecute(skillId)
+SkillController -> SkillFactory : GetOrCreate(definition)
+SkillFactory --> SkillController : SkillInstance
+SkillController -> SkillInstance : Execute(context)
+SkillInstance -> ConditionModule : CanExecute(context)
+SkillInstance -> CooldownModule : IsReady(context)
+SkillInstance -> TargetResolver : Resolve(context)
+TargetResolver --> SkillInstance : targets
+SkillInstance -> AnimationEventDispatcher : Play cast animation / wait event
+AnimationEventDispatcher --> SkillInstance : OnSkillImpact
+loop targets
+  SkillInstance -> EffectModule : Apply(context, target)
+end
+SkillInstance -> CooldownModule : Consume(context)
+@enduml

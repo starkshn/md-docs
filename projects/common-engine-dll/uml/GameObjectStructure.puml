@@ -1,0 +1,54 @@
+﻿@startuml
+skinparam classAttributeIconSize 0
+abstract class CBase {
+  -uint m_iRefCnt
+  +AddRef()
+  +Release()
+  +Free()
+}
+abstract class CGameObject {
+  -map<wstring, CComponent*> m_Components
+  -CTransform* m_pTransformCom
+  -string m_strObjectTag
+  +InitializePrototype()
+  +Initialize(arg)
+  +PriorityUpdate(dt)
+  +Update(dt)
+  +LateUpdate(dt)
+  +Render()
+  +AddComponent(...)
+  +GetComponent(tag)
+  +Clone(arg)
+}
+abstract class CAlphaObject {
+  +GetViewZ()
+}
+abstract class CContainerObject {
+  +AddPartObject()
+  +GetComponent(partIndex, tag)
+}
+abstract class CPartObject
+abstract class CUIObject {
+  +GetDepth()
+}
+class CPlayer
+class CMonsterBase
+class CProjectile
+class CEffect
+class CUIPanel
+class CUIElement
+
+CBase <|-- CGameObject
+CGameObject <|-- CAlphaObject
+CGameObject <|-- CContainerObject
+CGameObject <|-- CPartObject
+CGameObject <|-- CUIObject
+CContainerObject <|-- CPlayer
+CContainerObject <|-- CMonsterBase
+CGameObject <|-- CProjectile
+CAlphaObject <|-- CEffect
+CUIObject <|-- CUIPanel
+CUIObject <|-- CUIElement
+CGameObject *-- CComponent
+CGameObject *-- CTransform
+@enduml

@@ -1,0 +1,19 @@
+﻿@startuml
+start
+:Concept Study;
+:Unity API Analysis;
+:DX11 / Unreal Comparison;
+:Design Decision;
+:Mini Experiment;
+if (Experiment validated?) then (yes)
+  :Portfolio Integration;
+  :Markdown Documentation;
+  :PlantUML Update;
+  :Tistory Blog Draft;
+  :Interview Summary;
+else (no)
+  :Revise concept or scope;
+  :Run smaller experiment;
+endif
+stop
+@enduml

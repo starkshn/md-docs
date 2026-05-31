@@ -1,0 +1,47 @@
+﻿@startuml
+skinparam packageStyle rectangle
+package "Unity Technical Showcase" {
+  package Runtime {
+    [Core]
+    [Character]
+    [Skill Runtime]
+    [Animation Runtime]
+    [Rendering Runtime]
+    [Optimization Runtime]
+    [UI Runtime]
+    [Infrastructure]
+  }
+  package Editor {
+    [Skill Editor]
+    [Animation Tool]
+    [Debug Tools]
+  }
+  package Data {
+    [SkillDefinitionSO]
+    [EffectDefinitionSO]
+    [TargetingDefinitionSO]
+    [CooldownDefinitionSO]
+    [AnimationProfileSO]
+  }
+  package Demo {
+    [TechnicalShowcaseScene]
+    [ShaderViewer]
+    [OptimizationViewer]
+    [RenderingDebugView]
+  }
+}
+[Skill Runtime] --> [Core]
+[Skill Runtime] --> [Character]
+[Skill Runtime] --> [Infrastructure]
+[Skill Runtime] --> [SkillDefinitionSO]
+[Skill Editor] --> [Skill Runtime]
+[Skill Editor] --> [SkillDefinitionSO]
+[Animation Tool] --> [Animation Runtime]
+[Animation Tool] --> [AnimationProfileSO]
+[Rendering Runtime] --> [Core]
+[Optimization Runtime] --> [Core]
+[TechnicalShowcaseScene] --> [Skill Runtime]
+[TechnicalShowcaseScene] --> [Animation Runtime]
+[TechnicalShowcaseScene] --> [Rendering Runtime]
+[TechnicalShowcaseScene] --> [Optimization Runtime]
+@enduml

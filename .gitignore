@@ -1,0 +1,14 @@
+﻿*.tmp
+*.bak
+*.log
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+out/
+dist/
+exports/
+*.png
+*.svg
+!docs/**/*.png
+!docs/**/*.svg

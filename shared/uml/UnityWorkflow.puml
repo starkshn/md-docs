@@ -1,0 +1,23 @@
+﻿@startuml
+start
+:Pick weekly milestone;
+:Implement Runtime slice;
+if (Needs data?) then (yes)
+  :Create/Update ScriptableObject schema;
+endif
+if (Needs tool?) then (yes)
+  :Add EditorWindow or Inspector UI;
+endif
+:Create demo scene interaction;
+:Add validation and debug UI;
+:Add focused tests;
+:Record short capture;
+:Update Markdown docs;
+:Update PlantUML diagram;
+if (Feature proves value?) then (yes)
+  :Merge to dev/main milestone;
+else (no)
+  :Reduce scope or refactor;
+endif
+stop
+@enduml
