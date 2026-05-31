@@ -63,3 +63,36 @@ MVP 이후 우선 확장한다.
 - Won't 항목은 면접에서 물어보면 “이번 포트폴리오의 목적과 맞지 않아 제외했다”고 설명한다.
 - 새 아이디어는 바로 구현하지 않고 먼저 Backlog에 넣는다.
 - 매주 Weekly Review에서 Backlog 승격/보류/제외를 판단한다.
+
+## Selective Lua Scripting Layer Backlog Rule
+
+`Selective Lua Scripting Layer`는 MVP 필수 기능이 아니다. Skill System, Skill Tool, Before/After Comparison, ModuleHub가 안정화된 이후 확장 기능으로 구현한다.
+
+우선순위:
+
+1. Skill System
+2. Skill Tool
+3. Before / After Comparison
+4. ModuleHub
+5. Selective Lua Scripting Layer
+
+Backlog 위치: `Should` 또는 `Could` 사이. 라이브 서비스 Hotfix / Script Layer 설명 가치가 있으므로 완전 제외하지는 않는다. 단, Core Framework나 Tool 구현보다 먼저 진행하지 않는다.
+
+Lua 적용 대상:
+
+- Skill Damage Formula
+- Skill Condition
+- Buff Trigger
+- Effect Parameter Calculation
+- AI Test Behavior
+- Debug Command
+
+Lua 제외 대상:
+
+- ModuleHub
+- Core Framework
+- Rendering
+- Animation Tool Core
+- Editor Tool Core
+- Optimization System
+- Comparison Framework

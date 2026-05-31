@@ -161,3 +161,12 @@ NY_Category_Role
 ```
 
 예시: `NY_Core_ModuleHub`, `NY_Skill_SystemModule`, `NY_Skill_DefinitionSO`, `NY_Tool_ModuleDashboard`
+
+## Selective Lua Scripting Layer
+
+C# Core Framework를 유지하면서 Skill Formula, Condition, Trigger 같은 작은 Gameplay Logic만 Lua로 확장하는 선택적 Script Layer다. MVP 필수 기능은 아니며 Skill System/Tool 안정화 이후 확장 기능으로 진행한다.
+
+- [SelectiveLuaScriptingLayer](projects/unity-technical-showcase/scripting/SelectiveLuaScriptingLayer.md)
+- [LuaSkillFormulaExperiment](projects/unity-technical-showcase/scripting/LuaSkillFormulaExperiment.md)
+- [SelectiveLuaScriptingLayer.puml](projects/unity-technical-showcase/scripting/uml/SelectiveLuaScriptingLayer.puml)
+- [LuaSkillFormulaSequence.puml](projects/unity-technical-showcase/scripting/uml/LuaSkillFormulaSequence.puml)

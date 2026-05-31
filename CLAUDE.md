@@ -125,3 +125,13 @@ Use the project-specific naming convention: `NY_Category_Role`.
 Examples: `NY_Core_ModuleHub`, `NY_Skill_SystemModule`, `NY_Skill_DefinitionSO`, `NY_Animation_PreviewModule`, `NY_Shader_DissolveModule`, `NY_Tool_ModuleDashboard`.
 
 This intentionally prioritizes searchability and module traceability over strict idiomatic C# PascalCase. Before adding a new class or feature, read the convention docs and create an Architecture Governance Report if the feature affects module boundaries, assembly references, or roadmap scope.
+
+## Selective Lua Scripting Layer Rule
+
+C# remains the primary implementation language. Lua must not replace Core Framework, ModuleHub, Rendering, Animation Tool Core, Editor Tool Core, Optimization, or Comparison Framework.
+
+Lua is only allowed as a selective extension point for small gameplay logic such as Skill Damage Formula, Skill Condition, Buff Trigger, Effect Parameter Calculation, AI Test Behavior, or Debug Command.
+
+Priority: Skill System -> Skill Tool -> Before/After Comparison -> ModuleHub -> Selective Lua Scripting Layer.
+
+All Lua calls must go through `NY_Scripting_Gateway`, return `NY_Scripting_Result`, record errors/metrics, and fallback safely if script execution fails.

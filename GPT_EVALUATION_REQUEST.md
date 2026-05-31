@@ -597,3 +597,17 @@ Concept Study -> Architecture Design -> Mini Experiment -> Implementation -> Ver
 4. `NY_Core_ModuleHub`, `NY_Core_ModuleRegistry`, `NY_Core_ModuleController` 분리가 과한가?
 5. Architecture Governance 프로세스가 기능 확장 억제에 도움이 되는가?
 6. 새 기능 추가 전 충돌/의존성 분석 보고서를 작성하게 하는 규칙이 현실적인가?
+
+---
+
+## 추가 평가 요청: Selective Lua Scripting Layer
+
+C# Core Framework를 유지하면서 Lua를 선택적 확장 포인트로만 사용하는 설계를 추가했다.
+
+평가해줘:
+
+1. Lua를 전체 게임 로직이 아니라 Skill Formula / Condition / Trigger 수준으로 제한한 판단이 적절한가?
+2. MVP 이후 확장 기능으로 미루는 우선순위가 맞는가?
+3. 라이브 서비스 Hotfix / Script Layer 이해도를 보여주는 포트폴리오 요소로 가치가 있는가?
+4. `NY_Scripting_Gateway`를 통해 Lua를 격리하고 실패 시 C# fallback을 사용하는 구조가 실무적으로 설득력 있는가?
+5. Unity 클라이언트 포트폴리오에서 Lua Layer가 과해 보일 위험은 없는가?

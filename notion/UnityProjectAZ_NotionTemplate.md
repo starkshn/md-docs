@@ -792,3 +792,57 @@ NY_Category_Role
 | Metrics로 증명 가능한가? | ☐ |  |
 | Blog / Interview 가치가 있는가? | ☐ |  |
 | 일반 Unity 포트폴리오와의 차별점이 있는가? | ☐ |  |
+
+---
+
+## 22. Selective Lua Scripting Layer
+
+### 목적
+
+C# Core Framework를 유지하면서 Skill Formula, Condition, Trigger 같은 작은 Gameplay Logic만 Lua로 확장한다. Lua는 메인 게임 구조가 아니다.
+
+### 우선순위
+
+| 순서 | 항목 | 상태 |
+| ---: | --- | --- |
+| 1 | Skill System | Must |
+| 2 | Skill Tool | Must |
+| 3 | Before / After Comparison | Must |
+| 4 | ModuleHub | Must |
+| 5 | Selective Lua Scripting Layer | Later |
+
+### 적용 대상
+
+- Skill Damage Formula
+- Skill Condition
+- Buff Trigger
+- Effect Parameter Calculation
+- AI Test Behavior
+- Debug Command
+
+### 제외 대상
+
+- ModuleHub
+- Core Framework
+- Rendering
+- Animation Tool Core
+- Editor Tool Core
+- Optimization System
+- Comparison Framework
+
+### 호출 흐름
+
+```text
+NY_Skill_Instance -> NY_Scripting_Gateway -> NY_Scripting_LuaRuntime -> Lua Script -> NY_Scripting_Result
+```
+
+### 완료 Gate
+
+| 질문 | 체크 |
+| --- | --- |
+| C# Core를 침범하지 않는가? | ☐ |
+| Gateway를 통해서만 Lua를 호출하는가? | ☐ |
+| 실패 시 C# fallback이 있는가? | ☐ |
+| Timeout / Error / Metrics가 있는가? | ☐ |
+| Before/After 비교가 가능한가? | ☐ |
+| Blog Draft 가치가 있는가? | ☐ |

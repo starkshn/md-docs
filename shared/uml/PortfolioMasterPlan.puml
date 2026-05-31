@@ -62,6 +62,7 @@ package "MVP 3순위" as Mvp3 {
   rectangle "Optimization Showcase" as Optimization
   rectangle "Rendering Debug View" as DebugView
   rectangle "Blog Series Polish" as BlogPolish
+  rectangle "Selective Lua Scripting Layer\\nSkill Formula / Condition 확장" as LuaScripting
 }
 
 package "공통 아키텍처" as Architecture {
@@ -89,6 +90,7 @@ package "제외 범위" as OutOfScope {
   rectangle "Login" as Login
   rectangle "Matchmaking" as Matchmaking
   rectangle "ECS / DOTS" as Dots
+  rectangle "Lua Core Replacement" as LuaCoreReplacement
   rectangle "대규모 Addressables 심화" as DeepAddressables
 }
 
@@ -136,6 +138,9 @@ Mvp3 --> Architecture : 확장 기능
 Optimization --> MetricsProvider : 수치 기반 비교
 DebugView --> ComparisonSystem : RenderTexture Debug View
 BlogPolish --> Tistory : 게시용 글 정리
+LuaScripting --> SkillSystem : 작은 Gameplay Logic 확장
+LuaScripting --> ComparisonSystem : C# Formula vs Lua Formula 비교
+LuaScripting --> MetricsProvider : 실행 시간 / 에러 Metrics
 
 IFeatureModule --> ToggleManager : 등록 / 제어
 ToggleManager --> ComparisonSystem : Before/After 트리거
@@ -159,6 +164,7 @@ Backlog -[#red,dashed]-> Login : Won't
 Backlog -[#red,dashed]-> Matchmaking : Won't
 Backlog -[#red,dashed]-> Dots : Won't
 Backlog -[#red,dashed]-> DeepAddressables : 초기 제외
+Backlog -[#red,dashed]-> LuaCoreReplacement : Lua는 Core 대체 금지
 
 note bottom of Strategy
 최상위 질문:
@@ -174,4 +180,5 @@ note bottom of Cycle
 end note
 
 @enduml
+
 

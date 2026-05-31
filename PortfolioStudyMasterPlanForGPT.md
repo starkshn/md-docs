@@ -759,3 +759,26 @@ Codex는 새 클래스를 만들기 전에 다음 문서를 반드시 확인한�
 새로운 기능을 추가하기 전에는 Architecture Governance Report를 먼저 작성한다.
 
 필수 검토 항목: Backlog 위치, KPI Level, ModuleHub 등록 가능 여부, Assembly 영향, 기존 Feature와 결합도, Before/After 가능성, Metrics 가능성, Blog/Interview 가치, 승인 또는 보류 판단.
+
+# 추가 지침: Selective Lua Scripting Layer
+
+Unity Technical Showcase의 기본 구현 언어는 C#이다. Core Framework, ModuleHub, Skill System, Tool System, Comparison System, Metrics System은 C#으로 구현한다.
+
+Lua는 전체 게임 로직을 대체하지 않는다. Lua는 Skill Damage Formula, Skill Condition, Buff Trigger, Effect Parameter Calculation, AI Test Behavior, Debug Command 같은 작은 확장 포인트에만 사용한다.
+
+권장 호출 흐름:
+
+```text
+NY_Skill_Instance -> NY_Scripting_Gateway -> NY_Scripting_LuaRuntime -> Lua Script -> NY_Scripting_Result
+```
+
+추천 클래스명:
+
+- `NY_Scripting_Gateway`
+- `NY_Scripting_LuaRuntime`
+- `NY_Scripting_Context`
+- `NY_Scripting_Result`
+- `NY_Scripting_ErrorReporter`
+- `NY_Scripting_Metrics`
+
+우선순위는 Skill System, Skill Tool, Before/After Comparison, ModuleHub 이후다. Lua Script가 실패해도 C# Core Framework가 깨지면 안 된다.

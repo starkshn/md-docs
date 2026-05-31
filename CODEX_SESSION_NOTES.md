@@ -264,3 +264,22 @@ otion/CodexNotionOperationRules.md 신규 생성
 - ScriptableObject: `NY_Skill_DefinitionSO`
 
 다음 작업 시 새 기능 추가 전 Architecture Governance Report를 먼저 작성해야 한다.
+
+## 2026-05-31 21:20:52 +09:00 - Selective Lua Scripting Layer 추가
+
+사용자가 Lua를 전체 구조가 아닌 선택적 확장 포인트로만 사용하는 요구사항을 추가했다.
+
+결정 사항:
+
+- C#이 기본 구현 언어다.
+- Core Framework, ModuleHub, Rendering, Animation Tool Core, Editor Tool Core, Optimization, Comparison Framework에는 Lua를 적용하지 않는다.
+- Lua는 Skill Damage Formula, Condition, Trigger, Formula 같은 작은 Gameplay Logic에만 적용한다.
+- 모든 Lua 호출은 `NY_Scripting_Gateway`를 통과한다.
+- Lua 실패 시 C# Core가 깨지면 안 되며 fallback, error, timeout, metrics를 둔다.
+- MVP 필수 기능이 아니며 Skill System/Tool 안정화 이후 확장 기능으로 둔다.
+
+신규 문서:
+
+- `projects/unity-technical-showcase/scripting/SelectiveLuaScriptingLayer.md`
+- `projects/unity-technical-showcase/scripting/LuaSkillFormulaExperiment.md`
+- `projects/unity-technical-showcase/scripting/uml/*.puml`

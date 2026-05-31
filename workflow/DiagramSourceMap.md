@@ -53,3 +53,9 @@ When a Markdown file changes:
 - Source: `projects/unity-technical-showcase/framework/uml/NYModuleLifecycle.puml`
 - Source: `projects/unity-technical-showcase/framework/uml/NYModuleDependencyGraph.puml`
 - Purpose: NY Core Framework, Module Hub, Module Registry, Tool Module, Comparable Module, Metrics 흐름을 정의한다.
+
+## Selective Lua Scripting Layer
+
+- Source: `projects/unity-technical-showcase/scripting/uml/SelectiveLuaScriptingLayer.puml`
+- Source: `projects/unity-technical-showcase/scripting/uml/LuaSkillFormulaSequence.puml`
+- Purpose: C# Core 위에서 Lua를 선택적 Gameplay Logic 확장 포인트로만 사용하는 구조를 정의한다.
