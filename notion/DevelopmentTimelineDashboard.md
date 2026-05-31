@@ -52,7 +52,7 @@ Role:
 Database:
 
 ```text
-Portfolio Development Timeline
+포트폴리오 개발 타임라인
 ```
 
 URL:
@@ -69,56 +69,56 @@ collection://99f867b4-09cd-43c3-9f47-0b5e86cde399
 
 ## Views
 
-### 01 All Schedule Timeline
+### 01 전체 일정 타임라인
 
 Purpose:
 
 - Shows all development work, No Development blocks, patch buffers, and milestone reviews in one timeline.
 - This is the main visual dashboard for "what happened when".
 
-### 02 MVP 1 Roadmap
+### 02 MVP 1 로드맵
 
 Purpose:
 
 - Shows only MVP 1 work.
 - Current MVP 1 scope is Skill System, Skill Tool, documentation, UML, blog draft, and interview readiness.
 
-### 03 Work Queue
+### 03 작업 큐
 
 Purpose:
 
 - Main editing table.
 - Use this view when adding, modifying, prioritizing, or rescheduling work.
 
-### 04 Calendar Linked
+### 04 캘린더 연결됨
 
 Purpose:
 
 - Shows items already linked to Google Calendar.
 - Used to confirm which Notion records have actual calendar references.
 
-### 05 No Development / Patch
+### 05 개발 금지 / 패치
 
 Purpose:
 
 - Shows patch days, patch -1 buffers, vacation days, and other blocked days.
 - No implementation work should be scheduled here.
 
-### 06 Status Board
+### 06 상태 보드
 
 Purpose:
 
 - Board grouped by `Calendar Status`.
 - Useful for seeing whether a task is not scheduled, scheduled, linked, needs reschedule, blocked, or done.
 
-### 08 Calendar Create Queue
+### 08 캘린더 생성 큐
 
 Purpose:
 
 - Shows items where `Calendar Action = Create Event`.
 - Codex can read this view and create Google Calendar events from it.
 
-### 09 Calendar Reschedule Queue
+### 09 캘린더 이동 큐
 
 Purpose:
 
@@ -163,37 +163,37 @@ Purpose:
 
 | Property | Type | Purpose |
 | --- | --- | --- |
-| Task | Title | Development item name |
-| Item Type | Select | Development Task, Study, Documentation, Blog, Review, Calendar Block, Patch Buffer, Milestone |
-| Feature | Select | Feature category |
-| Phase | Select | Development cycle phase |
-| Status | Select | Planned, In Progress, Blocked, Review, Done, Deferred |
-| Priority | Select | P0, P1, P2, P3 |
-| Sprint | Select | MVP 1, MVP 2, MVP 3, Backlog, Maintenance |
-| Calendar Status | Select | Not Scheduled, Scheduled, Calendar Linked, Needs Reschedule, No Development, Done |
-| Calendar Action | Select | None, Create Event, Update Event, Reschedule, Cancel |
-| Start | Date | Start date |
-| End | Date | End date |
-| KPI Level | Select | Completion or maturity level from 0 to 5 |
-| Development Hub | URL | Link to detailed Notion development page |
-| Google Calendar | URL | Google Calendar event link |
-| Google Event ID | Rich text | Google Calendar event ID when available |
-| Docs | URL | Link to Markdown document |
+| 작업명 | Title | Development item name |
+| 항목 유형 | Select | 개발 작업, 학습, 문서화, 블로그, 리뷰, 일정 차단, 패치 버퍼, 마일스톤 |
+| 기능 | Select | Feature category |
+| 단계 | Select | 개념 학습, 아키텍처 설계, 미니 실험, 구현, 검증, 문서화, 블로그 초안, 면접 정리, 리뷰 |
+| 상태 | Select | 예정, 진행 중, 차단됨, 검토 중, 완료, 보류 |
+| 우선순위 | Select | P0, P1, P2, P3 |
+| 스프린트 | Select | MVP 1, MVP 2, MVP 3, Backlog, Maintenance |
+| 캘린더 상태 | Select | 미등록, 등록 예정, 캘린더 연결됨, 일정 변경 필요, 개발 금지, 완료 |
+| 캘린더 작업 | Select | 없음, 일정 생성, 일정 수정, 일정 이동, 일정 취소 |
+| 시작일 | Date | Start date |
+| 종료일 | Date | End date |
+| KPI 단계 | Select | Completion or maturity level from 0 to 5 |
+| 개발 허브 | URL | Link to detailed Notion development page |
+| Google Calendar 링크 | URL | Google Calendar event link |
+| Google 이벤트 ID | Rich text | Google Calendar event ID when available |
+| 문서 | URL | Link to Markdown document |
 | PlantUML | URL | Link to PlantUML diagram |
-| Git Commit | Rich text | Related commit hash or commit list |
+| Git 커밋 | Rich text | Related commit hash or commit list |
 | Calendar Event | URL | Related Google Calendar event link |
-| Blog Draft | URL | Related Tistory blog draft |
-| Interview Notes | URL | Related interview summary |
-| Planned Hours | Number | Planned effort |
-| Actual Hours | Number | Actual effort |
-| Next Action | Rich text | Immediate next action |
-| Done Criteria | Rich text | Completion criteria |
-| No Development | Checkbox | True for patch/vacation/no-dev blocks |
-| Owner | Select | NY, Codex, or NY + Codex |
-| Schedule Note | Rich text | Scheduling context |
-| Review Date | Date | Review date |
-| Summary | Rich text | Short explanation of what was done |
-| Risk | Select | Low, Medium, High |
+| 블로그 초안 | URL | Related Tistory blog draft |
+| 면접 노트 | URL | Related interview summary |
+| 예상 시간 | Number | Planned effort |
+| 실제 시간 | Number | Actual effort |
+| 다음 작업 | Rich text | Immediate next action |
+| 완료 기준 | Rich text | Completion criteria |
+| 개발 금지 | Checkbox | True for patch/vacation/no-dev blocks |
+| 담당 | Select | NY, Codex, or NY + Codex |
+| 일정 메모 | Rich text | Scheduling context |
+| 리뷰일 | Date | Review date |
+| 요약 | Rich text | Short explanation of what was done |
+| 위험도 | Select | 낮음, 보통, 높음 |
 
 ## Initial Records
 
@@ -367,11 +367,25 @@ Codex writes Google Calendar URL and Event ID back to Notion
 
 When manually editing the database:
 
-1. Use `03 Work Queue`.
-2. Edit `Task`, `Start`, `End`, `Priority`, `Sprint`, and `Next Action`.
-3. If the task should appear in Google Calendar, set `Calendar Action = Create Event`.
-4. If an existing calendar event should move, set `Calendar Action = Reschedule`.
-5. Never schedule implementation work on rows where `No Development = checked`.
+1. Use `03 작업 큐`.
+2. Edit `작업명`, `시작일`, `종료일`, `우선순위`, `스프린트`, and `다음 작업`.
+3. If the task should appear in Google Calendar, set `캘린더 작업 = 일정 생성`.
+4. If an existing calendar event should move, set `캘린더 작업 = 일정 이동`.
+5. Never schedule implementation work on rows where `개발 금지 = checked`.
+
+## Korean Management Naming
+
+The Notion database is a management surface, so visible database names, view names, property names, and option labels are Korean-first.
+
+Technical proper nouns remain in English when that improves recognition:
+
+- Git
+- PlantUML
+- Google Calendar
+- MVP
+- ModuleHub
+- Before/After
+- Lua
 
 ## Operating Rule
 

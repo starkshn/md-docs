@@ -439,3 +439,62 @@ Google Calendar reflected blocks:
 MVP 1 draft schedule was added from 2026-06-01 to 2026-07-05, avoiding vacation and patch NoDev dates.
 
 Operating rule: Notion DB is the schedule intent source, Google Calendar is the actual time-block source, and Codex syncs rows marked by Calendar Action.
+
+## 2026-05-31 22:55:00 +09:00 notion timeline korean localization
+
+Portfolio Development Timeline DB was localized for Korean management use.
+
+Renamed database:
+
+- Portfolio Development Timeline -> 포트폴리오 개발 타임라인
+
+Localized visible properties:
+
+- Task -> 작업명
+- Item Type -> 항목 유형
+- Feature -> 기능
+- Phase -> 단계
+- Status -> 상태
+- Priority -> 우선순위
+- Sprint -> 스프린트
+- Calendar Status -> 캘린더 상태
+- Calendar Action -> 캘린더 작업
+- Start / End -> 시작일 / 종료일
+- Summary -> 요약
+- Next Action -> 다음 작업
+- Done Criteria -> 완료 기준
+- Risk -> 위험도
+
+Localized select options:
+
+- Planned -> 예정
+- In Progress -> 진행 중
+- Blocked -> 차단됨
+- Done -> 완료
+- Concept Study -> 개념 학습
+- Architecture Design -> 아키텍처 설계
+- Mini Experiment -> 미니 실험
+- Implementation -> 구현
+- Documentation -> 문서화
+- Not Scheduled -> 미등록
+- Create Event -> 일정 생성
+- Reschedule -> 일정 이동
+- No Development -> 개발 금지
+
+Localized views:
+
+- 기본 관리 테이블
+- 전체 개발 타임라인
+- 전체 작업 테이블
+- 기능별 보기
+- 01 전체 일정 타임라인
+- 02 MVP 1 로드맵
+- 03 작업 큐
+- 04 캘린더 연결됨
+- 05 개발 금지 / 패치
+- 06 상태 보드
+- 07 리뷰 큐
+- 08 캘린더 생성 큐
+- 09 캘린더 이동 큐
+
+Rule: keep Git, PlantUML, Google Calendar, MVP, ModuleHub, Before/After, Lua as English technical nouns when useful.
