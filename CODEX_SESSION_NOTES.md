@@ -329,3 +329,22 @@ otion/CodexNotionOperationRules.md 신규 생성
 - 새 기능 구현 전: Architecture Governance Review
 - 기능 구현 후: Build / Test / Docs / UML / Interview Notes 확인
 - 매주 일요일: Weekly Technical Review
+
+## 2026-05-31 21:39:41 +09:00 - Actual Notion page automation dashboard sync
+
+실제 Notion 페이지 `UnityProjectAZ_NotionTemplate`를 fetch해 확인했다.
+
+확인 결과:
+
+- 실제 Notion 페이지는 `Final Interview Package`까지만 있었고, 로컬 Markdown의 이후 섹션은 아직 반영되지 않은 상태였다.
+- Notion update tool이 정상 동작하여 실제 페이지 끝에 `Portfolio Automation Dashboard` 섹션을 추가했다.
+
+추가한 섹션:
+
+- Automation Overview
+- Portfolio Health Dashboard
+- Architecture Governance Review Log
+- Unity CI/CD Pipeline Status
+- Weekly Technical Review Automation
+- Calendar / Notion 운영 규칙
+- Codex Request Templates
