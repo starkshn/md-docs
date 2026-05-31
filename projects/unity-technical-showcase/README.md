@@ -46,3 +46,22 @@
 - Building a Unity skill editor for runtime assembly
 - Creating a technical showcase instead of a generic RPG portfolio
 - Building a portfolio dashboard that shows Before / After technical improvements
+
+## Feature Toggle / Before-After Showcase Core
+
+포트폴리오의 모든 기능은 `IFeatureModule` 기반 독립 모듈로 설계한다. `FeatureToggleManager`가 ON/OFF, 의존성, 상태, 로그, Metrics를 관리하고, `ComparisonViewSystem`이 Before/After RenderTexture 비교를 담당한다.
+
+관련 문서:
+
+- [FeatureToggleArchitecture](feature-toggle/FeatureToggleArchitecture.md)
+- [BeforeAfterComparisonSystem](feature-toggle/BeforeAfterComparisonSystem.md)
+- [ShowcaseControlPanelDesign](feature-toggle/ShowcaseControlPanelDesign.md)
+- [RenderTargetComparisonDesign](feature-toggle/RenderTargetComparisonDesign.md)
+- [InflearnSkillSystemAdaptation](feature-toggle/InflearnSkillSystemAdaptation.md)
+
+핵심 원칙:
+
+- 강의 구조는 그대로 복사하지 않고 현재 포트폴리오 구조에 맞게 재설계한다.
+- 모든 주요 기능은 Runtime에서 ON/OFF 가능해야 한다.
+- 모든 주요 기능은 Before/After 비교와 Metrics를 제공해야 한다.
+- Showcase Control Panel이 시연 UX의 중심이다.

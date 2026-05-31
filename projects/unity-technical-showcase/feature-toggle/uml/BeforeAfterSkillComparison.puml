@@ -1,0 +1,33 @@
+﻿@startuml
+title Before / After Skill Comparison - 스킬 시스템 적용 전후 비교
+
+package "Before - 적용 전" {
+  class HardcodedSkill
+  class CoupledTargetEffectCondition
+  class NoValidation
+  class NoTimeline
+}
+
+package "After - 적용 후" {
+  class SkillDefinitionSO
+  class EffectDefinitionSO
+  class TargetingDefinitionSO
+  class ConditionDefinitionSO
+  class CooldownDefinitionSO
+  class SkillFactory
+  class SkillInstance
+  class SkillEventTimeline
+  class SkillValidationPanel
+  class MetricsView
+}
+
+HardcodedSkill --> SkillDefinitionSO : 데이터 기반으로 전환
+CoupledTargetEffectCondition --> EffectDefinitionSO : Effect 분리
+CoupledTargetEffectCondition --> TargetingDefinitionSO : Targeting 분리
+CoupledTargetEffectCondition --> ConditionDefinitionSO : Condition 분리
+NoValidation --> SkillValidationPanel : 검증 UI 추가
+NoTimeline --> SkillEventTimeline : 실행 흐름 시각화
+SkillFactory --> SkillInstance : 런타임 조립
+SkillInstance --> MetricsView : 실행 비용 표시
+
+@enduml

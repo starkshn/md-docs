@@ -1,0 +1,52 @@
+﻿@startuml
+title Comparison View System - 비교 뷰 시스템
+
+class ComparisonViewSystem {
+  +SetMode(ViewMode mode)
+  +BindBeforeTarget(RenderTexture rt)
+  +BindAfterTarget(RenderTexture rt)
+  +Refresh()
+}
+
+class ComparisonCameraRig {
+  +Camera beforeCamera
+  +Camera afterCamera
+  +SyncCameraTransform()
+  +SetTargetScene()
+}
+
+class RenderTargetController {
+  +RenderTexture beforeRT
+  +RenderTexture afterRT
+  +CreateRenderTargets()
+  +ReleaseRenderTargets()
+}
+
+class RenderPassController {
+  +ConfigureBeforePass()
+  +ConfigureAfterPass()
+  +ApplyDebugPass()
+}
+
+class MetricsPanelPresenter {
+  +ShowBeforeMetrics()
+  +ShowAfterMetrics()
+  +ShowDiff()
+}
+
+enum ViewMode {
+  BeforeOnly
+  AfterOnly
+  SideBySide
+  SplitScreen
+  OverlayDifference
+  DebugView
+}
+
+ComparisonViewSystem --> ComparisonCameraRig : 카메라 동기화
+ComparisonViewSystem --> RenderTargetController : 렌더 타겟 관리
+ComparisonViewSystem --> RenderPassController : 렌더 패스 제어
+ComparisonViewSystem --> MetricsPanelPresenter : 지표 표시
+ComparisonViewSystem --> ViewMode : 표시 모드 선택
+
+@enduml

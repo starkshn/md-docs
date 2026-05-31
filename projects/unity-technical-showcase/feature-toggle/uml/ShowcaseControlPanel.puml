@@ -1,0 +1,45 @@
+﻿@startuml
+title Showcase Control Panel - 기술 시연 제어 패널
+
+class ShowcaseControlPanel {
+  +BindFeatureToggleManager()
+  +BindComparisonViewSystem()
+  +SelectModule(string id)
+  +Refresh()
+}
+
+class FeatureToggleView {
+  +ShowModuleList()
+  +ToggleModule(string id)
+}
+
+class ModuleSettingView {
+  +ShowSettings(string moduleId)
+  +ApplySetting(string key, object value)
+}
+
+class ComparisonViewPanel {
+  +SetViewMode(ViewMode mode)
+  +BindBeforeAfterTargets()
+}
+
+class MetricsView {
+  +ShowMetrics()
+  +ShowDiff()
+}
+
+class SkillEditorPanel
+class SkillRuntimePanel
+class SkillValidationPanel
+class SkillEventTimeline
+
+ShowcaseControlPanel --> FeatureToggleView : 모듈 토글 UI
+ShowcaseControlPanel --> ModuleSettingView : 모듈 설정 UI
+ShowcaseControlPanel --> ComparisonViewPanel : Before/After 뷰
+ShowcaseControlPanel --> MetricsView : 성능 지표 UI
+ShowcaseControlPanel --> SkillEditorPanel : 스킬 편집
+ShowcaseControlPanel --> SkillRuntimePanel : 스킬 실행
+ShowcaseControlPanel --> SkillValidationPanel : 데이터 검증
+ShowcaseControlPanel --> SkillEventTimeline : 실행 흐름 표시
+
+@enduml

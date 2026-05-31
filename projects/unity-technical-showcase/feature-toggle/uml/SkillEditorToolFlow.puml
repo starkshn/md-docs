@@ -1,0 +1,22 @@
+﻿@startuml
+title Skill Editor Tool Flow - 스킬 에디터 툴 흐름
+
+start
+:ShowcaseControlPanel에서 Skill Editor 선택;
+:SkillDefinitionSO 생성 또는 로드;
+:Effect 모듈 추가/삭제;
+:Targeting 모듈 선택;
+:Condition 모듈 추가/삭제;
+:Cooldown 설정;
+:Validation 실행;
+if (검증 통과?) then (예)
+  :Skill Asset 저장;
+  :Runtime Preview 실행;
+  :SkillEventTimeline 갱신;
+  :MetricsView 갱신;
+else (아니오)
+  :SkillValidationPanel에 오류 표시;
+endif
+stop
+
+@enduml

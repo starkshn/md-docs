@@ -1,0 +1,25 @@
+﻿@startuml
+title Before / After RenderTarget Flow - 적용 전후 렌더 타겟 흐름
+
+start
+
+:기능 모듈 선택;
+:Before 상태 캡처;
+:Before Camera 렌더링;
+:Before Render Pass 실행;
+:Before RenderTexture 출력;
+
+:기능 모듈 활성화;
+:After 상태 캡처;
+:After Camera 렌더링;
+:After Render Pass 실행;
+:After RenderTexture 출력;
+
+:Before RenderTexture를 UI에 표시;
+:After RenderTexture를 UI에 표시;
+:Metrics 수집;
+:성능 차이 표시;
+
+stop
+
+@enduml

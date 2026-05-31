@@ -646,3 +646,52 @@ Docs --> BlogSeries : 블로그 원문 소스로 재사용
 
 
 
+
+# 추가 지침: Feature Toggle와 Before/After RenderTarget 비교
+
+Unity Technical Showcase의 모든 기능은 `IFeatureModule` 기반 독립 모듈로 관리한다. 각 기능은 `FeatureToggleManager`에서 ON/OFF 가능해야 하며, `ComparisonViewSystem`을 통해 적용 전과 후를 RenderTexture로 비교한다.
+
+## 공통 모듈 책임
+
+- Initialize
+- Enable
+- Disable
+- Reset
+- Tick
+- Capture Before State
+- Capture After State
+- Provide Debug UI Data
+- Provide Performance Metrics
+
+## 포트폴리오 시연 중심 구조
+
+- `ShowcaseControlPanel`: 모든 기능 조작 UI
+- `FeatureToggleManager`: 모듈 등록, 토글, 의존성, 상태 관리
+- `ComparisonViewSystem`: Before/After RenderTexture 비교
+- `ModuleMetricsProvider`: FPS, GC, Draw Call, 실행 시간 등 지표 수집
+- `MetricsView`: 수치 변화 표시
+
+## 인프런 스킬 시스템 강의 적용 규칙
+
+강의 구조를 그대로 복사하지 않는다. 강의는 모듈형 스킬 시스템, ScriptableObject 데이터 설계, Effect/Target/Condition/Cooldown 분리, Runtime Skill Assembly를 학습하기 위한 참고 자료다.
+
+최종 구조는 다음처럼 변환한다.
+
+```text
+강의 Skill System -> SkillSystemModule
+강의 Skill Editor -> SkillEditorModule
+강의 Skill Data -> SkillDefinitionSO / EffectDefinitionSO / TargetingDefinitionSO / ConditionDefinitionSO
+강의 Runtime Skill -> SkillInstance / SkillFactory / SkillController
+강의 Tool UI -> ShowcaseControlPanel + SkillEditorPanel
+강의 Debug 출력 -> ModuleMetricsProvider + MetricsView + SkillEventTimeline
+강의 단일 실행 화면 -> Before / After RenderTarget Comparison View
+```
+
+## GPT 피드백 요청 시 확인할 질문
+
+1. 이 MVP 범위가 현실적인가?
+2. Feature Module 구조가 Unity 프로젝트에 과하게 복잡하지 않은가?
+3. Before/After RenderTexture 비교가 면접 시연에 충분히 설득력 있는가?
+4. Skill System과 Skill Editor를 MVP 1순위로 둔 판단이 적절한가?
+5. 인프런 강의 구조를 포트폴리오 구조로 재설계하는 방향이 타당한가?
+6. 문서, PlantUML, 블로그, 면접 설명 흐름이 하나로 연결되는가?

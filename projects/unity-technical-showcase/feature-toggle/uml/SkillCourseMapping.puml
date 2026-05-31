@@ -1,0 +1,56 @@
+﻿@startuml
+title Skill System Course Mapping - 강의 구조에서 포트폴리오 구조로 변환
+
+package "강의 스킬 시스템" {
+  class CourseSkill
+  class CourseSkillData
+  class CourseEffect
+  class CourseTarget
+  class CourseSkillEditor
+}
+
+package "포트폴리오 스킬 시스템" {
+  class SkillSystemModule
+  class SkillDefinitionSO
+  class EffectDefinitionSO
+  class TargetingDefinitionSO
+  class ConditionDefinitionSO
+  class SkillFactory
+  class SkillInstance
+  class SkillController
+}
+
+package "포트폴리오 Tool UI" {
+  class ShowcaseControlPanel
+  class SkillEditorPanel
+  class SkillValidationPanel
+  class SkillEventTimeline
+  class MetricsView
+}
+
+package "포트폴리오 비교 시스템" {
+  class ComparisonViewSystem
+  class BeforeRenderTarget
+  class AfterRenderTarget
+}
+
+CourseSkill --> SkillSystemModule : Feature Module로 재설계
+CourseSkillData --> SkillDefinitionSO : ScriptableObject 데이터로 변환
+CourseEffect --> EffectDefinitionSO : Effect 모듈 분리
+CourseTarget --> TargetingDefinitionSO : Targeting 모듈 분리
+CourseSkillEditor --> SkillEditorPanel : Showcase Tool에 통합
+
+SkillSystemModule --> SkillFactory : 런타임 조립 요청
+SkillFactory --> SkillInstance : 실행 인스턴스 생성
+SkillController --> SkillInstance : 입력과 실행 제어
+
+ShowcaseControlPanel --> SkillEditorPanel : 편집 패널 제어
+ShowcaseControlPanel --> SkillValidationPanel : 검증 결과 표시
+ShowcaseControlPanel --> SkillEventTimeline : 실행 흐름 표시
+ShowcaseControlPanel --> MetricsView : 성능 지표 표시
+
+SkillSystemModule --> ComparisonViewSystem : Before/After 비교 연결
+ComparisonViewSystem --> BeforeRenderTarget : 적용 전 출력
+ComparisonViewSystem --> AfterRenderTarget : 적용 후 출력
+
+@enduml

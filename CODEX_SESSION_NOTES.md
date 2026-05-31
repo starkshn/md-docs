@@ -119,3 +119,19 @@ Important decision:
 
 - MVP 1 is now limited to Skill System, Skill Editor, Technical Showcase Scene, Markdown Docs, and PlantUML.
 - Animation, Shader, Optimization, Rendering Debug View, and full blog polish are later phases.
+
+## 2026-05-31 - Feature Toggle / Before-After 비교 구조 추가
+
+첨부 텍스트를 다시 참고해서 다음 내용을 문서화했다.
+
+- 모든 기능을 `IFeatureModule` 기반 독립 모듈로 관리
+- `FeatureToggleManager` 중심의 ON/OFF, 의존성, 상태, Metrics 구조
+- `ComparisonViewSystem` 기반 Before/After RenderTexture 비교
+- `ShowcaseControlPanel` 중심의 기술 시연 대시보드
+- 인프런 스킬 시스템 강의를 그대로 복사하지 않고 포트폴리오 구조로 변환하는 규칙
+
+새 문서 폴더:
+
+- `projects/unity-technical-showcase/feature-toggle/`
+
+다음 세션에서 이 폴더와 `PortfolioStudyMasterPlanForGPT.md`를 먼저 읽으면 전체 설계 방향을 빠르게 파악할 수 있다.
