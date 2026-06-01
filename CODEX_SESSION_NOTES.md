@@ -644,3 +644,56 @@ Added document:
 ```text
 C:\kny\technical-portfolio-docs\RepositorySplitStrategy.md
 ```
+
+## 2026-06-01 local repository split setup
+
+User requested local Git repositories to be split if that is better for Markdown and project management.
+
+Decision:
+
+Use three local repositories only:
+
+1. Documentation: C:\kny\technical-portfolio-docs
+2. Unity Project: C:\kny\Project\Unity\unity-technical-showcase
+3. Public Website: C:\kny\starkshn.github.io
+
+Do not create a separate blog repository during MVP.
+Blog drafts remain in `technical-portfolio-docs` because they are derived from study notes and architecture docs.
+
+Created local Unity repository:
+
+```text
+C:\kny\Project\Unity\unity-technical-showcase
+```
+
+Initialized files:
+
+- README.md
+- .gitignore
+
+Initial Unity repo commit:
+
+```text
+f4686dc chore: initialize unity technical showcase repo
+```
+
+Unity repo branch:
+
+```text
+main
+```
+
+Unity repo remote:
+
+```text
+not connected yet
+```
+
+Added docs:
+
+```text
+C:\kny\technical-portfolio-docs\LocalGitRepositoryMap.md
+C:\kny\technical-portfolio-docs\RepositorySplitStrategy.md updated
+```
+
+When user provides GitHub repo URLs later, connect remotes and push.

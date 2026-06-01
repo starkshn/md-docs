@@ -73,7 +73,7 @@ https://github.com/starkshn/unity-technical-showcase
 Recommended local path:
 
 ```text
-C:\kny\Project\unity-technical-showcase
+C:\kny\Project\Unity\unity-technical-showcase
 ```
 
 Role:
@@ -94,6 +94,15 @@ Rules:
 - Use Git LFS if large assets are added.
 - Do not commit `Library`, `Temp`, `Obj`, `Build`, `Logs`, `UserSettings`.
 - Keep documentation summaries in the repo, but keep full architecture docs in `technical-portfolio-docs`.
+
+Current local status:
+
+```text
+Local Git repository initialized.
+Branch: main
+Remote: not connected yet
+Initial commit: f4686dc chore: initialize unity technical showcase repo
+```
 
 ### 3. starkshn.github.io
 
@@ -165,6 +174,14 @@ starkshn.github.io
 ```
 
 Do not split more than this at the MVP stage.
+
+Blog drafts stay in `technical-portfolio-docs` during MVP.
+
+Reason:
+
+- Blog drafts are derived from study notes and architecture docs.
+- Keeping them together avoids duplicated Markdown management.
+- Public blog links can later be surfaced through `starkshn.github.io`.
 
 ## Responsibility Boundary
 
