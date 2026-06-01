@@ -540,3 +540,55 @@ Next sessions should read this file first, then inspect:
 1. C:\kny\technical-portfolio-docs\CODEX_SESSION_NOTES.md
 2. C:\kny\technical-portfolio-docs\notion\DevelopmentTimelineDashboard.md
 3. C:\kny\technical-portfolio-docs\notion\TwoPageNotionManagementStructure.md
+
+## 2026-06-01 save-md checkpoint
+
+/save-md checkpoint saved.
+
+Current active management state:
+
+- Main docs repo: C:\kny\technical-portfolio-docs
+- Global memory: C:\kny\CODEX_WORK_MEMORY.md
+- Schedule Dashboard: https://www.notion.so/3714bccaf9eb81cabf9edec06dd3a6da
+- Development Hub: https://www.notion.so/3714bccaf9eb8020bc85e39638c56d7b
+- Timeline DB: https://www.notion.so/fa259baed449460693fcdfbd2d0dc4b2
+- Timeline DB name: 포트폴리오 개발 타임라인
+
+Current Notion operation rule:
+
+```text
+Notion DB = 계획과 상태 원본
+Google Calendar = 실제 시간 블록
+Codex = 캘린더 작업 큐를 읽고 일정 생성/수정/이동
+```
+
+Important Korean views:
+
+- 기본 관리 테이블
+- 전체 개발 타임라인
+- 전체 작업 테이블
+- 기능별 보기
+- 01 전체 일정 타임라인
+- 02 MVP 1 로드맵
+- 03 작업 큐
+- 04 캘린더 연결됨
+- 05 개발 금지 / 패치
+- 06 상태 보드
+- 07 리뷰 큐
+- 08 캘린더 생성 큐
+- 09 캘린더 이동 큐
+
+Important rule:
+
+- Visible management labels are Korean-first.
+- Keep Git, PlantUML, Google Calendar, MVP, ModuleHub, Before/After, Lua as English technical nouns when useful.
+- Patch day and patch -1 day are no-development days.
+- Use `03 작업 큐` for adding/editing work.
+- Use `08 캘린더 생성 큐` for Google Calendar creation candidates.
+- Use `09 캘린더 이동 큐` for Google Calendar reschedule candidates.
+
+Latest saved Git commit before this checkpoint:
+
+```text
+d5c3a70 docs: save notion timeline checkpoint
+```
