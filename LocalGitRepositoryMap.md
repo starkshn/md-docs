@@ -26,12 +26,14 @@ Remote:
 
 ```text
 origin https://github.com/starkshn/technical-portfolio-docs.git
+md-docs https://github.com/starkshn/md-docs.git
 ```
 
 Current status:
 
 ```text
-Remote is configured, but GitHub repository does not exist yet.
+origin is kept for the originally planned docs repository.
+md-docs is the active GitHub repository currently pushed and tracked.
 ```
 
 Role:
@@ -158,7 +160,7 @@ When the user creates GitHub repositories, connect them like this:
 ### Documentation Repository
 
 ```powershell
-git -C C:\kny\technical-portfolio-docs push -u origin main
+git -C C:\kny\technical-portfolio-docs push md-docs main
 ```
 
 ### Unity Repository

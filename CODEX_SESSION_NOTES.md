@@ -697,3 +697,48 @@ C:\kny\technical-portfolio-docs\RepositorySplitStrategy.md updated
 ```
 
 When user provides GitHub repo URLs later, connect remotes and push.
+
+## 2026-06-01 md-docs remote connected
+
+User created GitHub repository:
+
+```text
+https://github.com/starkshn/md-docs.git
+```
+
+Important correction:
+
+- Do not replace the existing `origin` remote.
+- Keep the original `origin` remote for the originally planned docs repository.
+- Add the new repository as an additional remote named `md-docs`.
+
+Current remotes:
+
+```text
+origin  https://github.com/starkshn/technical-portfolio-docs.git
+md-docs https://github.com/starkshn/md-docs.git
+```
+
+Push completed:
+
+```text
+git -C C:\kny\technical-portfolio-docs push -u md-docs main
+```
+
+Result:
+
+```text
+main -> md-docs/main
+```
+
+Current active GitHub docs repository:
+
+```text
+https://github.com/starkshn/md-docs
+```
+
+Future docs push command:
+
+```powershell
+git -C C:\kny\technical-portfolio-docs push md-docs main
+```

@@ -21,6 +21,7 @@ Recommended GitHub repository:
 
 ```text
 https://github.com/starkshn/technical-portfolio-docs
+https://github.com/starkshn/md-docs
 ```
 
 Local path:
@@ -45,21 +46,14 @@ This repository is the source of truth for documentation.
 Current push status:
 
 ```text
-Remote was configured.
-Push failed because the GitHub repository does not exist yet.
+origin remains configured for technical-portfolio-docs.
+md-docs is configured and pushed successfully.
 ```
 
-Required user action:
-
-```text
-Create an empty GitHub repository named technical-portfolio-docs under starkshn.
-Do not initialize it with README, .gitignore, or license.
-```
-
-After the repository exists:
+Current active push command:
 
 ```powershell
-git -C C:\kny\technical-portfolio-docs push -u origin main
+git -C C:\kny\technical-portfolio-docs push md-docs main
 ```
 
 ### 2. unity-technical-showcase
@@ -221,14 +215,14 @@ When working with Git:
 
 The docs repository is ready locally.
 
-GitHub push is blocked until this repository exists:
+GitHub push target currently in use:
 
 ```text
-https://github.com/starkshn/technical-portfolio-docs
+https://github.com/starkshn/md-docs
 ```
 
-After creating it, run:
+Push command:
 
 ```powershell
-git -C C:\kny\technical-portfolio-docs push -u origin main
+git -C C:\kny\technical-portfolio-docs push md-docs main
 ```
