@@ -592,3 +592,55 @@ Latest saved Git commit before this checkpoint:
 ```text
 d5c3a70 docs: save notion timeline checkpoint
 ```
+
+## 2026-06-01 repository push and split strategy
+
+User requested GitHub upload and repository split review.
+
+Checked docs repository:
+
+- Local repo: C:\kny\technical-portfolio-docs
+- Branch: main
+- Working tree was clean before strategy doc update.
+- No remote existed initially.
+
+Configured intended remote:
+
+```text
+origin https://github.com/starkshn/technical-portfolio-docs.git
+```
+
+Push attempt:
+
+```text
+git -C C:\kny\technical-portfolio-docs push -u origin main
+```
+
+Result:
+
+```text
+remote: Repository not found.
+fatal: repository 'https://github.com/starkshn/technical-portfolio-docs.git/' not found
+```
+
+Conclusion:
+
+- GitHub repository `starkshn/technical-portfolio-docs` does not exist yet.
+- The local remote is already set to the intended URL.
+- After creating an empty GitHub repository with that name, push can be retried.
+
+Repository split decision:
+
+Use three primary repositories:
+
+1. `technical-portfolio-docs` for Markdown, PlantUML, GPT/Claude/Codex handoff docs, Notion rules, roadmap, interview notes.
+2. `unity-technical-showcase` for the actual Unity project and source code.
+3. `starkshn.github.io` for public portfolio site, blog index, demo links.
+
+Do not split into more repositories during MVP unless assets or mini experiments become too heavy.
+
+Added document:
+
+```text
+C:\kny\technical-portfolio-docs\RepositorySplitStrategy.md
+```
