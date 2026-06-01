@@ -742,3 +742,35 @@ Future docs push command:
 ```powershell
 git -C C:\kny\technical-portfolio-docs push md-docs main
 ```
+
+## 2026-06-01 save-md Claude/Codex sync checkpoint
+
+User noted that when a Unity project repository is created later, it should be connected separately.
+
+Saved Claude/Codex sync strategy:
+
+- Home uses Codex.
+- Company may use Claude.
+- Both should synchronize through GitHub repository `https://github.com/starkshn/md-docs` for Markdown docs.
+- Claude should first read `CLAUDE.md`, `README.md`, `CODEX_SESSION_NOTES.md`, `LocalGitRepositoryMap.md`, `RepositorySplitStrategy.md`, `PortfolioStudyMasterPlanForGPT.md`, and `notion/DevelopmentTimelineDashboard.md`.
+- Codex focuses on architecture, Notion/Calendar, Git, implementation prep.
+- Claude focuses on review, blog draft polish, interview answers, and explanation quality.
+- Unity project source should be managed in a separate repository later.
+
+Current Unity local repository:
+
+```text
+C:\kny\Project\Unity\unity-technical-showcase
+```
+
+Unity repository remote status:
+
+```text
+not connected yet
+```
+
+Added document:
+
+```text
+C:\kny\technical-portfolio-docs\ClaudeCodexSyncGuide.md
+```
