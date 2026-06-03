@@ -1,0 +1,59 @@
+﻿@startuml GitPlantUMLIndex
+!theme plain
+title Git PlantUML 인덱스
+
+skinparam defaultFontName Malgun Gothic
+skinparam shadowing false
+skinparam componentStyle rectangle
+skinparam ArrowColor #333333
+skinparam NoteBackgroundColor #FFFDE7
+skinparam NoteBorderColor #777777
+
+rectangle "Git UML 문서" as Root
+
+component "PortfolioGitRepositoryMaster.puml\n전체 Git 저장소 구조" as Master
+component "PortfolioGitWorkflow.puml\n작업 유형별 Git 흐름" as Workflow
+component "ClaudeCodexGitSync.puml\n집 Codex / 회사 Claude 동기화" as Sync
+component "GitRepositoryResponsibility.puml\n저장소별 책임 경계" as Responsibility
+component "GitRemoteConnectionPlan.puml\nremote 연결 계획" as RemotePlan
+
+Root --> Master
+Root --> Workflow
+Root --> Sync
+Root --> Responsibility
+Root --> RemotePlan
+
+note right of Root
+이 파일은 PlantUML 렌더링용 인덱스다.
+Markdown 가이드는 렌더링하지 않는다.
+
+Markdown 설명 문서:
+GitPlantUMLGuide.md
+end note
+
+note bottom of Master
+문서 저장소, Unity 저장소,
+공개 사이트 저장소의 전체 관계
+end note
+
+note bottom of Workflow
+문서 작업 / Unity 작업 /
+공개 사이트 작업 분기
+end note
+
+note bottom of Sync
+md-docs를 기준으로
+Codex와 Claude가 같은 맥락 공유
+end note
+
+note bottom of Responsibility
+각 저장소에 넣을 것과
+넣으면 안 되는 것
+end note
+
+note bottom of RemotePlan
+현재 md-docs remote와
+향후 Unity remote 연결 계획
+end note
+
+@enduml

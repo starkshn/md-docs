@@ -1,28 +1,47 @@
-# Git PlantUML Guide
+﻿# Git PlantUML Guide
 
-## Purpose
+> 이 파일은 Markdown 설명 문서다. PlantUML 렌더러에 넣지 않는다.
+>
+> PlantUML에서 바로 렌더링할 파일은 `shared/uml/git/*.puml` 파일이다.
+
+## 목적
 
 이 문서는 포트폴리오 Git 저장소 구조를 PlantUML로 설명하기 위한 가이드다.
 
-문서, Unity 프로젝트, 공개 포트폴리오 사이트를 어떤 기준으로 나누고, Codex / Claude / GitHub / Notion이 어떻게 연결되는지 한눈에 파악하는 것이 목적이다.
+문서 저장소, Unity 프로젝트 저장소, 공개 포트폴리오 사이트 저장소를 어떤 기준으로 나누고, Codex / Claude / GitHub / Notion이 어떻게 연결되는지 한눈에 파악하는 것이 목적이다.
 
-## Diagram Location
+## PlantUML 파일 위치
 
 ```text
 C:\kny\technical-portfolio-docs\shared\uml\git
 ```
 
-## Diagrams
+## 렌더링 규칙
+
+Markdown 파일은 PlantUML 렌더러에 넣지 않는다.
+
+렌더링해야 하는 파일은 아래 `.puml` 파일들이다.
+
+```text
+PortfolioGitRepositoryMaster.puml
+PortfolioGitWorkflow.puml
+ClaudeCodexGitSync.puml
+GitRepositoryResponsibility.puml
+GitRemoteConnectionPlan.puml
+GitPlantUMLIndex.puml
+```
+
+## 다이어그램 목록
 
 ### 1. PortfolioGitRepositoryMaster.puml
 
-Purpose:
+용도:
 
-- 전체 Git 저장소 구조를 한눈에 보여준다.
+- 전체 Git 저장소 구조를 한 장으로 보여준다.
 - 로컬 저장소와 GitHub remote의 관계를 설명한다.
 - Codex, Claude, NY, 면접관/방문자가 어떤 저장소를 바라보는지 설명한다.
 
-Shows:
+포함 내용:
 
 - `technical-portfolio-docs`
 - `unity-technical-showcase`
@@ -33,12 +52,12 @@ Shows:
 
 ### 2. PortfolioGitWorkflow.puml
 
-Purpose:
+용도:
 
 - 작업 유형별 Git 흐름을 보여준다.
 - 문서 작업, Unity 작업, 공개 사이트 작업을 분기해서 관리한다.
 
-Shows:
+포함 내용:
 
 - 문서 작업 시 `technical-portfolio-docs`에 commit / push
 - Unity 작업 시 `unity-technical-showcase`에 commit
@@ -47,11 +66,11 @@ Shows:
 
 ### 3. ClaudeCodexGitSync.puml
 
-Purpose:
+용도:
 
 - 집 Codex와 회사 Claude가 같은 문서 맥락을 공유하는 과정을 보여준다.
 
-Shows:
+포함 내용:
 
 - 집에서 Codex 작업
 - `md-docs`로 push
@@ -62,11 +81,11 @@ Shows:
 
 ### 4. GitRepositoryResponsibility.puml
 
-Purpose:
+용도:
 
 - 각 Git 저장소의 책임 경계를 설명한다.
 
-Shows:
+포함 내용:
 
 - `technical-portfolio-docs`가 관리해야 하는 것
 - `unity-technical-showcase`가 관리해야 하는 것
@@ -75,18 +94,25 @@ Shows:
 
 ### 5. GitRemoteConnectionPlan.puml
 
-Purpose:
+용도:
 
 - 현재 remote 연결 상태와 나중에 연결할 Unity remote 계획을 보여준다.
 
-Shows:
+포함 내용:
 
 - `origin`: 기존 계획 remote
 - `md-docs`: 현재 활성 문서 remote
 - Unity repository: 나중에 GitHub URL을 받아 연결
 - `starkshn.github.io`: 이미 연결된 공개 사이트 remote
 
-## Current Git Structure
+### 6. GitPlantUMLIndex.puml
+
+용도:
+
+- PlantUML에서 렌더링 가능한 Git UML 인덱스다.
+- 어떤 다이어그램을 열어야 하는지 빠르게 확인한다.
+
+## 현재 Git 구조
 
 ```text
 technical-portfolio-docs
@@ -103,7 +129,7 @@ starkshn.github.io
     origin = https://github.com/starkshn/starkshn.github.io.git
 ```
 
-## Operating Rule
+## 운영 규칙
 
 ```text
 문서 / 설계 / PlantUML / Notion 규칙
@@ -116,7 +142,7 @@ Unity C# / 씬 / 셰이더 / 에디터 툴
 → starkshn.github.io
 ```
 
-## Future Work
+## 향후 작업
 
 Unity 프로젝트 GitHub 저장소를 만들면 아래 다이어그램을 업데이트한다.
 

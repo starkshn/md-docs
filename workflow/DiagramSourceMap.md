@@ -73,6 +73,7 @@ When a Markdown file changes:
 ## Git Repository Management
 
 - Source: `shared/uml/git/PortfolioGitRepositoryMaster.puml`
+- Source: `shared/uml/git/GitPlantUMLIndex.puml`
 - Source: `shared/uml/git/PortfolioGitWorkflow.puml`
 - Source: `shared/uml/git/ClaudeCodexGitSync.puml`
 - Source: `shared/uml/git/GitRepositoryResponsibility.puml`
