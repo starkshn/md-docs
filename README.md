@@ -1,194 +1,59 @@
-﻿# Technical Portfolio Documentation
+﻿# Unity Client System Research Portfolio Docs
 
-This repository is the source-of-truth documentation workspace for my game client technical portfolio.
+이 저장소는 Unity 기반 클라이언트 시스템 연구 포트폴리오의 문서 원본이다.
 
-The Markdown files are the primary artifacts. PlantUML diagrams are managed next to the Markdown files that explain them, so the same content can later be reused in a technical blog, GitHub portfolio, or a static portfolio website.
+## Goal
 
-## Folder Structure
+Unity 기반 클라이언트 시스템 연구 프로젝트를 통해 게임 클라이언트 개발 역량과 엔진 시스템 이해도를 보여주는 장기 포트폴리오 프로젝트.
 
-```text
-technical-portfolio-docs/
-  README.md
-  workflow/
-    Workflow.md
-    BlogPortfolioPublishing.md
-  projects/
-    dx11-gunfire-reborn/
-      ProjectAnalysis.md
-      RenderingPipeline.md
-      PerformanceOptimization.md
-      uml/
-    dx11-animation-tool/
-      ProjectAnalysis.md
-      AnimationSystem.md
-      uml/
-    common-engine-dll/
-      EngineArchitecture.md
-      ResourceSystem.md
-      DesignPatternAnalysis.md
-      uml/
-    unity-technical-showcase/
-      ArchitectureDesign.md
-      DevelopmentRoadmap.md
-      uml/
-  shared/
-    templates/
-    uml/
-```
+## Read First
 
-## Projects
+다른 세션에서는 아래 문서만 먼저 읽는다.
 
-- [DX11 Gunfire Reborn Clone](projects/dx11-gunfire-reborn/ProjectAnalysis.md)
-- [DX11 Animation Tool](projects/dx11-animation-tool/ProjectAnalysis.md)
-- [Common Engine DLL](projects/common-engine-dll/EngineArchitecture.md)
-- [Unity Technical Showcase](projects/unity-technical-showcase/ArchitectureDesign.md)
+1. `CORE.md`
+2. `PORTFOLIO_PLAN.md`
+3. `DX11_UNITY_MAP.md`
+4. `AGENT_HANDOFF.md`
 
-## MVP First Release\n\n- [MVP Scope Strategy](projects/unity-technical-showcase/mvp/MvpScopeStrategy.md)\n- [Technical Showcase Scene Design](projects/unity-technical-showcase/showcase-scene/ShowcaseSceneDesign.md)\n- [Before / After Rule](projects/unity-technical-showcase/showcase-scene/BeforeAfterRule.md)\n- [Feature Documentation Template](projects/unity-technical-showcase/feature-template/FeatureDocumentationTemplate.md)\n\n## Workflow
+## Preserved Analysis
 
-- [Documentation Workflow](workflow/Workflow.md)
-- [Blog and Portfolio Publishing Workflow](workflow/BlogPortfolioPublishing.md)
+아래 분석 자료는 보존한다.
 
-## Authoring Rule
+| 폴더 | 용도 |
+|---|---|
+| `projects/common-engine-dll/` | 공통 Engine DLL 분석 |
+| `projects/dx11-animation-tool/` | DX11 Animation Tool 분석 |
+| `projects/dx11-gunfire-reborn/` | Gunfire Reborn Clone 분석 |
+| `projects/unity-technical-showcase/` | Unity 포트폴리오 설계 자료 |
 
-1. Write or update Markdown first.
-2. Extract architecture relationships from Markdown into PlantUML.
-3. Keep each PlantUML file beside the project document it belongs to.
-4. Use `shared/uml` only for duplicated or cross-project diagrams.
-5. Link documents with relative Markdown links so they can be reused in GitHub, a static blog, or a portfolio website.
+## Management Rule
 
+공식 운영 문서는 최소화한다.
 
-## Learning / Blog / Journal Workflow
+중복 전략 / Git / Notion / Workflow 문서는 유지하지 않는다.
 
-이 포트폴리오는 기능 구현 자체보다 “학습한 개념을 실무 수준의 구조로 재설계하고 설명하는 과정”을 증명하는 것이 목표다.
+필요한 내용은 `CORE.md`, `PORTFOLIO_PLAN.md`, `DX11_UNITY_MAP.md`, `AGENT_HANDOFF.md`에 흡수한다.
 
-필수 개발 사이클:
+## Local UML
+
+로컬 확인용 PlantUML:
 
 ```text
-Concept Study
-↓
-Architecture Design
-↓
-Mini Experiment
-↓
-Implementation
-↓
-Verification
-↓
-Git Commit
-↓
-Markdown Documentation
-↓
-PlantUML Update
-↓
-Tistory Blog Draft
-↓
-Notion Development Journal
-↓
-Interview Notes
+C:\kny\plantuml-overview
 ```
 
-관련 문서:
+중요 파일:
 
-- [LearningBlogPortfolioStrategy](workflow/LearningBlogPortfolioStrategy.md)
-- [DevelopmentCycleEnforcement](workflow/DevelopmentCycleEnforcement.md)
-- [NotionJournalAndWeeklyReview](workflow/NotionJournalAndWeeklyReview.md)
-- [DifferentiationTrackingSystem](workflow/DifferentiationTrackingSystem.md)
+- `C:\kny\plantuml-overview\KnyPortfolioWorkspaceMap.puml`
+- `C:\kny\plantuml-overview\portfolio\ManagementSimplificationCore.puml`
+- `C:\kny\plantuml-overview\portfolio\PortfolioPlanSimplificationBeforeAfter.puml`
 
-Codex는 기능 구현 시 항상 공부한 개념, 강의 구조 분석, 우리 구조와의 차이점, 변경 이유, 모듈화 포인트, 확장성 포인트, 기술 블로그 초안, 면접 설명 포인트, PlantUML, 최종 아키텍처 반영 내용을 함께 산출해야 한다.
+## Git
 
-## Strategy Layer: KPI / Risk / Recruiter Mode
-
-포트폴리오가 무한 확장되지 않도록 전략 계층을 추가한다. 앞으로 기능을 추가하거나 완료 판단을 할 때는 아래 문서를 먼저 확인한다.
-
-- [PortfolioKpiSystem](strategy/PortfolioKpiSystem.md)
-- [FeatureBacklog](strategy/FeatureBacklog.md)
-- [PortfolioRiskLog](strategy/PortfolioRiskLog.md)
-- [PortfolioDashboard](strategy/PortfolioDashboard.md)
-- [DX11ToUnityMapping](strategy/DX11ToUnityMapping.md)
-- [DemoVideoPlan](strategy/DemoVideoPlan.md)
-- [RecruiterMode](strategy/RecruiterMode.md)
-
-최상위 질문:
+문서 레포 원격:
 
 ```text
-이 기능이 일반 Unity 포트폴리오와 비교해서 어떤 차별성을 만들고 있는가?
+https://github.com/starkshn/md-docs.git
 ```
 
-이 질문에 답하지 못하면 기능을 추가하지 않는다.
-
-## Master Plan Diagram
-
-전체 포트폴리오 구조, 전략 계층, 개발 사이클, MVP 우선순위, 산출물 흐름은 아래 PlantUML에서 한눈에 확인한다.
-
-- [PortfolioMasterPlan.puml](shared/uml/PortfolioMasterPlan.puml)
-
-## Notion Workspace Template
-
-Notion `Unity Project A-Z` 페이지에 붙여 넣어 사용할 수 있는 운영 템플릿이다.
-
-- [UnityProjectAZ_NotionTemplate.md](notion/UnityProjectAZ_NotionTemplate.md)
-
-## Codex Notion Operation Rules
-
-Codex가 완료한 작업, 핵심 코드 요약, 기술 블로그 링크, 개발일지, 기능 완료 Gate를 Notion에서 추적하기 위한 운영 규칙이다.
-
-- [CodexNotionOperationRules.md](notion/CodexNotionOperationRules.md)
-
-## Modular Portfolio Framework / Naming Governance
-
-Unity Technical Showcase의 모든 기능은 `NY Core Framework -> NY Module Hub -> Category Modules -> Feature Modules -> Tool Modules` 구조를 따른다.
-
-핵심 문서:
-
-- [ModularPortfolioFramework](projects/unity-technical-showcase/framework/ModularPortfolioFramework.md)
-- [ModuleGovernanceSystem](projects/unity-technical-showcase/framework/ModuleGovernanceSystem.md)
-- [ModuleNamingConvention](projects/unity-technical-showcase/framework/ModuleNamingConvention.md)
-- [ModuleAssemblyDefinitionPlan](projects/unity-technical-showcase/framework/ModuleAssemblyDefinitionPlan.md)
-- [ModuleDashboardDesign](projects/unity-technical-showcase/framework/ModuleDashboardDesign.md)
-
-컨벤션 문서:
-
-- [NamingConvention](docs/conventions/NamingConvention.md)
-- [FolderConvention](docs/conventions/FolderConvention.md)
-- [AssemblyConvention](docs/conventions/AssemblyConvention.md)
-- [GitConvention](docs/conventions/GitConvention.md)
-- [BlogConvention](docs/conventions/BlogConvention.md)
-
-최종 네이밍 규칙:
-
-```text
-NY_Category_Role
-```
-
-예시: `NY_Core_ModuleHub`, `NY_Skill_SystemModule`, `NY_Skill_DefinitionSO`, `NY_Tool_ModuleDashboard`
-
-## Selective Lua Scripting Layer
-
-C# Core Framework를 유지하면서 Skill Formula, Condition, Trigger 같은 작은 Gameplay Logic만 Lua로 확장하는 선택적 Script Layer다. MVP 필수 기능은 아니며 Skill System/Tool 안정화 이후 확장 기능으로 진행한다.
-
-- [SelectiveLuaScriptingLayer](projects/unity-technical-showcase/scripting/SelectiveLuaScriptingLayer.md)
-- [LuaSkillFormulaExperiment](projects/unity-technical-showcase/scripting/LuaSkillFormulaExperiment.md)
-- [SelectiveLuaScriptingLayer.puml](projects/unity-technical-showcase/scripting/uml/SelectiveLuaScriptingLayer.puml)
-- [LuaSkillFormulaSequence.puml](projects/unity-technical-showcase/scripting/uml/LuaSkillFormulaSequence.puml)
-
-## Google Calendar + Notion Schedule System
-
-Google Calendar는 실제 시간 블록을 관리하고, Notion은 작업 상태와 개발일지/산출물을 관리한다.
-
-- [GoogleCalendarNotionScheduleSystem](notion/GoogleCalendarNotionScheduleSystem.md)
-- [GoogleCalendarNotionScheduleWorkflow](notion/GoogleCalendarNotionScheduleWorkflow.puml)
-
-## Portfolio Automation Strategy
-
-프로젝트 품질 관리를 위해 Architecture Governance Review, Unity CI/CD Pipeline, Weekly Technical Review를 운영한다.
-
-- [PortfolioAutomationStrategy](workflow/PortfolioAutomationStrategy.md)
-- [PortfolioAutomationWorkflow](workflow/PortfolioAutomationWorkflow.puml)
-
-## Two Page Notion Management Structure
-
-Notion은 일정 전용 `Schedule Dashboard`와 세부 기록용 `Development Hub` 두 페이지로 분리한다.
-
-- [TwoPageNotionManagementStructure](notion/TwoPageNotionManagementStructure.md)
-- Schedule Dashboard: https://www.notion.so/3714bccaf9eb81cabf9edec06dd3a6da
-- Development Hub: https://www.notion.so/3714bccaf9eb8020bc85e39638c56d7b
+커밋과 Push는 사용자 확인 후 진행한다.
