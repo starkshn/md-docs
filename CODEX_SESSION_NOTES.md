@@ -774,3 +774,39 @@ Added document:
 ```text
 C:\kny\technical-portfolio-docs\ClaudeCodexSyncGuide.md
 ```
+
+## 2026-06-03 Git repository PlantUML diagrams
+
+Created PlantUML diagrams for portfolio Git repository management.
+
+Diagram directory:
+
+```text
+C:\kny\technical-portfolio-docs\shared\uml\git
+```
+
+Created diagrams:
+
+- PortfolioGitRepositoryMaster.puml: 전체 Git 저장소 구조
+- PortfolioGitWorkflow.puml: 작업 유형별 Git 흐름
+- ClaudeCodexGitSync.puml: 집 Codex / 회사 Claude 동기화 흐름
+- GitRepositoryResponsibility.puml: 저장소별 책임 경계
+- GitRemoteConnectionPlan.puml: remote 연결 계획
+
+Created guide:
+
+```text
+C:\kny\technical-portfolio-docs\GitPlantUMLGuide.md
+```
+
+Updated references:
+
+- LocalGitRepositoryMap.md
+- workflow/DiagramSourceMap.md
+
+Purpose:
+
+- 문서 저장소, Unity 프로젝트 저장소, 공개 포트폴리오 사이트 저장소의 역할을 시각화한다.
+- md-docs, Unity future repo, starkshn.github.io remote 구조를 설명한다.
+- Codex / Claude / GitHub 동기화 흐름을 보여준다.
+- 나중에 Unity project GitHub repo를 만들면 GitRemoteConnectionPlan.puml과 PortfolioGitRepositoryMaster.puml을 업데이트한다.

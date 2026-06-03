@@ -8,6 +8,28 @@ Codex, Claude, GPT 또는 다른 에이전트가 작업을 이어받을 때 먼�
 
 ## Repository Layout
 
+## PlantUML Diagrams
+
+Git 저장소 구조와 동기화 흐름은 아래 PlantUML에서 관리한다.
+
+```text
+C:\kny\technical-portfolio-docs\shared\uml\git
+```
+
+Main guide:
+
+```text
+C:\kny\technical-portfolio-docs\GitPlantUMLGuide.md
+```
+
+Key diagrams:
+
+- `PortfolioGitRepositoryMaster.puml`
+- `PortfolioGitWorkflow.puml`
+- `ClaudeCodexGitSync.puml`
+- `GitRepositoryResponsibility.puml`
+- `GitRemoteConnectionPlan.puml`
+
 ### 1. Documentation Repository
 
 Local path:

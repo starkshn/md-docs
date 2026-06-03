@@ -1,0 +1,54 @@
+﻿@startuml ClaudeCodexGitSync
+!theme plain
+title 집 Codex / 회사 Claude Git 동기화 흐름
+
+skinparam defaultFontName Malgun Gothic
+skinparam shadowing false
+skinparam sequenceMessageAlign center
+skinparam ArrowColor #333333
+
+actor "집 NY" as HomeNY
+participant "Codex" as Codex
+collections "로컬 docs repo\nC:\\kny\\technical-portfolio-docs" as LocalDocs
+database "GitHub md-docs" as MdDocs
+actor "회사 NY" as OfficeNY
+participant "Claude" as Claude
+collections "회사 docs clone" as OfficeDocs
+
+HomeNY -> Codex : /save-md 또는 문서 작업 요청
+Codex -> LocalDocs : Markdown / PlantUML / 세션 노트 업데이트
+Codex -> LocalDocs : git commit
+Codex -> MdDocs : git push md-docs main
+
+OfficeNY -> OfficeDocs : git pull
+OfficeNY -> Claude : CLAUDE.md부터 읽고 상태 파악 요청
+Claude -> OfficeDocs : README / CLAUDE / SESSION / Notion 문서 읽기
+Claude -> OfficeDocs : 블로그 초안 / 면접 답변 / 문서 리뷰 수정
+Claude -> OfficeDocs : git commit
+OfficeDocs -> MdDocs : git push
+
+HomeNY -> LocalDocs : git pull md-docs main
+Codex -> LocalDocs : 최신 문서 기준으로 작업 계속
+
+note over MdDocs
+문서 동기화 기준 저장소
+https://github.com/starkshn/md-docs
+end note
+
+note over Claude
+Claude 권장 역할
+- 문서 리뷰
+- 블로그 초안 개선
+- 면접 답변 정리
+- 설명 흐름 다듬기
+end note
+
+note over Codex
+Codex 권장 역할
+- 구조 설계
+- Notion / Calendar 운영
+- Git 정리
+- Unity 구현 준비
+end note
+
+@enduml

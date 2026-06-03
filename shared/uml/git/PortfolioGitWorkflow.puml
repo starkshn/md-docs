@@ -1,0 +1,43 @@
+﻿@startuml PortfolioGitWorkflow
+!theme plain
+title 포트폴리오 Git 작업 흐름
+
+skinparam defaultFontName Malgun Gothic
+skinparam shadowing false
+skinparam activityBorderColor #333333
+skinparam activityBackgroundColor #F7F7F7
+skinparam ArrowColor #333333
+
+start
+:작업 유형 판단;
+
+if (문서 / 설계 / PlantUML?) then (예)
+  :technical-portfolio-docs 수정;
+  :Markdown / PlantUML 업데이트;
+  :CODEX_SESSION_NOTES.md 업데이트;
+  if (/save-md 요청?) then (예)
+    :CODEX_WORK_MEMORY.md 업데이트;
+  endif
+  :문서 Git commit;
+  :md-docs remote로 push;
+elseif (Unity 코드 / 씬 / 에셋?) then (예)
+  :unity-technical-showcase 수정;
+  :Unity .gitignore 규칙 확인;
+  :Unity Git commit;
+  if (GitHub Unity repo 존재?) then (예)
+    :Unity remote로 push;
+  else (아니오)
+    :로컬 Git에만 보관;
+    :나중에 repo URL 받으면 remote 연결;
+  endif
+else (공개 포트폴리오 / 블로그 링크)
+  :starkshn.github.io 수정;
+  :공개 페이지 / 링크 업데이트;
+  :site Git commit;
+  :GitHub Pages repo로 push;
+endif
+
+:Notion 필요 시 링크 갱신;
+:다음 세션을 위한 메모 저장;
+stop
+@enduml

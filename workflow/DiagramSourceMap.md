@@ -69,3 +69,12 @@ When a Markdown file changes:
 
 - Source: `workflow/PortfolioAutomationWorkflow.puml`
 - Purpose: Architecture Governance Review, Unity CI/CD Pipeline, Weekly Technical Review 자동화 운영 흐름을 정의한다.
+
+## Git Repository Management
+
+- Source: `shared/uml/git/PortfolioGitRepositoryMaster.puml`
+- Source: `shared/uml/git/PortfolioGitWorkflow.puml`
+- Source: `shared/uml/git/ClaudeCodexGitSync.puml`
+- Source: `shared/uml/git/GitRepositoryResponsibility.puml`
+- Source: `shared/uml/git/GitRemoteConnectionPlan.puml`
+- Purpose: 문서 저장소, Unity 프로젝트 저장소, 공개 포트폴리오 사이트 저장소의 역할, remote 연결, Codex/Claude 동기화, 작업 흐름을 정의한다.
