@@ -89,3 +89,23 @@ Assets/02_Modules/NY.Modules.asmdef
 Assets/03_Tools/NY.Editor.asmdef
 Assets/04_Showcase/NY.Showcase.asmdef
 ```
+
+## Career Target Context
+
+Current portfolio direction should prioritize Com2uS / mid-size Unity client positions first.
+
+Reason:
+
+- Current work experience is closer to mobile live service operations.
+- Unity portfolio ROI is highest when focused on Skill System, Skill Tool, Addressables, UI, Debug, and Metrics.
+- SHIFT UP-style Animation / Rendering / Combat content is useful, but should be a second-layer expansion after the first portfolio version is complete.
+
+Do not over-expand Shader or Rendering early.
+
+First portfolio completion should prove:
+
+```text
+data-driven skill architecture
++ planner-usable Unity Editor tool
++ live-service-friendly loading/debug structure
+```

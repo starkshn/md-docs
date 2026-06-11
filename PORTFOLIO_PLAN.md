@@ -183,3 +183,88 @@ Goal:
 - prevent wrong dependency direction
 - keep Editor code out of runtime builds
 - make the portfolio architecture explainable in interviews
+
+## Target Company Strategy
+
+현재 1차 목표는 시프트업형 포트폴리오보다 컴투스 / 중견 Unity 클라이언트형 포트폴리오에 맞춘다.
+
+이유:
+
+- 현재 넥스쳐 라이브 서비스 경험과 연결성이 높다.
+- Unity, C#, 모바일, 라이브 운영, 데이터 기반 구조, 툴 제작이 컴투스/중견 Unity 회사에 직접적으로 어필된다.
+- 시프트업형 Animation / Rendering / Combat 포트폴리오는 가능하지만, 초기 ROI는 낮다.
+- DX11 / UE5 경험은 시프트업 지원 시 보조 강점으로 활용하고, Unity 포트폴리오의 1차 완성은 라이브 서비스형 구조로 잡는다.
+
+## Portfolio Priority For Job Change
+
+1차 완성 목표:
+
+```text
+Skill System
++ Skill Editor Tool
++ Addressables / Data Loading
++ UI / Debug / Metrics
++ 간단한 Animation Event 연동
+```
+
+권장 비중:
+
+```text
+Skill System          35%
+Skill Tool            25%
+Addressables          15%
+UI / Debug / Metrics  15%
+Animation              7%
+Shader                 3%
+```
+
+Shader는 독립 대형 축이 아니라 Showcase 안의 작은 기술 예제로 둔다.
+
+## Recommended Module Direction
+
+```text
+NY_Framework
+├─ NY_Core
+├─ NY_Skill
+├─ NY_SkillEditor
+├─ NY_Addressables
+├─ NY_UI
+├─ NY_DebugProfiler
+└─ NY_Animation
+```
+
+`NY_Shader`는 초기 핵심 모듈로 두지 않는다. 필요하면 Showcase 하위 예제로 관리한다.
+
+## Main Portfolio Message
+
+이 포트폴리오의 핵심 메시지는 다음이다.
+
+```text
+나는 단순히 스킬 하나를 구현한 사람이 아니라,
+라이브 서비스에서 확장 가능한 데이터 기반 스킬 시스템과
+기획자가 사용할 수 있는 Unity Editor Tool을 설계한 클라이언트 개발자다.
+```
+
+## Company Fit
+
+### Com2uS / 중견 Unity 모바일 회사
+
+강하게 보여줄 것:
+
+- Unity C# 실무 가능성
+- 라이브 서비스형 데이터 구조
+- Skill System / Skill Tool
+- Addressables 기반 데이터와 리소스 관리
+- UI Framework / Debug / Metrics
+- 운영과 기획 협업을 고려한 Tool UX
+
+### SHIFT UP / 액션 지향 회사
+
+후순위로 보강할 것:
+
+- Animation Event와 Skill Timing 연동
+- StateMachine 기반 Cast / Action / Cooldown 흐름
+- 간단한 Root Motion / Animation Preview 개념
+- DX11 / UE5 / HLSL 경험 연결
+
+시프트업을 버리는 것이 아니라, 1차 포폴 완성 이후 Animation / Rendering 설명력을 얹는 방향으로 간다.

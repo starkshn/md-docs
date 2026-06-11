@@ -161,3 +161,25 @@ Current example:
 ```text
 Assembly Definition → projects/unity-technical-showcase/AssemblyDefinitionPlan.md
 ```
+
+## Career Portfolio Direction Rule
+
+포트폴리오의 1차 타깃은 컴투스 / 중견 Unity 클라이언트 회사에 맞춘다.
+
+우선순위:
+
+1. Skill System
+2. Skill Editor Tool
+3. Addressables / Data Loading
+4. UI / Debug / Metrics
+5. 간단한 Animation Event 연동
+6. Shader는 후순위 예제
+
+시프트업 / 넥슨 / 스마일게이트 대응은 1차 완성 후 Animation / Rendering / Combat 설명력을 추가하는 방식으로 확장한다.
+
+새 기능을 제안할 때는 먼저 아래 질문에 답한다.
+
+- Unity 라이브 서비스 포폴에 직접 도움이 되는가?
+- Skill / Tool / Addressables / UI / Debug 중 하나를 강화하는가?
+- 면접에서 실무적인 구조로 설명 가능한가?
+- 단순 시각 효과나 과시용 기능에 과하게 시간을 쓰는 것은 아닌가?
