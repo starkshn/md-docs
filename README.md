@@ -25,6 +25,7 @@ Unity 기반 클라이언트 시스템 연구 프로젝트를 통해 게임 클�
 | `projects/dx11-animation-tool/` | DX11 Animation Tool 분석 |
 | `projects/dx11-gunfire-reborn/` | Gunfire Reborn Clone 분석 |
 | `projects/unity-technical-showcase/` | Unity 포트폴리오 설계 자료 |
+| `projects/skill-project/` | 기존 SkillProject 구조 분석 / Claude 전달용 |
 
 ## Management Rule
 
@@ -57,3 +58,4 @@ https://github.com/starkshn/md-docs.git
 ```
 
 커밋과 Push는 사용자 확인 후 진행한다.
+

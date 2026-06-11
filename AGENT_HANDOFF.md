@@ -69,3 +69,23 @@ C:\kny\plantuml-overview
 ```
 
 계획이나 구조가 변경되면 관련 PlantUML도 같이 수정한다.
+
+## Next Unity Task
+
+Create asmdef files in the Unity project.
+
+Reference:
+
+```text
+projects/unity-technical-showcase/AssemblyDefinitionPlan.md
+```
+
+Expected files:
+
+```text
+Assets/00_Core/NY.Core.asmdef
+Assets/01_Runtime/NY.Runtime.asmdef
+Assets/02_Modules/NY.Modules.asmdef
+Assets/03_Tools/NY.Editor.asmdef
+Assets/04_Showcase/NY.Showcase.asmdef
+```

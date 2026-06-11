@@ -156,3 +156,30 @@ PlantUML 갱신
 4. Skill Tool 최소 구현
 5. Showcase Scene 구성
 6. DX11 -> Unity 연구 주제 연결
+
+## Next Technical Concept: Assembly Definition
+
+Next Unity task is to create asmdef files for the current folder structure.
+
+Reference document:
+
+```text
+projects/unity-technical-showcase/AssemblyDefinitionPlan.md
+```
+
+Planned assemblies:
+
+```text
+NY.Core
+NY.Runtime
+NY.Modules
+NY.Editor
+NY.Showcase
+```
+
+Goal:
+
+- separate Core / Runtime / Modules / Editor / Showcase boundaries
+- prevent wrong dependency direction
+- keep Editor code out of runtime builds
+- make the portfolio architecture explainable in interviews

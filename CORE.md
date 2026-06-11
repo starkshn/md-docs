@@ -143,3 +143,21 @@ Google Calendar는 실제 시간 제약 확인용이다.
 - PlantUML 구조도가 필요하다.
 
 그 외에는 기존 문서에 흡수한다.
+
+## Project Learning Rule
+
+When a Unity feature or project setting is introduced, record the concept before implementing it.
+
+For each important Unity concept, document:
+
+- what it is
+- why it exists
+- how it affects project structure
+- how it supports the portfolio goal
+- what the next implementation step is
+
+Current example:
+
+```text
+Assembly Definition → projects/unity-technical-showcase/AssemblyDefinitionPlan.md
+```
