@@ -109,3 +109,27 @@ data-driven skill architecture
 + planner-usable Unity Editor tool
 + live-service-friendly loading/debug structure
 ```
+
+## Skill Course Workflow
+
+User is currently learning from the Inflearn modular skill system course in:
+
+```text
+C:\kny\Project\Unity\SkillProject
+```
+
+This project is a learning / experiment project.
+
+The final portfolio project is:
+
+```text
+C:\kny\Project\Unity\UnityTechnicalShowcase
+```
+
+Do not implement the final Skill System in TechShowcase before the course structure is completed and analyzed.
+
+Reference:
+
+```text
+projects/skill-project/SkillCourseLearningWorkflow.md
+```

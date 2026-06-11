@@ -183,3 +183,19 @@ Assembly Definition → projects/unity-technical-showcase/AssemblyDefinitionPlan
 - Skill / Tool / Addressables / UI / Debug 중 하나를 강화하는가?
 - 면접에서 실무적인 구조로 설명 가능한가?
 - 단순 시각 효과나 과시용 기능에 과하게 시간을 쓰는 것은 아닌가?
+
+## Skill Learning Project Rule
+
+`C:\kny\Project\Unity\SkillProject` is the learning and experiment project for the Inflearn modular skill system course.
+
+`C:\kny\Project\Unity\UnityTechnicalShowcase` is the final portfolio project.
+
+Do not copy course code directly into the portfolio project.
+
+First complete the course in SkillProject, then analyze the completed structure, extract useful concepts, discard weak structures, and redesign the system for UnityTechnicalShowcase.
+
+Reference document:
+
+```text
+projects/skill-project/SkillCourseLearningWorkflow.md
+```

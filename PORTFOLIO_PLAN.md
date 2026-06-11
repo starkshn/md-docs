@@ -268,3 +268,24 @@ NY_Framework
 - DX11 / UE5 / HLSL 경험 연결
 
 시프트업을 버리는 것이 아니라, 1차 포폴 완성 이후 Animation / Rendering 설명력을 얹는 방향으로 간다.
+
+## Skill Course Learning Strategy
+
+SkillProject는 인프런 모듈식 스킬 시스템 강의를 따라가며 학습하는 실험 프로젝트로 사용한다.
+
+UnityTechnicalShowcase는 강의 완료 후 구조를 분석하고 재설계해서 적용하는 포트폴리오 프로젝트로 유지한다.
+
+Reference:
+
+```text
+projects/skill-project/SkillCourseLearningWorkflow.md
+```
+
+현재 결정:
+
+```text
+SkillProject를 먼저 끝까지 진행한다.
+강의 완료 전에는 TechShowcase에 Skill System 본 구현을 넣지 않는다.
+강의 완료 후 Codex가 SkillProject 전체를 분석한다.
+그 분석을 기반으로 UnityTechnicalShowcase의 Skill System / Skill Tool 구조를 재설계한다.
+```
